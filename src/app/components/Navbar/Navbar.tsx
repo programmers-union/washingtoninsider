@@ -1,0 +1,340 @@
+"use client";
+import { useRef, useState } from "react"; // <-- ADDED for menu toggle state
+import styles from "./Navbar.module.css";
+import Image from "next/image";
+import { FaSearch, FaBars } from "react-icons/fa";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import Link from "next/link";
+
+const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isAccessibilityOpen, setIsAccessibilityOpen] = useState(false);
+
+  // Toggle Menu Dropdown
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  // Toggle Accessibility Dropdown
+  const handleAccessibilityToggle = () => {
+    setIsAccessibilityOpen(!isAccessibilityOpen);
+  };
+
+  const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
+  const searchRef = useRef<HTMLDivElement>(null);
+
+  // Toggle Search Bar
+  const handleSearchToggle = (event: React.MouseEvent) => {
+    event.stopPropagation(); // Prevents closing when clicking inside search
+    setIsSearchOpen((prev) => !prev);
+  };
+
+  // Close Search Bar if Clicking Outside
+  const handleNavbarClick = (event: React.MouseEvent) => {
+    if (
+      searchRef.current &&
+      !searchRef.current.contains(event.target as Node)
+    ) {
+      setIsSearchOpen(false);
+    }
+  };
+
+  return (
+    <>
+    <header className={styles["navbar-container"]} onClick={handleNavbarClick}>
+      {/* Top Language Bar */}
+      <div className={styles["navbar-languageBar"]}>
+        {[
+          { name: "اردو", link: "#" },
+          { name: "العربية", link: "#" },
+          { name: "বাংলা", link: "#" },
+          { name: "English", link: "#" },
+          { name: "Français", link: "#" },
+          { name: "Español", link: "#" },
+          { name: "Português", link: "#" },
+          { name: "Українська", link: "#" },
+          { name: "Türkçe", link: "#" },
+          { name: "हिंदी", link: "#" },
+          { name: "Русский", link: "#" },
+          { name: "Africa", link: "#" },
+          { name: "Deutsch", link: "#" },
+          { name: "Indonesian", link: "#" },
+          { name: "中文", link: "#" },
+        ].map((lang, index) => (
+          <a key={index} href={lang.link} className={styles["navbar-language"]}>
+            {lang.name}
+          </a>
+        ))}
+      </div>
+
+      {/* Main Navigation */}
+      <div className={styles["navbar-mainNav"]}>
+        <div className={styles["navbar-leftSection"]} ref={searchRef} >
+          <div 
+            className={`${styles["navbar-searchWrapper"]} ${
+              isSearchOpen ? styles["searchOpen"] : ""
+            }`}
+            
+          >
+            <FaSearch className={styles["navbar-icon"]} onClick={handleSearchToggle}  />
+
+           
+            {!isSearchOpen && <span>Search</span>}
+
+            
+            {isSearchOpen && (
+              <input
+                type="text"
+                placeholder="Search"
+                className={styles["navbar-searchInput"]}
+              />
+            )}
+          </div>
+          
+        </div>
+        
+
+        {/* Logo and Title Side by Side */}
+        <div className={styles["navbar-centerSection"]}>
+          <span className="navbar-logo-icon">
+            <Image
+              src="/images/logo.webp"
+              alt="Global Investigative Journalism Network"
+              width={50}
+              height={50}
+            />
+          </span>
+            <Link href="/">
+            <span className={styles["navbar-title"]}>
+            Global Investigative <br /> Journalism Network
+          </span>
+            </Link>
+          
+          <button
+            className={styles["navbar-menuButton"]}
+            onClick={handleMenuToggle}
+          >
+            <FaBars />
+            <span>Menu</span>
+          </button>
+        </div>
+
+        {/* Right Section */}
+        <div className={styles["navbar-rightSection"]}>
+          <div
+            className={styles["navbar-accessibilityIcon"]}
+            onClick={handleAccessibilityToggle}
+          >
+            <i className="fa-solid fa-universal-access"></i>
+          </div>
+
+          
+          <button className={styles["navbar-donateButton"]}>Donate</button>
+        </div>
+      </div>
+
+      
+      
+      {/* ▲▲▲ END DROPDOWN MENU ▲▲▲ */}
+    </header>
+    <div className={styles["search-mobile-div"]}>
+    {isSearchOpen && (
+      <div className={styles["inside-search-mobile-div"]}>
+         <input
+              
+              type="text"
+              placeholder="🔍 Search"
+              className={styles["navbar-searchInput2"]}
+            />
+      </div>
+             
+            )}
+    
+    
+    </div>
+    <div className="nav-dropdown-div">
+    {isMenuOpen && (
+        <div className={styles["navbar-dropdown"]}>
+          <ul className={styles["navbar-menuList"]}>
+            <li>
+              <span className={styles["navbar-itemTitle"]}>Stories</span>
+              <span className={styles["navbar-itemDesc"]}>
+                Reporting from around the world
+              </span>
+              <span className={styles["navbar-itemArrow"]}>→</span>
+            </li>
+            <li>
+              <span className={styles["navbar-itemTitle"]}>
+                Resource Center
+              </span>
+              <span className={styles["navbar-itemDesc"]}>
+                A library of resources for journalists
+              </span>
+              <span className={styles["navbar-itemArrow"]}>→</span>
+            </li>
+            <li>
+              <span className={styles["navbar-itemTitle"]}>About</span>
+              <span className={styles["navbar-itemDesc"]}>
+                Find out about our organization
+              </span>
+              <span className={styles["navbar-itemArrow"]}>→</span>
+            </li>
+            <li>
+              <span className={styles["navbar-itemTitle"]}>Membership</span>
+              <span className={styles["navbar-itemDesc"]}>
+                Find out about our members and joining
+              </span>
+              <span className={styles["navbar-itemArrow"]}>→</span>
+            </li>
+            <li>
+              <span className={styles["navbar-itemTitle"]}>Conferences</span>
+              <span className={styles["navbar-itemDesc"]}>
+                Our bi-annual conferences
+              </span>
+              <span className={styles["navbar-itemArrow"]}>→</span>
+            </li>
+            <li>
+              <span className={styles["navbar-itemTitle"]}>Awards</span>
+              <span className={styles["navbar-itemDesc"]}>
+                Awards honoring investigative journalism
+              </span>
+              <span className={styles["navbar-itemArrow"]}>→</span>
+            </li>
+            <li>
+              <span className={styles["navbar-itemTitle"]}>Jobs</span>
+              <span className={styles["navbar-itemDesc"]}>
+                Opportunities within the GIJN Network
+              </span>
+              <span className={styles["navbar-itemArrow"]}>→</span>
+            </li>
+            <li>
+              <span className={styles["navbar-itemTitle"]}>
+                Regional Editions
+              </span>
+              <span className={styles["navbar-itemDesc"]}>
+                Our regional homepages and partners
+              </span>
+              <span className={styles["navbar-itemArrow"]}>→</span>
+            </li>
+          </ul>
+
+          {/* Languages Row */}
+          <div className={styles["navbar-languagesRow"]}>
+            {[
+              "اردو",
+              "العربية",
+              "বাংলা",
+              "English",
+              "Français",
+              "Español",
+              "Português",
+              "Українська",
+              "Türkçe",
+              "हिंदी",
+              "Русский",
+              "Africa",
+              "Deutsch",
+              "Indonesian",
+              "中文",
+            ].map((lang, index) => (
+              <button key={index} className={styles["navbar-langButton"]}>
+                {lang}
+              </button>
+            ))}
+          </div>
+
+          {/* ▼▼▼ Add this at the end of your dropdown menu ▼▼▼ */}
+          <div className={styles["navbar-footer"]}>
+            {/* Social Media Icons (Left) */}
+            <div className={styles["navbar-socialIcons"]}>
+              <a href="#">
+                <i className="fab fa-facebook"></i>
+              </a>
+              <a href="#">
+                <i className="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i className="fab fa-youtube"></i>
+              </a>
+              <a href="#">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i className="fab fa-linkedin"></i>
+              </a>
+              <a href="#">
+                <i className="fas fa-rss"></i>
+              </a>
+            </div>
+
+            {/* Donate Button (Right) */}
+            <button className={styles["navbar-donateButton"]}>Donate</button>
+          </div>
+        </div>
+      )}
+    </div>
+    <div className="nav-accessebility-div">
+    {isAccessibilityOpen && (
+            <div className={styles["navbar-accessibilityDropdown"]}>
+              <div className={styles["navbar-accessibility-left"]}>
+                <h3 className={styles["navbar-accessibilityTitle"]}>
+                  ACCESSIBILITY SETTINGS
+                </h3>
+
+                {/* Reset Button */}
+                <button className={styles["navbar-accessibilityReset"]}>
+                  reset all
+                </button>
+              </div>
+
+              {/* Accessibility Grid */}
+              <div className={styles["navbar-accessibility-right"]}>
+                <div className={styles["navbar-accessibilityGrid"]}>
+                  {/* Text Size */}
+                  <div>
+                    <h4>TEXT SIZE</h4>
+                    <button>— decrease</button>
+                    <button>+ increase</button>
+                  </div>
+
+                  {/* Color Options */}
+                  <div>
+                    <h4>COLOR OPTIONS</h4>
+                    <button>monochrome</button>
+                    <button>muted color</button>
+                    <button>dark</button>
+                  </div>
+
+                  {/* Reading Tools */}
+                  <div>
+                    <h4>READING TOOLS</h4>
+                    <button>isolation</button>
+                    <button>ruler</button>
+                  </div>
+
+                  {/* Other */}
+                  <div>
+                    <h4>OTHER</h4>
+                    <button>no motion</button>
+                    <button>large cursor</button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Close Button (top-right) */}
+              <button
+                className={styles["navbar-accessibilityClose"]}
+                onClick={handleAccessibilityToggle}
+              >
+                ×
+              </button>
+            </div>
+          )}
+    </div>
+    
+    
+    </>
+  );
+};
+
+export default Navbar;

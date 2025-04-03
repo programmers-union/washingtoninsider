@@ -1,0 +1,260 @@
+/* Footer.module.css */
+
+.FooterContainer {
+  background-color: #302F2C;
+  color: white;
+  padding: 1.5rem 0 0 0;
+ 
+}
+
+.FooterTop {
+  
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.FooterLogoSection {
+  padding-left: 1rem;
+  flex: 1;
+  width: 30%;
+}
+
+.FooterLogoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.FooterLogo {
+  width: 2.5rem;
+  height: auto;
+}
+
+.FooterTitle {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.FooterFollow {
+  font-size: 0.7rem;
+  margin-top: 1.25rem;
+  /* font-weight: bold; */
+  letter-spacing: 0.063rem;
+}
+
+.FooterIcons {
+  display: flex;
+  gap: 0.938rem;
+  font-size: 1.2rem;
+  margin-top: 0.625rem;
+}
+
+.FooterLinksSection {
+  /* background-color: aqua; */
+  flex: 2;
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+  width: 70%;
+  /* margin-top: 1.25rem; */
+  height: auto;
+  gap: 1rem;
+}
+
+.FooterColumn {
+  width: 12rem;
+  
+}
+
+.FooterColumn h3 {
+font-size: 0.8rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.FooterColumn ul {
+  
+  list-style: none;
+  padding: 0.1rem;
+  
+}
+
+.FooterColumn li {
+  width: auto;
+  padding-bottom: 0.2rem;
+  font-size: 0.8rem;
+  margin: 0 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  border-bottom: 1px solid #666;
+}
+
+.FooterColumn li:hover {
+  color: #ccc;
+}
+
+.FooterBottom {
+  background-color: #171717;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem;
+  font-size: 0.8rem;
+  color: #aaa;
+  flex-wrap: wrap;
+}
+
+.FooterBottom p {
+  margin: 0.313rem 0;
+}
+@media (max-width: 1024px) {
+  .FooterTop {
+    flex-direction: row;
+    padding: 1.5rem 1rem;
+  }
+
+  .FooterLogoSection {
+    width: 35%;
+  }
+
+  .FooterLinksSection {
+    width: 65%;
+    gap: 1.5rem;
+    justify-content: flex-end;
+  }
+
+  .FooterColumn {
+    width: 8rem;
+  }
+
+  .FooterTitle {
+    font-size: 1rem;
+  }
+
+  
+
+  .FooterBottom {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 0.75rem 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .FooterTop {
+    flex-direction: row;
+    padding: 1.25rem 1rem;
+  }
+
+  .FooterLogoSection {
+    width: 40%;
+  }
+
+  .FooterLinksSection {
+    width: 60%;
+    gap: 1rem;
+    justify-content: flex-end;
+  }
+
+  .FooterColumn {
+    width: 8rem;
+  }
+  
+
+  .FooterTitle {
+    font-size: 1rem;
+  }
+
+ 
+
+  .FooterBottom {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 0.5rem 1rem;
+  }
+}
+
+
+@media (max-width: 680px) {
+ 
+
+  .FooterLogoSection {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .FooterLogoWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .FooterTitle {
+    font-size: 1.25rem;
+    text-align: left;
+    flex: 1;
+  }
+
+  .FooterFollow {
+    font-size: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .FooterIcons {
+    gap: 1.5rem;
+    display: flex;
+    /* flex-wrap: wrap; */
+    font-size: 1rem;
+    justify-content: flex-start;
+    margin-top: 0.5rem;
+  }
+
+  .FooterLinksSection {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 1.5rem;
+    width: 100%;
+    
+    
+  }
+
+  .FooterColumn {
+    
+    font-size: 0.8rem;
+    width: 100%;
+  }
+
+  .FooterColumn:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1;
+  }
+
+  .FooterColumn:nth-child(2) {
+    grid-column: 1 / 2;
+    grid-row: 2;
+  }
+
+  .FooterColumn:nth-child(3) {
+    grid-column: 2 / 3;
+    grid-row: 1 / span 2;
+  }
+
+  .FooterBottom {
+    /* flex-direction: column;
+    text-align: center;
+    padding: 0.75rem 0;
+    gap: 0.5rem; */
+    font-size: 0.5rem;
+  }
+}
+
+
+
+
+

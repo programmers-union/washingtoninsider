@@ -1,0 +1,146 @@
+.project-section {
+    width: 100%;
+    padding: 2rem 1.2rem;
+    background: #F2F2F2;
+    height: auto;
+    text-align: left;
+  }
+  
+  .project-section-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    border-left: 0.2rem solid black;
+    padding-left: 1rem;
+  }
+  
+  .project-section-grid {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .project-section-card {
+    background: #DDD3C4;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 24%;
+    
+  }
+  
+  .project-section-image {
+    
+   
+    position: relative;
+    width: 100%;
+    height: 12rem;
+  }
+  .project-section-image-img{
+    box-shadow: inset 0 -60px 10px rgba(0, 0, 0, 0.4);
+    object-fit: cover;
+  }
+  
+  .project-section-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* background: rgba(0, 0, 0, 0.6); */
+    color: white;
+    padding: 0.6rem;
+    
+  }
+  .project-section-overlay-title{
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  .project-section-description {
+    padding: 1.2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  
+  .project-section-description p {
+    margin-bottom: 1rem;
+  }
+  
+  .project-section-description button {
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: none;
+    font-size: 0.7rem;
+    cursor: pointer;
+    text-align: left;
+    color: white;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.5rem;
+    transition: background 0.3s ease;
+  }
+  
+  .project-section-description button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .project-section-orange {
+    background-color: #DD9933;
+    color: white;
+  }
+  
+  .project-section-green {
+    
+    background-color: #15661A;
+    color: white;
+  }
+  
+  .project-section-blue {
+    background-color: #1E73BE;
+    color: white;
+  }
+  
+  .project-section-darkblue {
+    background-color: #183E7C;
+    color: white;
+  }
+  @media screen and (max-width: 1024px) {
+    .project-section-grid {
+      
+      flex-wrap: wrap;
+     
+      justify-content: space-between;
+    }
+  
+    .project-section-card {
+     
+      width: 24%;
+      /* min-width: 12rem; */
+    }
+  }
+  
+  @media  (max-width: 680px) {
+    .project-section {
+      padding: 2rem 0.7rem;
+    }
+    .project-section-description button{
+      width: 45%;
+    }
+    .project-section-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .project-section-card {
+      width: 100%;
+      max-width: 100%;
+    }
+    .project-section-image{
+      height: 13rem;
+    }
+  }
+  

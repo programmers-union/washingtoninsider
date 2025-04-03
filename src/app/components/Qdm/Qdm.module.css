@@ -1,0 +1,240 @@
+/* :global(.qdm-tab-content) {
+  display: none;
+}
+:global(.qdm-tab-content.active) {
+  display: block;
+} */
+
+
+.qdm-section-wrapper {
+  text-align: left;
+    background-color: #302F2C;
+    color: white;
+    height: auto;
+    padding: 0 0 1rem 0;
+  }
+  
+  .qdm-section-tabs {
+    padding: 0 0.5rem;
+    background-color: #141414;
+    display: flex;
+    border-bottom: 2px solid #222;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    height: auto;
+  }
+  
+  .qdm-section-tab {
+    width: auto;
+    height: auto;
+    background-color: #141414;
+    position: relative;
+    padding: 1rem 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .qdm-section-tab:hover {
+    background-color: #1e1e1e;
+  }
+  
+  .qdm-section-tab.active {
+    background-color: #302F2C;
+    
+   
+  }
+  
+  .qdm-section-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #FFCE40;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .qdm-section-content {
+    
+    padding: 0.5rem 0.5rem;
+  }
+  
+  /* CARD LAYOUT */
+  .qdm-card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    
+    height: auto;
+  }
+  
+  .qdm-card {
+    background-color: #302F2C;
+height: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+   
+  }
+  
+  .qdm-card-img {
+    position: relative;
+    width: 100%;
+    height: 12rem;
+    overflow: hidden;
+  }
+  .qdm-card-image{ 
+    object-fit: cover; 
+  }
+  
+  .qdm-card-body {
+    padding: 0.75rem 1rem;
+  }
+  
+  .qdm-card-tag {
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+  
+  .qdm-card-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 0.4rem 0;
+    line-height: 1.4;
+  }
+  
+  .qdm-card-meta {
+    font-style: italic;
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-bottom: 0.6rem;
+  }
+  
+  .qdm-card-author {
+    text-decoration: underline;
+  }
+  
+  .qdm-card-desc {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: #aaa;
+    letter-spacing: 0.03em;
+  }
+  @media (max-width: 1024px) {
+    .qdm-section-tabs {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      gap: 0;
+    }
+  
+    .qdm-section-tab {
+      flex: 1 1 33%;
+      padding: 0.6rem 0.4rem;
+      font-size: 0.75rem;
+      text-align: center;
+      justify-content: center;
+    }
+  
+    .qdm-card-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+    }
+  
+    .qdm-card-img {
+      position: relative;
+      width: 100%;
+      height: 16rem;
+      background-color: black;
+    }
+  
+    /* .qdm-card-image {
+      object-fit: cover !important;
+      width: 100% !important;
+      height: 100% !important;
+      position: absolute !important;
+      inset: 0;
+    } */
+  
+    .qdm-card-body {
+      padding: 0.5rem 0.75rem;
+    }
+  
+    .qdm-card-title {
+      font-size: 0.95rem;
+      line-height: 1.3;
+    }
+  
+    .qdm-card-desc {
+      font-size: 0.8rem;
+    }
+  
+    .qdm-card-meta {
+      font-size: 0.75rem;
+    }
+  
+    .qdm-card-tag {
+      font-size: 0.7rem;
+    }
+  }  
+  @media (max-width: 680px) {
+    .qdm-section-tabs {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      gap: 0;
+    }
+  
+    .qdm-section-tab {
+      flex: 1 1 33%;
+      padding: 0.6rem 0.4rem;
+      font-size: 0.7rem;
+      text-align: center;
+      justify-content: center;
+    }
+  
+    .qdm-card-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+    }
+  
+    .qdm-card-img {
+      position: relative;
+      width: 100%;
+      height: 7rem;
+      background-color: black;
+    }
+  
+    /* .qdm-card-image {
+      object-fit: cover ;
+      width: 100% !important;
+      height: 100% !important;
+      position: absolute !important;
+      inset: 0;
+    } */
+  
+    .qdm-card-body {
+      padding: 0.5rem 0.75rem;
+    }
+  
+    .qdm-card-title {
+      font-size: 0.95rem;
+      line-height: 1.3;
+    }
+  
+    .qdm-card-desc {
+      font-size: 0.8rem;
+    }
+  
+    .qdm-card-meta {
+      font-size: 0.75rem;
+    }
+  
+    .qdm-card-tag {
+      font-size: 0.7rem;
+    }
+  }
+  
+  

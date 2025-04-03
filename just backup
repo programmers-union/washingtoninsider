@@ -1,0 +1,441 @@
+// extradata 
+
+// {
+//           "image": "/images/categorypage1.jpg",
+//           "category": "HOW THEY DID IT",
+//           "title": "How Two Graduate Reporters Exposed a System Used to Hide Police Officer Misconduct",
+//           "author": "Denise-Marie Ordway, The Journalist's Resource",
+//           "date": "March 27, 2025",
+//           "excerpt": "Two reporters, nominated for the 2025 Goldsmith Prize, spent years investigating legal agreements in California that hide police officers’ past misconduct from the..."
+//         },
+//         {
+//           "image": "/images/categorypage2.jpg",
+//           "category": "CLIMATE, REPORTING TOOLS & TIPS",
+//           "title": "New Angle for Reporting on Oil and Gas Industry — Radioactive Waste",
+//           "author": "Justin Nobel, SEJournal",
+//           "date": "March 26, 2025",
+//           "excerpt": "The lack of regulatory oversight of radioactive waste in the oil and gas industry has created an environment ripe for some extraordinary science and environmental..."
+//         },
+//         {
+//           "image": "/images/categorypage3.jpg",
+//           "category": "NEWS & ANALYSIS",
+//           "title": "Creating a New Nonprofit Outlet to Investigate Wildlife Crime",
+//           "author": "Maurice Oniang'o, Reuters Institute",
+//           "date": "March 25, 2025",
+//           "excerpt": "With legacy media stepping back from the space, three veteran reporters decided to create a new outlet dedicated to wildlife investigations."
+//         },
+//         {
+//           "image": "/images/categorypage4.png",
+//           "category": "10 QUESTIONS",
+//           "title": "Investigating Gold Mines, Deforestation, and Corporate Misconduct in the Amazon",
+//           "author": "Andrea Arzaba",
+//           "date": "March 24, 2025",
+//           "excerpt": "Hyury Potter is one of the leading environmental investigative journalists in Brazil. A freelance reporter, he recently won the Pulitzer Center’s Breakthrough..."
+//         }
+        
+
+
+
+
+
+
+
+
+
+
+
+
+//         {
+//     "category1": {
+//       "mainTitle": "Category 1 Stories",
+//       "searchPlaceholder": "Search Category 1",
+//       "postCount": 2766,
+//       "cards": [
+//         {
+//           "image": "/images/categorypage1.jpg",
+//           "category": "1-HOW THEY DID IT",
+//           "title": "How Two Graduate Reporters Exposed a System Used to Hide Police Officer Misconduct",
+//           "author": "Denise-Marie Ordway, The Journalist's Resource",
+//           "date": "March 27, 2025",
+//           "excerpt": "Two reporters, nominated for the 2025 Goldsmith Prize, spent years investigating legal agreements in California that hide police officers’ past misconduct from the..."
+//         },
+//         {
+//           "image": "/images/categorypage2.jpg",
+//           "category": "CLIMATE, REPORTING TOOLS & TIPS",
+//           "title": "New Angle for Reporting on Oil and Gas Industry — Radioactive Waste",
+//           "author": "Justin Nobel, SEJournal",
+//           "date": "March 26, 2025",
+//           "excerpt": "The lack of regulatory oversight of radioactive waste in the oil and gas industry has created an environment ripe for some extraordinary science and environmental..."
+//         },
+//         {
+//           "image": "/images/categorypage3.jpg",
+//           "category": "NEWS & ANALYSIS",
+//           "title": "Creating a New Nonprofit Outlet to Investigate Wildlife Crime",
+//           "author": "Maurice Oniang'o, Reuters Institute",
+//           "date": "March 25, 2025",
+//           "excerpt": "With legacy media stepping back from the space, three veteran reporters decided to create a new outlet dedicated to wildlife investigations."
+//         },
+//         {
+//           "image": "/images/categorypage4.png",
+//           "category": "10 QUESTIONS",
+//           "title": "Investigating Gold Mines, Deforestation, and Corporate Misconduct in the Amazon",
+//           "author": "Andrea Arzaba",
+//           "date": "March 24, 2025",
+//           "excerpt": "Hyury Potter is one of the leading environmental investigative journalists in Brazil. A freelance reporter, he recently won the Pulitzer Center’s Breakthrough..."
+//         }
+        
+//       ],
+//       "pagination": {
+//         "currentPage": 1,
+//         "totalPages": 9
+//       }
+//     },
+//     "category2": {
+//       "mainTitle": "Category 2 Stories",
+//       "searchPlaceholder": "Search Category 2",
+//       "postCount": 3000,
+//       "cards": [
+//         {
+//           "image": "/images/categorypage1.jpg",
+//           "category": "2-HOW THEY DID IT",
+//           "title": "How Two Graduate Reporters Exposed a System Used to Hide Police Officer Misconduct",
+//           "author": "Denise-Marie Ordway, The Journalist's Resource",
+//           "date": "March 27, 2025",
+//           "excerpt": "Two reporters, nominated for the 2025 Goldsmith Prize, spent years investigating legal agreements in California that hide police officers’ past misconduct from the..."
+//         },
+//         {
+//           "image": "/images/categorypage2.jpg",
+//           "category": "CLIMATE, REPORTING TOOLS & TIPS",
+//           "title": "New Angle for Reporting on Oil and Gas Industry — Radioactive Waste",
+//           "author": "Justin Nobel, SEJournal",
+//           "date": "March 26, 2025",
+//           "excerpt": "The lack of regulatory oversight of radioactive waste in the oil and gas industry has created an environment ripe for some extraordinary science and environmental..."
+//         },
+//         {
+//           "image": "/images/categorypage3.jpg",
+//           "category": "NEWS & ANALYSIS",
+//           "title": "Creating a New Nonprofit Outlet to Investigate Wildlife Crime",
+//           "author": "Maurice Oniang'o, Reuters Institute",
+//           "date": "March 25, 2025",
+//           "excerpt": "With legacy media stepping back from the space, three veteran reporters decided to create a new outlet dedicated to wildlife investigations."
+//         },
+//         {
+//           "image": "/images/categorypage4.png",
+//           "category": "10 QUESTIONS",
+//           "title": "Investigating Gold Mines, Deforestation, and Corporate Misconduct in the Amazon",
+//           "author": "Andrea Arzaba",
+//           "date": "March 24, 2025",
+//           "excerpt": "Hyury Potter is one of the leading environmental investigative journalists in Brazil. A freelance reporter, he recently won the Pulitzer Center’s Breakthrough..."
+//         }
+        
+//       ],
+//       "pagination": {
+//         "currentPage": 2,
+//         "totalPages": 9
+//       }
+//     },
+//     "category3": {
+//       "mainTitle": "Category 3 Stories",
+//       "searchPlaceholder": "Search Category 3",
+//       "postCount": 1500,
+//       "cards": [
+//         {
+//           "image": "/images/categorypage1.jpg",
+//           "category": "3-HOW THEY DID IT",
+//           "title": "How Two Graduate Reporters Exposed a System Used to Hide Police Officer Misconduct",
+//           "author": "Denise-Marie Ordway, The Journalist's Resource",
+//           "date": "March 27, 2025",
+//           "excerpt": "Two reporters, nominated for the 2025 Goldsmith Prize, spent years investigating legal agreements in California that hide police officers’ past misconduct from the..."
+//         },
+//         {
+//           "image": "/images/categorypage2.jpg",
+//           "category": "CLIMATE, REPORTING TOOLS & TIPS",
+//           "title": "New Angle for Reporting on Oil and Gas Industry — Radioactive Waste",
+//           "author": "Justin Nobel, SEJournal",
+//           "date": "March 26, 2025",
+//           "excerpt": "The lack of regulatory oversight of radioactive waste in the oil and gas industry has created an environment ripe for some extraordinary science and environmental..."
+//         },
+//         {
+//           "image": "/images/categorypage3.jpg",
+//           "category": "NEWS & ANALYSIS",
+//           "title": "Creating a New Nonprofit Outlet to Investigate Wildlife Crime",
+//           "author": "Maurice Oniang'o, Reuters Institute",
+//           "date": "March 25, 2025",
+//           "excerpt": "With legacy media stepping back from the space, three veteran reporters decided to create a new outlet dedicated to wildlife investigations."
+//         },
+//         {
+//           "image": "/images/categorypage4.png",
+//           "category": "10 QUESTIONS",
+//           "title": "Investigating Gold Mines, Deforestation, and Corporate Misconduct in the Amazon",
+//           "author": "Andrea Arzaba",
+//           "date": "March 24, 2025",
+//           "excerpt": "Hyury Potter is one of the leading environmental investigative journalists in Brazil. A freelance reporter, he recently won the Pulitzer Center’s Breakthrough..."
+//         }
+//       ],
+//       "pagination": {
+//         "currentPage": 3,
+//         "totalPages": 9
+//       }
+//     },
+//     "category4": {
+//       "mainTitle": "Category 4 Stories",
+//       "searchPlaceholder": "Search Category 4",
+//       "postCount": 2000,
+//       "cards": [
+//         {
+//           "image": "/images/categorypage1.jpg",
+//           "category": "4-HOW THEY DID IT",
+//           "title": "How Two Graduate Reporters Exposed a System Used to Hide Police Officer Misconduct",
+//           "author": "Denise-Marie Ordway, The Journalist's Resource",
+//           "date": "March 27, 2025",
+//           "excerpt": "Two reporters, nominated for the 2025 Goldsmith Prize, spent years investigating legal agreements in California that hide police officers’ past misconduct from the..."
+//         },
+//         {
+//           "image": "/images/categorypage2.jpg",
+//           "category": "CLIMATE, REPORTING TOOLS & TIPS",
+//           "title": "New Angle for Reporting on Oil and Gas Industry — Radioactive Waste",
+//           "author": "Justin Nobel, SEJournal",
+//           "date": "March 26, 2025",
+//           "excerpt": "The lack of regulatory oversight of radioactive waste in the oil and gas industry has created an environment ripe for some extraordinary science and environmental..."
+//         },
+//         {
+//           "image": "/images/categorypage3.jpg",
+//           "category": "NEWS & ANALYSIS",
+//           "title": "Creating a New Nonprofit Outlet to Investigate Wildlife Crime",
+//           "author": "Maurice Oniang'o, Reuters Institute",
+//           "date": "March 25, 2025",
+//           "excerpt": "With legacy media stepping back from the space, three veteran reporters decided to create a new outlet dedicated to wildlife investigations."
+//         },
+//         {
+//           "image": "/images/categorypage4.png",
+//           "category": "10 QUESTIONS",
+//           "title": "Investigating Gold Mines, Deforestation, and Corporate Misconduct in the Amazon",
+//           "author": "Andrea Arzaba",
+//           "date": "March 24, 2025",
+//           "excerpt": "Hyury Potter is one of the leading environmental investigative journalists in Brazil. A freelance reporter, he recently won the Pulitzer Center’s Breakthrough..."
+//         }
+//       ],
+//       "pagination": {
+//         "currentPage": 4,
+//         "totalPages": 9
+//       }
+//     },
+//     "category5": {
+//       "mainTitle": "Category 5 Stories",
+//       "searchPlaceholder": "Search Category 5",
+//       "postCount": 1800,
+//       "cards": [
+//         {
+//           "image": "/images/categorypage1.jpg",
+//           "category": "5-HOW THEY DID IT",
+//           "title": "How Two Graduate Reporters Exposed a System Used to Hide Police Officer Misconduct",
+//           "author": "Denise-Marie Ordway, The Journalist's Resource",
+//           "date": "March 27, 2025",
+//           "excerpt": "Two reporters, nominated for the 2025 Goldsmith Prize, spent years investigating legal agreements in California that hide police officers’ past misconduct from the..."
+//         },
+//         {
+//           "image": "/images/categorypage2.jpg",
+//           "category": "CLIMATE, REPORTING TOOLS & TIPS",
+//           "title": "New Angle for Reporting on Oil and Gas Industry — Radioactive Waste",
+//           "author": "Justin Nobel, SEJournal",
+//           "date": "March 26, 2025",
+//           "excerpt": "The lack of regulatory oversight of radioactive waste in the oil and gas industry has created an environment ripe for some extraordinary science and environmental..."
+//         },
+//         {
+//           "image": "/images/categorypage3.jpg",
+//           "category": "NEWS & ANALYSIS",
+//           "title": "Creating a New Nonprofit Outlet to Investigate Wildlife Crime",
+//           "author": "Maurice Oniang'o, Reuters Institute",
+//           "date": "March 25, 2025",
+//           "excerpt": "With legacy media stepping back from the space, three veteran reporters decided to create a new outlet dedicated to wildlife investigations."
+//         },
+//         {
+//           "image": "/images/categorypage4.png",
+//           "category": "10 QUESTIONS",
+//           "title": "Investigating Gold Mines, Deforestation, and Corporate Misconduct in the Amazon",
+//           "author": "Andrea Arzaba",
+//           "date": "March 24, 2025",
+//           "excerpt": "Hyury Potter is one of the leading environmental investigative journalists in Brazil. A freelance reporter, he recently won the Pulitzer Center’s Breakthrough..."
+//         }
+//       ],
+//       "pagination": {
+//         "currentPage": 5,
+//         "totalPages": 9
+//       }
+//     },
+//     "category6": {
+//       "mainTitle": "Category 6 Stories",
+//       "searchPlaceholder": "Search Category 6",
+//       "postCount": 2200,
+//       "cards": [
+//         {
+//           "image": "/images/categorypage1.jpg",
+//           "category": "6-HOW THEY DID IT",
+//           "title": "How Two Graduate Reporters Exposed a System Used to Hide Police Officer Misconduct",
+//           "author": "Denise-Marie Ordway, The Journalist's Resource",
+//           "date": "March 27, 2025",
+//           "excerpt": "Two reporters, nominated for the 2025 Goldsmith Prize, spent years investigating legal agreements in California that hide police officers’ past misconduct from the..."
+//         },
+//         {
+//           "image": "/images/categorypage2.jpg",
+//           "category": "CLIMATE, REPORTING TOOLS & TIPS",
+//           "title": "New Angle for Reporting on Oil and Gas Industry — Radioactive Waste",
+//           "author": "Justin Nobel, SEJournal",
+//           "date": "March 26, 2025",
+//           "excerpt": "The lack of regulatory oversight of radioactive waste in the oil and gas industry has created an environment ripe for some extraordinary science and environmental..."
+//         },
+//         {
+//           "image": "/images/categorypage3.jpg",
+//           "category": "NEWS & ANALYSIS",
+//           "title": "Creating a New Nonprofit Outlet to Investigate Wildlife Crime",
+//           "author": "Maurice Oniang'o, Reuters Institute",
+//           "date": "March 25, 2025",
+//           "excerpt": "With legacy media stepping back from the space, three veteran reporters decided to create a new outlet dedicated to wildlife investigations."
+//         },
+//         {
+//           "image": "/images/categorypage4.png",
+//           "category": "10 QUESTIONS",
+//           "title": "Investigating Gold Mines, Deforestation, and Corporate Misconduct in the Amazon",
+//           "author": "Andrea Arzaba",
+//           "date": "March 24, 2025",
+//           "excerpt": "Hyury Potter is one of the leading environmental investigative journalists in Brazil. A freelance reporter, he recently won the Pulitzer Center’s Breakthrough..."
+//         }
+//       ],
+//       "pagination": {
+//         "currentPage": 6,
+//         "totalPages": 9
+//       }
+//     },
+//     "category7": {
+//       "mainTitle": "Category 7 Stories",
+//       "searchPlaceholder": "Search Category 7",
+//       "postCount": 2400,
+//       "cards": [
+//         {
+//           "image": "/images/categorypage1.jpg",
+//           "category": "7-HOW THEY DID IT",
+//           "title": "How Two Graduate Reporters Exposed a System Used to Hide Police Officer Misconduct",
+//           "author": "Denise-Marie Ordway, The Journalist's Resource",
+//           "date": "March 27, 2025",
+//           "excerpt": "Two reporters, nominated for the 2025 Goldsmith Prize, spent years investigating legal agreements in California that hide police officers’ past misconduct from the..."
+//         },
+//         {
+//           "image": "/images/categorypage2.jpg",
+//           "category": "CLIMATE, REPORTING TOOLS & TIPS",
+//           "title": "New Angle for Reporting on Oil and Gas Industry — Radioactive Waste",
+//           "author": "Justin Nobel, SEJournal",
+//           "date": "March 26, 2025",
+//           "excerpt": "The lack of regulatory oversight of radioactive waste in the oil and gas industry has created an environment ripe for some extraordinary science and environmental..."
+//         },
+//         {
+//           "image": "/images/categorypage3.jpg",
+//           "category": "NEWS & ANALYSIS",
+//           "title": "Creating a New Nonprofit Outlet to Investigate Wildlife Crime",
+//           "author": "Maurice Oniang'o, Reuters Institute",
+//           "date": "March 25, 2025",
+//           "excerpt": "With legacy media stepping back from the space, three veteran reporters decided to create a new outlet dedicated to wildlife investigations."
+//         },
+//         {
+//           "image": "/images/categorypage4.png",
+//           "category": "10 QUESTIONS",
+//           "title": "Investigating Gold Mines, Deforestation, and Corporate Misconduct in the Amazon",
+//           "author": "Andrea Arzaba",
+//           "date": "March 24, 2025",
+//           "excerpt": "Hyury Potter is one of the leading environmental investigative journalists in Brazil. A freelance reporter, he recently won the Pulitzer Center’s Breakthrough..."
+//         }
+        
+//       ],
+//       "pagination": {
+//         "currentPage": 7,
+//         "totalPages": 9
+//       }
+//     },
+//     "category8": {
+//       "mainTitle": "Category 8 Stories",
+//       "searchPlaceholder": "Search Category 8",
+//       "postCount": 2600,
+//       "cards": [
+//         {
+//           "image": "/images/categorypage1.jpg",
+//           "category": "8-HOW THEY DID IT",
+//           "title": "How Two Graduate Reporters Exposed a System Used to Hide Police Officer Misconduct",
+//           "author": "Denise-Marie Ordway, The Journalist's Resource",
+//           "date": "March 27, 2025",
+//           "excerpt": "Two reporters, nominated for the 2025 Goldsmith Prize, spent years investigating legal agreements in California that hide police officers’ past misconduct from the..."
+//         },
+//         {
+//           "image": "/images/categorypage2.jpg",
+//           "category": "CLIMATE, REPORTING TOOLS & TIPS",
+//           "title": "New Angle for Reporting on Oil and Gas Industry — Radioactive Waste",
+//           "author": "Justin Nobel, SEJournal",
+//           "date": "March 26, 2025",
+//           "excerpt": "The lack of regulatory oversight of radioactive waste in the oil and gas industry has created an environment ripe for some extraordinary science and environmental..."
+//         },
+//         {
+//           "image": "/images/categorypage3.jpg",
+//           "category": "NEWS & ANALYSIS",
+//           "title": "Creating a New Nonprofit Outlet to Investigate Wildlife Crime",
+//           "author": "Maurice Oniang'o, Reuters Institute",
+//           "date": "March 25, 2025",
+//           "excerpt": "With legacy media stepping back from the space, three veteran reporters decided to create a new outlet dedicated to wildlife investigations."
+//         },
+//         {
+//           "image": "/images/categorypage4.png",
+//           "category": "10 QUESTIONS",
+//           "title": "Investigating Gold Mines, Deforestation, and Corporate Misconduct in the Amazon",
+//           "author": "Andrea Arzaba",
+//           "date": "March 24, 2025",
+//           "excerpt": "Hyury Potter is one of the leading environmental investigative journalists in Brazil. A freelance reporter, he recently won the Pulitzer Center’s Breakthrough..."
+//         }
+        
+//       ],
+//       "pagination": {
+//         "currentPage": 8,
+//         "totalPages": 9
+//       }
+//     },
+//     "category9": {
+//       "mainTitle": "Category 9 Stories",
+//       "searchPlaceholder": "Search Category 9",
+//       "postCount": 2800,
+//       "cards": [
+//         {
+//           "image": "/images/categorypage1.jpg",
+//           "category": "9-HOW THEY DID IT",
+//           "title": "How Two Graduate Reporters Exposed a System Used to Hide Police Officer Misconduct",
+//           "author": "Denise-Marie Ordway, The Journalist's Resource",
+//           "date": "March 27, 2025",
+//           "excerpt": "Two reporters, nominated for the 2025 Goldsmith Prize, spent years investigating legal agreements in California that hide police officers’ past misconduct from the..."
+//         },
+//         {
+//           "image": "/images/categorypage2.jpg",
+//           "category": "CLIMATE, REPORTING TOOLS & TIPS",
+//           "title": "New Angle for Reporting on Oil and Gas Industry — Radioactive Waste",
+//           "author": "Justin Nobel, SEJournal",
+//           "date": "March 26, 2025",
+//           "excerpt": "The lack of regulatory oversight of radioactive waste in the oil and gas industry has created an environment ripe for some extraordinary science and environmental..."
+//         },
+//         {
+//           "image": "/images/categorypage3.jpg",
+//           "category": "NEWS & ANALYSIS",
+//           "title": "Creating a New Nonprofit Outlet to Investigate Wildlife Crime",
+//           "author": "Maurice Oniang'o, Reuters Institute",
+//           "date": "March 25, 2025",
+//           "excerpt": "With legacy media stepping back from the space, three veteran reporters decided to create a new outlet dedicated to wildlife investigations."
+//         },
+//         {
+//           "image": "/images/categorypage4.png",
+//           "category": "10 QUESTIONS",
+//           "title": "Investigating Gold Mines, Deforestation, and Corporate Misconduct in the Amazon",
+//           "author": "Andrea Arzaba",
+//           "date": "March 24, 2025",
+//           "excerpt": "Hyury Potter is one of the leading environmental investigative journalists in Brazil. A freelance reporter, he recently won the Pulitzer Center’s Breakthrough..."
+//         }
+//       ],
+//       "pagination": {
+//         "currentPage": 9,
+//         "totalPages": 9
+//       }
+//     }
+//   }
+  

@@ -1,0 +1,149 @@
+/* Container for the entire section */
+.videosectionContainer {
+    background-color: #F84449; /* Adjust to match your screenshot's background */
+    padding: 2rem;
+    color: #ffffff;
+  }
+  
+  /* Main heading for the section */
+  .videosectionHeading {
+    border-left: 2px solid ;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-left: 1rem;
+  }
+  
+  /* Grid layout for the cards */
+  .videosectionGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+  
+  /* Individual card wrapper */
+  .videosectionCard {
+    background-color: #C6363A;
+    color: white;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+    height: 25rem;
+  }
+  
+  .videosectionCard:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* 
+    Wrapper for Next.js Image so that it can maintain 
+    a consistent aspect ratio with layout="responsive"
+  */
+  .videosectionImageWrapper {
+    width: 100%;
+    /* The height is determined by the width/height props in <Image />. 
+       If you'd like a fixed height, you can define it here and switch to 
+       layout="fill" or a different approach. */
+    position: relative; 
+    padding: 0;
+    
+    height: 12rem;
+    
+  }
+  
+  /* Next.js Image itself */
+  /* .videosectionImage {
+    height: 10rem;
+    
+  } */
+  
+  /* Content inside each card */
+  .videosectionCardContent {
+    padding: 1rem;
+  }
+  
+  /* Resource text (e.g. "Resource: Video") */
+  .videosectionResource {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+  
+  /* Title of each card */
+  .videosectionTitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    
+  }
+  
+  /* Description paragraph */
+  .videosectionDescription {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    
+  }
+  
+  /* For screens 1024px wide or smaller */
+@media  (max-width: 1024px) {
+    .videosectionGrid {
+      /* Example: 2 columns up to 1024px */
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .videosectionHeading {
+      font-size: 1.1rem; /* Slightly smaller heading */
+    }
+  
+    /* You can also tweak card paddings, title sizes, etc. */
+    .videosectionCardContent {
+      padding: 1rem;
+    }
+    .videosectionImageWrapper{
+      
+      height: 15rem;
+    }
+  }
+  
+  /* For screens 768px wide or smaller */
+  @media (max-width: 768px) {
+    .videosectionGrid {
+      /* Keep 2 columns on tablets (or change to 1fr if you want a single column) */
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .videosectionHeading {
+      font-size: 1rem;
+    }
+  }
+  
+  /* For screens 480px wide or smaller (mobile) */
+  @media (max-width: 680px) {
+    .videosectionImageWrapper{
+      
+      height: 13rem;
+    }
+    .videosectionImage{
+      height: 13rem;
+    }
+    
+    .videosectionGrid {
+      /* Single column on mobile */
+      grid-template-columns: 1fr;
+    }
+  
+    .videosectionHeading {
+      font-size: 0.9rem;
+    }
+  
+    .videosectionCardContent {
+      padding: 0.75rem;
+    }
+  }
+  

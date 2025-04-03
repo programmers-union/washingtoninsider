@@ -1,0 +1,92 @@
+.categorypageGrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1rem;
+}
+
+.categorypageCard {
+  background: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.categorypageCard:hover {
+  transform: translateY(-4px);
+}
+
+.categorypageimagewrapper {
+  position: relative;
+  width: 100%;
+  height: 10rem;
+  background-color: #f2f2f2;
+  overflow: hidden;
+}
+
+.categorypageImage {
+  object-fit: cover;
+}
+
+.categorypageText {
+  padding: 1rem;
+}
+
+.categorypageCategory {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.categorypageHeading {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.categorypageMeta {
+  font-size: 0.8rem;
+  color: #626262;
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+.categorypageMetaAuthor {
+  text-decoration: underline;
+}
+
+.categorypageExcerpt {
+  font-size: 0.85rem;
+  color: #6D6D6D;
+  letter-spacing: 0.03em;
+}
+
+.loadMoreButton {
+  
+  display: block;
+  margin: 2rem auto;
+  padding: 0.75rem 0.75rem;
+  font-size: 1rem;
+  background: #302F2C;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.loadMoreButton:hover {
+  background: #444;
+}
+
+
+/* Responsive styles for small devices */
+@media (max-width: 680px) {
+  .categorypageGrid {
+    grid-template-columns: 1fr;
+  }
+}
