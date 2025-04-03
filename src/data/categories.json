@@ -4,7 +4,7 @@
     "categorySlug":"stories",
     "mainTitle": "STORIES",
     "searchPlaceholder": "Search Category 1",
-    "postCount": 2766,
+    "postCount": 24,
     "cards": [
       {
         "image": "/images/categorypage1.webp",
@@ -1281,5 +1281,159 @@
       "currentPage": 9,
       "totalPages": 9
     }
+  },
+  "GIJN_HUB": {
+    "id": 10,
+    "categorySlug": "gijn-hub",
+    "mainTitle": "GIJN Hub",
+    "searchPlaceholder": "Search GIJN Hub",
+    "postCount": 7,
+    "cards": [
+      {
+        "image": "/images/GH1.webp",
+        "category": "Event",
+        "title": "GIJC25 Call for Academic Papers",
+        "slug": "gijc25-call-for-academic-papers",
+        "author": "John Doe, GIJN",
+        "date": "31 March 2025",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "content1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod, nisi vel congue consequat, magna libero luctus nibh, sit amet pretium mi magna eu justo.",
+        "content2": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+        "detailSubtitle": "COVID-19 Pandemic's Legacy, Five Years On",
+        "detailGraphImage": "/images/detailgraph.webp",
+        "variant": "event",
+        "type": "Upcoming Event"
+      },
+      {
+        "image": "/images/GH2.webp",
+        "category": "Event",
+        "title": "Register for #GIJC25: Extended Deadline — April 15, 2025",
+        "slug": "register-for-gijc25-extended-deadline",
+        "author": "Jane Smith, GIJN",
+        "date": "15 April 2025",
+        "excerpt": "Suspendisse potenti lorem ipsum dolor sit amet.",
+        "content1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.",
+        "content2": "Cras ultricies ligula sed magna dictum porta. Nulla porttitor accumsan tincidunt.",
+        "detailSubtitle": "COVID-19 Pandemic's Legacy, Five Years On",
+        "detailGraphImage": "/images/detailgraph.webp",
+        "variant": "event",
+        "type": "Upcoming Event"
+      },
+      {
+        "image": "/images/GH3.webp",
+        "category": "Donation",
+        "title": "Donate to Support Investigative Journalism",
+        "slug": "donate-to-support-investigative-journalism",
+        "author": "GIJN Team",
+        "date": "",
+        "excerpt": "Help empower watchdog journalists worldwide.",
+        "content1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra nisi at libero malesuada, vitae convallis urna volutpat.",
+        "content2": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "detailSubtitle": "Support Transparency in Journalism",
+        "detailGraphImage": "/images/detailgraph.webp",
+        "variant": "donate",
+        "type": "Donate",
+        "description": "Empower the World’s Watchdog Journalists"
+      },
+      {
+        "image": "/images/GH4.webp",
+        "category": "Newsletter",
+        "title": "GIJN Newsletter",
+        "slug": "gijn-newsletter",
+        "author": "GIJN Editorial",
+        "date": "",
+        "excerpt": "Subscribe for the latest GIJN updates.",
+        "content1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit.",
+        "content2": "Cras ultricies ligula sed magna dictum porta. Pellentesque in ipsum id orci porta dapibus.",
+        "detailSubtitle": "Stay Updated with GIJN",
+        "detailGraphImage": "/images/detailgraph.webp",
+        "variant": "newsletter",
+        "type": "Newsletter",
+        "description": "The GIJN Bulletin is free and distributed to journalists in more than 100 countries.",
+        "cta": "Subscribe →"
+      },
+      {
+        "image": "/images/GH5.webp",
+        "category": "Calendar",
+        "title": "GIJN Calendar",
+        "slug": "gijn-calendar",
+        "author": "GIJN Team",
+        "date": "",
+        "excerpt": "Check upcoming events and key dates.",
+        "content1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porttitor accumsan tincidunt.",
+        "content2": "Sed porttitor lectus nibh. Vivamus suscipit tortor eget felis porttitor volutpat.",
+        "detailSubtitle": "Stay Informed",
+        "detailGraphImage": "/images/detailgraph.webp",
+        "variant": "calendar",
+        "type": "Calendar"
+      },
+      {
+        "image": "/images/GH6.webp",
+        "category": "Membership",
+        "title": "GIJN Membership",
+        "slug": "gijn-membership",
+        "author": "GIJN",
+        "date": "",
+        "excerpt": "Join our community of investigative journalists.",
+        "content1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus.",
+        "content2": "Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.",
+        "detailSubtitle": "Join the GIJN Community",
+        "detailGraphImage": "/images/detailgraph.webp",
+        "variant": "membership",
+        "type": "Membership"
+      },
+      {
+        "image": "/images/GH1.webp",
+        "category": "Jobs Board",
+        "title": "GIJN Jobs Board",
+        "slug": "gijn-jobs-board",
+        "author": "GIJN Careers",
+        "date": "",
+        "excerpt": "Find your next opportunity in investigative journalism.",
+        "content1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "content2": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "detailSubtitle": "Explore Opportunities",
+        "detailGraphImage": "/images/detailgraph.webp",
+        "variant": "jobs",
+        "type": "Jobs Board",
+        "jobs": [
+          {
+            "title": "Investigative Reporter",
+            "org": "The War Horse",
+            "location": "Sanford, North Carolina",
+            "deadline": "31 March 2025"
+          },
+          {
+            "title": "Open Source Investigator and Trainer (Conflict)",
+            "org": "Bellingcat",
+            "location": "Remote",
+            "deadline": "6 April 2025"
+          },
+          {
+            "title": "Regional Director, Americas",
+            "org": "Committee to Protect Journalists",
+            "location": "New York or DC, US",
+            "deadline": "24 March 2025"
+          },
+          {
+            "title": "Investigative Journalist",
+            "org": "Daily Maverick",
+            "location": "Johannesburg or Cape Town",
+            "deadline": "17 March 2025"
+          },
+          {
+            "title": "Chief Investigator",
+            "org": "Declassified UK",
+            "location": "Remote/London, UK",
+            "deadline": "28 March 2025"
+          }
+        ]
+      }
+    ],
+    "pagination": {
+      "currentPage": 1,
+      "totalPages": 1
+    }
   }
+  
 }

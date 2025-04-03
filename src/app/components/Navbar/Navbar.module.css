@@ -294,8 +294,10 @@ font-size:1.5rem;
 }
 
 .navbar-dropdown {
-  position: absolute;
+  position: fixed;  
+  /* position: absolute; */
   height: auto;
+  /* top: auto; */
   /* top: 20vh;  */
   left: 50%;
   transform: translateX(-50%);
@@ -431,6 +433,7 @@ font-size:1.5rem;
 /* separate mobile search code  */
 .search-mobile-div{
   
+  position: fixed;  
   /* position: absolute; */
   /* padding: 0.5rem ; */
   z-index: 9999;
@@ -442,7 +445,7 @@ font-size:1.5rem;
  
 }
 .inside-search-mobile-div{
-  
+  position: absolute;  
   background-color: #999999;
   padding: 0.5rem ;
   cursor: pointer;
@@ -616,7 +619,7 @@ font-size:1.5rem;
     /* left: 50%; */
     /* transform: translateX(-50%); */
      /* Prevent overflow */
-    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-y: auto; 
     
   }
   .navbar-footer{

@@ -573,11 +573,12 @@
   }
   
   .gh-donate-btn {
+    color: black;
     background-color: white;
     /* color: #0070f3; */
     font-size: 1rem;
     font-weight:500;
-    padding: 0.2rem 0.4rem;
+    padding: 0.2rem 0.6rem;
     border-radius:50%;
     text-decoration: none;
     width: auto;
