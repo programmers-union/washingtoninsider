@@ -44,7 +44,7 @@ export default async function CategoryPage({
         <div className={styles.categorypageHeaderInner}>
           <h1 className={styles.categorypageTitle}>{categoryData.mainTitle}</h1>
         </div>
-        <div className={styles.categorypageFloatingSearchBox}>
+        {/* <div className={styles.categorypageFloatingSearchBox}>
           <div className={styles.categorypageSearchWrapper}>
             <span className={styles.categorypageSearchIcon}>🔍</span>
             <input
@@ -60,7 +60,7 @@ export default async function CategoryPage({
               <option>Africa focus</option>
             </select>
           </div>
-        </div>
+        </div> */}
       </section>
 
       <div className={styles.categorypagePostCountDiv}>

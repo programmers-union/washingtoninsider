@@ -45,22 +45,23 @@ const Navbar = () => {
       {/* Top Language Bar */}
       <div className={styles["navbar-languageBar"]}>
         {[
-          { name: "اردو", link: "#" },
-          { name: "العربية", link: "#" },
-          { name: "বাংলা", link: "#" },
-          { name: "English", link: "#" },
-          { name: "Français", link: "#" },
-          { name: "Español", link: "#" },
-          { name: "Português", link: "#" },
-          { name: "Українська", link: "#" },
-          { name: "Türkçe", link: "#" },
-          { name: "हिंदी", link: "#" },
-          { name: "Русский", link: "#" },
-          { name: "Africa", link: "#" },
-          { name: "Deutsch", link: "#" },
-          { name: "Indonesian", link: "#" },
-          { name: "中文", link: "#" },
-        ].map((lang, index) => (
+  { name: "English", link: "#" },
+  { name: "Français", link: "#" },
+  { name: "Español", link: "#" },
+  { name: "Português", link: "#" },
+  { name: "Українська", link: "#" },
+  { name: "Türkçe", link: "#" },
+  { name: "Русский", link: "#" },
+  { name: "Deutsch", link: "#" },
+  { name: "Italiano", link: "#" },
+  { name: "Polski", link: "#" },
+  { name: "Nederlands", link: "#" },
+  { name: "Čeština", link: "#" },
+  { name: "Svenska", link: "#" },
+  { name: "Română", link: "#" },
+  { name: "Ελληνικά", link: "#" }
+]
+.map((lang, index) => (
           <a key={index} href={lang.link} className={styles["navbar-language"]}>
             {lang.name}
           </a>
@@ -156,66 +157,84 @@ const Navbar = () => {
     {isMenuOpen && (
         <div className={styles["navbar-dropdown"]}>
           <ul className={styles["navbar-menuList"]}>
+            <Link href="/realestate">
             <li>
-              <span className={styles["navbar-itemTitle"]}>Stories</span>
+              <span className={styles["navbar-itemTitle"]}>Real estate</span>
               <span className={styles["navbar-itemDesc"]}>
                 Reporting from around the world
               </span>
               <span className={styles["navbar-itemArrow"]}>→</span>
             </li>
+            </Link>
+            <Link href="/stocks">
             <li>
               <span className={styles["navbar-itemTitle"]}>
-                Resource Center
+              Stocks
               </span>
               <span className={styles["navbar-itemDesc"]}>
                 A library of resources for journalists
               </span>
               <span className={styles["navbar-itemArrow"]}>→</span>
             </li>
+            </Link>
+            <Link href="/cryptocurrency">
             <li>
-              <span className={styles["navbar-itemTitle"]}>About</span>
+              <span className={styles["navbar-itemTitle"]}>Cryptocurrency</span>
               <span className={styles["navbar-itemDesc"]}>
                 Find out about our organization
               </span>
               <span className={styles["navbar-itemArrow"]}>→</span>
             </li>
+            </Link>
+            <Link href="/reits">
             <li>
-              <span className={styles["navbar-itemTitle"]}>Membership</span>
+              <span className={styles["navbar-itemTitle"]}>REITs</span>
               <span className={styles["navbar-itemDesc"]}>
                 Find out about our members and joining
               </span>
               <span className={styles["navbar-itemArrow"]}>→</span>
             </li>
+            </Link>
+            <Link href="/artificial-intelligence-and-tech-startups">
             <li>
-              <span className={styles["navbar-itemTitle"]}>Conferences</span>
+              <span className={styles["navbar-itemTitle"]}>Artificial Intelligence (AI) & Tech Startups</span>
               <span className={styles["navbar-itemDesc"]}>
                 Our bi-annual conferences
               </span>
               <span className={styles["navbar-itemArrow"]}>→</span>
             </li>
+            </Link>
+            <Link href="/sustainable-and-esg-investments">
             <li>
-              <span className={styles["navbar-itemTitle"]}>Awards</span>
+              <span className={styles["navbar-itemTitle"]}>Sustainable & ESG Investments</span>
               <span className={styles["navbar-itemDesc"]}>
                 Awards honoring investigative journalism
               </span>
               <span className={styles["navbar-itemArrow"]}>→</span>
             </li>
+            </Link>
+            
+            <Link href="/private-equity-venture-capital">
             <li>
-              <span className={styles["navbar-itemTitle"]}>Jobs</span>
+              <span className={styles["navbar-itemTitle"]}>Private Equity & Venture Capital</span>
               <span className={styles["navbar-itemDesc"]}>
                 Opportunities within the GIJN Network
               </span>
               <span className={styles["navbar-itemArrow"]}>→</span>
             </li>
+            </Link>
+            <Link href="/metaverse-virtual-real-estate">
             <li>
               <span className={styles["navbar-itemTitle"]}>
-                Regional Editions
+              Metaverse & Virtual Real Estate
               </span>
               <span className={styles["navbar-itemDesc"]}>
                 Our regional homepages and partners
               </span>
               <span className={styles["navbar-itemArrow"]}>→</span>
             </li>
+            </Link>
+            
           </ul>
 
           {/* Languages Row */}

@@ -1,7 +1,7 @@
 {
   "STORIES": {
     "id":1,
-    "categorySlug":"stories",
+    "categorySlug":"realestate",
     "mainTitle": "STORIES",
     "searchPlaceholder": "Search Category 1",
     "postCount": 24,
@@ -326,7 +326,7 @@
   },
   "RESOURCE": {
     "id":2,
-    "categorySlug":"resource",
+    "categorySlug":"stocks",
     "mainTitle": "Resources",
     "searchPlaceholder": "Resources",
     "postCount": 8,
@@ -465,7 +465,7 @@
   },
   "PROJECT": {
     "id":3,
-    "categorySlug":"project",
+    "categorySlug":"cryptocurrency",
     "mainTitle": "Projects",
     "searchPlaceholder": "Projects",
     "postCount": 8,
@@ -582,7 +582,7 @@
   },
   "category4": {
     "id":4,
-    "categorySlug":"4",
+    "categorySlug":"reits",
     "mainTitle": "Category 4 Stories",
     "searchPlaceholder": "Search Category 4",
     "postCount": 2000,
@@ -699,7 +699,7 @@
   },
   "category5": {
     "id":5,
-    "categorySlug":"5",
+    "categorySlug":"artificial-intelligence-and-tech-startups",
     "mainTitle": "Category 5 Stories",
     "searchPlaceholder": "Search Category 5",
     "postCount": 1800,
@@ -816,7 +816,7 @@
   },
   "category6": {
     "id":6,
-    "categorySlug":"6",
+    "categorySlug":"sustainable-and-esg-investments",
     "mainTitle": "Category 6 Stories",
     "searchPlaceholder": "Search Category 6",
     "postCount": 2200,
@@ -933,7 +933,7 @@
   },
   "category7": {
     "id":7,
-    "categorySlug":"7",
+    "categorySlug":"private-equity-venture-capital",
     "mainTitle": "Category 7 Stories",
     "searchPlaceholder": "Search Category 7",
     "postCount": 2400,
@@ -1050,7 +1050,7 @@
   },
   "category8": {
     "id":8,
-    "categorySlug":"8",
+    "categorySlug":"metaverse-virtual-real-estate",
     "mainTitle": "Category 8 Stories",
     "searchPlaceholder": "Search Category 8",
     "postCount": 2600,
