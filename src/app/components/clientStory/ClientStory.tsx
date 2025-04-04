@@ -12,9 +12,9 @@ interface ClientStoryProps {
     image: string;
     title: string;
     category: string;
-    author?: string;
-    date?: string;
-    excerpt?: string;
+    author?: string | null;
+  date?: string | null;
+  excerpt?: string | null;
   }[];
   categorySlug: string;
 }

@@ -1,25 +1,53 @@
+// src/app/components/Qdm/Qdm.tsx
 import ClientQdm from '../ClientQdm/ClientQdm';
-import categoriesJson from '@/data/categories.json';
+import prisma from '@/lib/db';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Qdm.module.css';
 import { TabType } from '../ClientQdm/ClientQdm';
 
-const Qdm = () => {
-  const { category4, category5, category6 } = categoriesJson;
+const Qdm = async () => {
+  // Fetch categories (with their related cards) from the database.
+  // Here we assume category4, category5, and category6 have ids 4, 5, and 6 respectively.
+  const category4 = await prisma.category.findUnique({
+    where: { id: 4 },
+    include: { cards: true },
+  });
+  const category5 = await prisma.category.findUnique({
+    where: { id: 5 },
+    include: { cards: true },
+  });
+  const category6 = await prisma.category.findUnique({
+    where: { id: 6 },
+    include: { cards: true },
+  });
 
-  // Slice only the first 4 cards per category
-  const cards4 = category4?.cards.slice(0, 4) || [];
-  const cards5 = category5?.cards.slice(0, 4) || [];
-  const cards6 = category6?.cards.slice(0, 4) || [];
+  if (!category4 || !category5 || !category6) {
+    return <div>Error loading categories.</div>;
+  }
+
+  // Map each card so that we add a "category" field from the DB field "cardCategory"
+  const cards4 = category4.cards.map((card) => ({
+    ...card,
+    category: card.cardCategory,
+  })).slice(0, 4);
+
+  const cards5 = category5.cards.map((card) => ({
+    ...card,
+    category: card.cardCategory,
+  })).slice(0, 4);
+
+  const cards6 = category6.cards.map((card) => ({
+    ...card,
+    category: card.cardCategory,
+  })).slice(0, 4);
 
   // Prepare tab header data
   const tabs: { id: TabType; label: string }[] = [
-    { id: 'category4', label: category4?.mainTitle || 'category4' },
-    { id: 'category5', label: category5?.mainTitle || 'category5' },
-    { id: 'category6', label: category6?.mainTitle || 'category6' },
+    { id: 'category4', label: category4.mainTitle },
+    { id: 'category5', label: category5.mainTitle },
+    { id: 'category6', label: category6.mainTitle },
   ];
-  
 
   // Helper function to render a grid of cards
   const renderCards = (cards: any[], categorySlug: string, activeTabId: string) => (

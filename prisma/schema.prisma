@@ -1,0 +1,49 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Category {
+  id                Int      @id
+  // If you do NOT want to manually provide category IDs in your JSON,
+  // uncomment the following:
+  // @default(autoincrement())
+
+  categorySlug      String @unique 
+  mainTitle         String
+  searchPlaceholder String
+  postCount         Int
+  cards             Card[]
+}
+
+model Card {
+  id               Int      @id @default(autoincrement())
+  categoryId       Int
+
+  // Fields from your JSON:
+  image            String
+  cardCategory     String  // renamed from "category" in JSON
+  title            String
+  slug             String  @unique
+  author           String?
+  date             String?
+  excerpt          String?
+  content1         String?
+  content2         String?
+  detailSubtitle   String?
+  detailGraphImage String?
+  chapterLabel     String?
+  chapters         String[] @default([])
+  more             String?
+  variant          String?
+  type             String?
+  description      String?
+  cta              String?
+  jobs             Json?
+
+  category         Category @relation(fields: [categoryId], references: [id])
+}

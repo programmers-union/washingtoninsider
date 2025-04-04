@@ -3,20 +3,19 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Navbar from '@/app/components/Navbar/Navbar';
 import Footer from '@/app/components/Footer/Footer';
-import categoriesJson from '@/data/categories.json';
-import type { Categories } from '@/types/category';
+import prisma from '@/lib/db';
 import styles from './page.module.css';
 
-// Cast JSON to our defined type
-const data = categoriesJson as Categories;
-
+// Generate static params for every card in every category
 export async function generateStaticParams() {
+  const categories = await prisma.category.findMany({
+    include: { cards: { select: { slug: true } } },
+  });
+
   const paths: Array<{ category: string; slug: string }> = [];
-  // Use each category's categorySlug rather than the key
-  for (const key in data) {
-    const categoryObj = data[key];
-    for (const card of categoryObj.cards) {
-      paths.push({ category: categoryObj.categorySlug, slug: card.slug });
+  for (const cat of categories) {
+    for (const card of cat.cards) {
+      paths.push({ category: cat.categorySlug, slug: card.slug });
     }
   }
   return paths;
@@ -27,60 +26,81 @@ export default async function DetailPage({
 }: {
   params: Promise<{ category: string; slug: string }>;
 }) {
-  const { category, slug } =  await params;
-  // Look up category by matching categorySlug
-  const categoryData = Object.values(data).find(
-    (cat) => cat.categorySlug === category
-  );
+  const { category, slug } =await params;
+
+  // Get the category data (including its cards) by categorySlug
+  const categoryData = await prisma.category.findFirst({
+    where: { categorySlug: category },
+    include: { cards: true },
+  });
   if (!categoryData) return notFound();
 
-  const card = categoryData.cards.find((card) => card.slug === slug);
+  // Because your DB field is named "cardCategory", we remap it to "category"
+  const sanitizedCards = categoryData.cards.map((card) => ({
+    ...card,
+    category: card.cardCategory,
+  }));
+
+  // Find the specific card by slug
+  const card = sanitizedCards.find((c) => c.slug === slug);
   if (!card) return notFound();
 
-  // --- Compute Next Categories for left/right sections ---
-  const totalCategories = Object.keys(data).length; // e.g., 9
+  // --- For the left/right sections, fetch all categories from the DB ---
+  const allCategories = await prisma.category.findMany({ include: { cards: true } });
+  const totalCategories = allCategories.length;
   const currentCatId = categoryData.id;
+  // Compute next and next-next category IDs (assuming sequential IDs)
   const nextId = (currentCatId % totalCategories) + 1;
   const nextNextId = ((currentCatId + 1) % totalCategories) + 1;
-  const categoriesArray = Object.values(data);
-  const nextCategoryData = categoriesArray.find((cat) => cat.id === nextId);
-  const nextNextCategoryData = categoriesArray.find((cat) => cat.id === nextNextId);
+  const nextCategoryData = allCategories.find((cat) => cat.id === nextId);
+  const nextNextCategoryData = allCategories.find((cat) => cat.id === nextNextId);
 
-  // --- Compute "Read Next" Cards from the same category (latest 4 excluding current) ---
-  const readNextCards = [...categoryData.cards]
+  // --- "Read Next" Cards: Latest 4 cards from the same category (excluding current) ---
+  const readNextCards = sanitizedCards
     .filter((c) => c.slug !== slug)
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .sort(
+      (a, b) =>
+        new Date(b.date || '').getTime() - new Date(a.date || '').getTime()
+    )
     .slice(0, 4);
 
-    // --- Build Tags: extract unique card category values from current category's cards ---
-const uniqueTags = Array.from(new Set(categoryData.cards.map((c) => c.category)));
-const tagLinks = uniqueTags.map((tag) => {
-  const targetCard = categoryData.cards.find((c) => c.category === tag);
-  return {
-    tag,
-    href: `/${categoryData.categorySlug}/${targetCard?.slug}`,
-  };
-});
+  // --- Build Tags: extract unique card category values ---
+  const uniqueTags = Array.from(new Set(sanitizedCards.map((c) => c.category)));
+  const tagLinks = uniqueTags.map((tag) => {
+    const targetCard = sanitizedCards.find((c) => c.category === tag);
+    return {
+      tag,
+      href: `/${categoryData.categorySlug}/${targetCard?.slug}`,
+    };
+  });
 
+  // --- For Left Section: Next Category Cards ---
+  const nextSanitizedCards = nextCategoryData
+    ? nextCategoryData.cards.map((card) => ({
+        ...card,
+        category: card.cardCategory,
+      }))
+    : [];
+  const sortedNextCards = nextSanitizedCards
+    .sort(
+      (a, b) =>
+        new Date(b.date || '').getTime() - new Date(a.date || '').getTime()
+    )
+    .slice(0, 4);
 
-  // --- For Left Section (Next Category Cards): Sort nextCategoryData.cards descending, then take first 4 ---
-  const sortedNextCards =
-    nextCategoryData && nextCategoryData.cards
-      ? [...nextCategoryData.cards].sort(
-          (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-        ).slice(0, 4)
-      : [];
-
-  // --- For Right Section (Next-Next Category Cards): Sort descending and take first 4 ---
-  const sortedNextNextCards =
-    nextNextCategoryData && nextNextCategoryData.cards
-      ? [...nextNextCategoryData.cards].sort(
-          (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-        ).slice(0, 4)
-      : [];
-
- 
-
+  // --- For Right Section: Next-Next Category Cards ---
+  const nextNextSanitizedCards = nextNextCategoryData
+    ? nextNextCategoryData.cards.map((card) => ({
+        ...card,
+        category: card.cardCategory,
+      }))
+    : [];
+  const sortedNextNextCards = nextNextSanitizedCards
+    .sort(
+      (a, b) =>
+        new Date(b.date || '').getTime() - new Date(a.date || '').getTime()
+    )
+    .slice(0, 4);
 
   return (
     <>
@@ -129,8 +149,8 @@ const tagLinks = uniqueTags.map((tag) => {
       <div className={styles.detailpageContentWrapper}>
         {/* LEFT COLUMN: Share & Related Resources (Next Category) */}
         <div className={styles.detailpageLeft}>
-          {/* SHARE SECTION */}
-          <div className={styles.detailpageShareBlock}>
+           {/* SHARE SECTION */}
+           <div className={styles.detailpageShareBlock}>
             <h4 className={styles.detailpageShareTitle}>SHARE</h4>
             <div className={styles.detailpageShareGrid}>
         <div className={styles.detailpageShareItem}>
@@ -188,7 +208,7 @@ const tagLinks = uniqueTags.map((tag) => {
         </div>
       </div>
           </div>
-          {/* NEXT CATEGORY CARDS (Latest from Next Category) */}
+          
           {nextCategoryData && (
             <div className={styles.detailpageResourcesBlock}>
               <h4 className={styles.detailpageResourcesTitle}>
@@ -196,7 +216,10 @@ const tagLinks = uniqueTags.map((tag) => {
               </h4>
               <div className={styles.resourceCards}>
                 {sortedNextCards.map((resCard, index) => (
-                  <Link key={index} href={`/${nextCategoryData.categorySlug}/${resCard.slug}`}>
+                  <Link
+                    key={index}
+                    href={`/${nextCategoryData.categorySlug}/${resCard.slug}`}
+                  >
                     <div className={styles.detailpageResourceCard}>
                       <Image
                         src={resCard.image}
@@ -226,17 +249,20 @@ const tagLinks = uniqueTags.map((tag) => {
             {card.detailSubtitle}
           </h2>
           <div className={styles.detailpageGraph}>
-            <Image
-              src={card.detailGraphImage}
-              alt="Detail Graph"
-              fill
-              className={styles.detailpageGraphImage}
-            />
+          {card.detailGraphImage && (
+                <Image
+                  src={card.detailGraphImage}
+                  alt="Detail Graph"
+                  fill
+                  className={styles.detailpageGraphImage}
+                />
+              )}
+
           </div>
           <p className={styles.detailpageParagraph}>{card.content2}</p>
         </div>
 
-        {/* RIGHT COLUMN: Related Stories from Next-Next Category (Latest) */}
+        {/* RIGHT COLUMN: Related Stories (Next-Next Category Cards) */}
         {nextNextCategoryData && (
           <div className={styles.detailpageRight}>
             <h3 className={styles.detailpageRightHeading}>
@@ -244,7 +270,10 @@ const tagLinks = uniqueTags.map((tag) => {
             </h3>
             <div className={styles.storyCards}>
               {sortedNextNextCards.map((storyCard, idx) => (
-                <Link key={idx} href={`/${nextNextCategoryData.categorySlug}/${storyCard.slug}`}>
+                <Link
+                  key={idx}
+                  href={`/${nextNextCategoryData.categorySlug}/${storyCard.slug}`}
+                >
                   <div className={styles.detailpageStoryCard}>
                     <Image
                       src={storyCard.image}
@@ -266,6 +295,7 @@ const tagLinks = uniqueTags.map((tag) => {
           </div>
         )}
       </div>
+
       {/* FOOTER NOTE & TAGS */}
       <div className={styles.detailpageFooterNote}>
         <div className={styles.detailpageLicense}>
@@ -287,10 +317,10 @@ const tagLinks = uniqueTags.map((tag) => {
             </p>
           </div>
           <div className={styles.detailpageLicenseRight}>
-            <button className={styles.detailpageRepublishBtn}>
+          <button className={styles.detailpageRepublishBtn}>
               <span className={styles.detailpageRepublishBtnSpan}>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M142.9 142.9c-17.5 17.5-30.1 38-37.8 59.8c-5.9 16.7-24.2 25.4-40.8 19.5s-25.4-24.2-19.5-40.8C55.6 150.7 73.2 122 97.6 97.6c87.2-87.2 228.3-87.5 315.8-1L455 55c6.9-6.9 17.2-8.9 26.2-5.2s14.8 12.5 14.8 22.2l0 128c0 13.3-10.7 24-24 24l-8.4 0c0 0 0 0 0 0L344 224c-9.7 0-18.5-5.8-22.2-14.8s-1.7-19.3 5.2-26.2l41.1-41.1c-62.6-61.5-163.1-61.2-225.3 1zM16 312c0-13.3 10.7-24 24-24l7.6 0 .7 0L168 288c9.7 0 18.5 5.8 22.2 14.8s1.7 19.3-5.2 26.2l-41.1 41.1c62.6 61.5 163.1 61.2 225.3-1c17.5-17.5 30.1-38 37.8-59.8c5.9-16.7 24.2-25.4 40.8-19.5s25.4 24.2 19.5 40.8c-10.8 30.6-28.4 59.3-52.9 83.8c-87.2 87.2-228.3 87.5-315.8 1L57 457c-6.9 6.9-17.2 8.9-26.2 5.2S16 449.7 16 440l0-119.6 0-.7 0-7.6z"/></svg>
-              </span>{' '}
+              </span>
               Republish this article
             </button>
             <p>
@@ -303,12 +333,11 @@ const tagLinks = uniqueTags.map((tag) => {
             READ OTHER STORIES TAGGED WITH:
           </p>
           <div className={styles.detailpageTagList}>
-          {tagLinks.map((item, index) => (
-  <Link key={index} href={item.href}>
-    <span className={styles.detailpageTag}>{item.tag}</span>
-  </Link>
-))}
-
+            {tagLinks.map((item, index) => (
+              <Link key={index} href={item.href}>
+                <span className={styles.detailpageTag}>{item.tag}</span>
+              </Link>
+            ))}
           </div>
         </div>
       </div>

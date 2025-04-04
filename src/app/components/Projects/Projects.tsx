@@ -1,14 +1,20 @@
+// src/app/components/Projects/Projects.tsx
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Projects.module.css';
-import categoriesJson from '@/data/categories.json';
+import prisma from '@/lib/db'; // <-- Prisma client
 
-const Projects = () => {
-  
-  const projectCategory = categoriesJson['category3'];
+const Projects = async () => {
+  // Fetch the specific category by ID (category3 corresponds to ID: 3)
+  const projectCategory = await prisma.category.findUnique({
+    where: { id: 3 },
+    include: { cards: true },
+  });
+
+  if (!projectCategory) return null;
+
   const projectCards = projectCategory.cards.slice(0, 4);
 
-  // Allow dynamic keys by typing as Record<string, string>
   const colorMapping: Record<string, string> = {
     'Africa Focus': 'orange',
     'LATAM Focus': 'green',
@@ -26,7 +32,7 @@ const Projects = () => {
           return (
             <Link
               key={index}
-              href={`/${projectCategory.categorySlug}/${project.slug}`} 
+              href={`/${projectCategory.categorySlug}/${project.slug}`}
               className={styles['project-section-card']}
             >
               <div className={styles['project-section-image']}>
@@ -34,8 +40,8 @@ const Projects = () => {
                   className={styles['project-section-image-img']}
                   src={project.image}
                   alt={project.title}
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  style={{ objectFit: 'cover' }}
                 />
                 <div className={styles['project-section-overlay']}>
                   <h3 className={styles['project-section-overlay-title']}>

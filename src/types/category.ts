@@ -33,10 +33,6 @@ export interface CategoryData {
   searchPlaceholder: string;
   postCount: number;
   cards: Card[];
-  pagination: {
-    currentPage: number;
-    totalPages: number;
-  };
 }
 
 export type Categories = Record<string, CategoryData>;

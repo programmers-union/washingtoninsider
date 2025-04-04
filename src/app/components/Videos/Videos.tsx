@@ -1,26 +1,49 @@
+// src/app/videos/page.tsx
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import categoriesJson from "@/data/categories.json";
+import prisma from "@/lib/db";
 import styles from "./Videos.module.css";
 
-export default function Videos() {
-  // Get the RESOURCE category data
-const resourceCategory = categoriesJson["category2"];
+// This component is now a Server Component (async) because we're fetching data using Prisma.
+export default async function Videos() {
+  // Fetch the resource category with the unique categorySlug "stocks"
+  const resourceCategory = await prisma.category.findUnique({
+    where: { categorySlug: "stocks" },
+    include: { cards: true },
+  });
 
-// Filter only cards where card.category is 'video'
-const videoCards = resourceCategory.cards.filter(card => card.category === "video");
+  // If the category isn't found, return an error message.
+  if (!resourceCategory) {
+    return <div>Category not found</div>;
+  }
 
-// Show only the first 4 videos (adjust if needed)
-const displayedVideos = videoCards.slice(0, 4);
+  // Map each card to add a "category" field (copying from "cardCategory")
+  const mappedResourceCategory = {
+    ...resourceCategory,
+    cards: resourceCategory.cards.map((card) => ({
+      ...card,
+      category: card.cardCategory || "",
+    })),
+  };
 
+  // Filter the cards so that only those with category "video" remain.
+  const videoCards = mappedResourceCategory.cards.filter(
+    (card) => card.category === "video"
+  );
+
+  // Slice the first 4 video cards
+  const displayedVideos = videoCards.slice(0, 4);
 
   return (
     <section className={styles.videosectionContainer}>
       <h2 className={styles.videosectionHeading}>Videos</h2>
       <div className={styles.videosectionGrid}>
         {displayedVideos.map((card, index) => (
-          <Link key={index} href={`/${resourceCategory.categorySlug}/${card.slug}`}>
+          <Link
+            key={index}
+            href={`/${mappedResourceCategory.categorySlug}/${card.slug}`}
+          >
             <div className={styles.videosectionCard}>
               <div className={styles.videosectionImageWrapper}>
                 <Image
@@ -32,10 +55,10 @@ const displayedVideos = videoCards.slice(0, 4);
                 />
               </div>
               <div className={styles.videosectionCardContent}>
-                <p className={styles.videosectionResource}>{resourceCategory.categorySlug} : videos</p>
-                <h3 className={styles.videosectionTitle}>
-                  {card.title}
-                </h3>
+                <p className={styles.videosectionResource}>
+                  {mappedResourceCategory.categorySlug} : videos
+                </p>
+                <h3 className={styles.videosectionTitle}>{card.title}</h3>
                 <p className={styles.videosectionDescription}>
                   {card.excerpt}
                 </p>
