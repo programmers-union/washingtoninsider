@@ -6,7 +6,7 @@ import styles from "./Videos.module.css";
 
 export default function Videos() {
   // Get the RESOURCE category data
-const resourceCategory = categoriesJson["RESOURCE"];
+const resourceCategory = categoriesJson["category2"];
 
 // Filter only cards where card.category is 'video'
 const videoCards = resourceCategory.cards.filter(card => card.category === "video");

@@ -240,21 +240,21 @@ const Navbar = () => {
           {/* Languages Row */}
           <div className={styles["navbar-languagesRow"]}>
             {[
-              "اردو",
-              "العربية",
-              "বাংলা",
               "English",
               "Français",
               "Español",
               "Português",
               "Українська",
               "Türkçe",
-              "हिंदी",
               "Русский",
-              "Africa",
               "Deutsch",
-              "Indonesian",
-              "中文",
+              "Italiano",
+              "Polski",
+              "Nederlands",
+              "Čeština",
+              "Svenska",
+              "Română",
+              "Ελληνικά",
             ].map((lang, index) => (
               <button key={index} className={styles["navbar-langButton"]}>
                 {lang}

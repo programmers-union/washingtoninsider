@@ -4,8 +4,8 @@ import styles from './Projects.module.css';
 import categoriesJson from '@/data/categories.json';
 
 const Projects = () => {
-  // Get the PROJECT category from JSON
-  const projectCategory = categoriesJson['PROJECT'];
+  
+  const projectCategory = categoriesJson['category3'];
   const projectCards = projectCategory.cards.slice(0, 4);
 
   // Allow dynamic keys by typing as Record<string, string>

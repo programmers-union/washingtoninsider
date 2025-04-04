@@ -4,13 +4,14 @@ import styles from "./Story.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import categoriesJson from "@/data/categories.json";
+import ClientStory from "../clientStory/ClientStory";
 
 
 
 // Extract dynamic data from JSON
-const storiesCategory = categoriesJson["STORIES"];
-const resourceCategory = categoriesJson["RESOURCE"];
-const gijnHubCategory = categoriesJson["GIJN_HUB"];
+const storiesCategory = categoriesJson["category1"];
+const resourceCategory = categoriesJson["category2"];
+const gijnHubCategory = categoriesJson["category8"];
 
 
 // For the main story slider, get the latest 5 story cards
@@ -22,92 +23,7 @@ const subStories = storiesCategory.cards.slice(0, 8);
 // For the Resource Center on the right, get the latest 5 cards
 const resourceCenterData = resourceCategory.cards.slice(0, 5);
 
-// GIJN Hub remains static (we’ll make it dynamic later)
-// const gijnHubData = [
-//   {
-//     image: "/images/GH1.webp",
-//     type: "Upcoming Event",
-//     title: "GIJC25 Call for Academic Papers",
-//     date: "31 March 2025",
-//     variant: "event",
-//     link: "#",
-//   },
-//   {
-//     image: "/images/GH2.webp",
-//     type: "Upcoming Event",
-//     title: "Register for #GIJC25: Extended Deadline — April 15, 2025",
-//     date: "15 April 2025",
-//     variant: "event",
-//     link: "#",
-//   },
-//   {
-//     image: "/images/GH3.webp",
-//     type: "Donate",
-//     description: "Empower the World’s Watchdog Journalists",
-//     variant: "donate",
-//     link: "#",
-//   },
-//   {
-//     image: "/images/GH4.webp",
-//     title: "GIJN Newsletter",
-//     description:
-//       "The GIJN Bulletin is free and distributed to journalists in more than 100 countries",
-//     cta: "Subscribe →",
-//     variant: "newsletter",
-//     link: "#",
-//   },
-//   {
-//     image: "/images/GH5.webp",
-//     type: "Calendar",
-//     variant: "calendar",
-//     link: "#",
-//   },
-//   {
-//     image: "/images/GH6.webp",
-//     type: "Membership",
-//     variant: "membership",
-//     link: "#",
-//   },
-//   {
-//     type: "Jobs Board",
-//     jobs: [
-//       {
-//         title: "Investigative Reporter",
-//         org: "The War Horse",
-//         location: "Sanford, North Carolina",
-//         deadline: "31 March 2025",
-//       },
-//       {
-//         title: "Open Source Investigator and Trainer (Conflict)",
-//         org: "Bellingcat",
-//         location: "Remote",
-//         deadline: "6 April 2025",
-//       },
-//       {
-//         title: "Regional Director, Americas",
-//         org: "Committee to Protect Journalists",
-//         location: "New York or DC, US",
-//         deadline: "24 March 2025",
-//       },
-//       {
-//         title: "Investigative Journalist",
-//         org: "Daily Maverick",
-//         location: "Johannesburg or Cape Town",
-//         deadline: "17 March 2025",
-//       },
-//       {
-//         title: "Chief Investigator",
-//         org: "Declassified UK",
-//         location: "Remote/London, UK",
-//         deadline: "28 March 2025",
-//       },
-//     ],
-//     variant: "jobs",
-//     link: "#",
-//   },
-// ];
 
-import ClientStory from "../clientStory/ClientStory";
 
 export default function Story() {
   return (
