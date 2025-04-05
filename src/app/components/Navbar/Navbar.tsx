@@ -86,7 +86,7 @@ const Navbar = () => {
             {isSearchOpen && (
               <input
                 type="text"
-                placeholder="Search"
+                placeholder="search"
                 className={styles["navbar-searchInput"]}
               />
             )}
