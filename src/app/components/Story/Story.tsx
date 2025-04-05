@@ -132,7 +132,7 @@ export default async function Story() {
                     alt={story.title ?? ""}
                     fill
                     className={styles.substoryImage}
-                  ></Image>
+                  />
                 </div>
                 <div className={styles.substoryText}>
                   <p className={styles.substoryCategory}>{story.category}</p>
@@ -182,7 +182,7 @@ export default async function Story() {
                     width={400}
                     height={200}
                     className={styles["rc-section-image"]}
-                  ></Image>
+                  />
                 </div>
                 <div className={styles["rc-section-card-content"]}>
                   <p className={styles["rc-section-category"]}>
@@ -271,7 +271,7 @@ export default async function Story() {
                           width={400}
                           height={200}
                           className={styles["gh-section-image"]}
-                        ></Image>
+                        />
                       )}
                       <div className={styles["gh-donate-overlay"]}>
                         <div>
@@ -308,7 +308,7 @@ export default async function Story() {
                           width={400}
                           height={200}
                           className={styles["gh-section-image"]}
-                        ></Image>
+                        />
                       )}
                       <div className={styles["gh-newsletter-overlay"]}>
                         <h3 className={styles["gh-newsletter-title"]}>
@@ -351,7 +351,7 @@ export default async function Story() {
                           width={400}
                           height={200}
                           className={styles["gh-section-image"]}
-                        ></Image>
+                        />
                       </div>
                     )}
                     <div className={styles["gh-section-card-content"]}>
@@ -387,7 +387,7 @@ export default async function Story() {
                         width={400}
                         height={200}
                         className={styles["gh-section-image"]}
-                      ></Image>
+                      />
                       {item.variant === "event" && (
                         <span className={styles["gh-section-info-btn"]}>
                           {item.cta} <span>↗</span>
