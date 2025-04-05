@@ -4,12 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
     "seed": "ts-node --project tsconfig.seed.json prisma/seed.ts",
-    "build": "npx prisma generate && npm install && tsc",
-    "prestart": "npm run build"
+    "postinstall": "prisma generate"
     
     
   },
