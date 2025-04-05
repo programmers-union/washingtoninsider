@@ -1,5 +1,3 @@
-// prisma/seed.ts
-console.log("DATABASE_URL from seed.ts:", process.env.DATABASE_URL)
 import { PrismaClient } from '@prisma/client'
 import fs from 'fs'
 import path from 'path'
