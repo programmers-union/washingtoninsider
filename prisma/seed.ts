@@ -1,12 +1,10 @@
 // prisma/seed.ts
-
+console.log("DATABASE_URL from seed.ts:", process.env.DATABASE_URL)
 import { PrismaClient } from '@prisma/client'
 import fs from 'fs'
 import path from 'path'
 
 // 1) Initialize Prisma Client
-console.log("DATABASE_URL:", process.env.DATABASE_URL)
-
 const prisma = new PrismaClient()
 
 async function main() {
