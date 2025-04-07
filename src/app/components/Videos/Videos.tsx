@@ -29,7 +29,7 @@ export default async function Videos() {
 
   // Filter the cards so that only those with category "video" remain.
   const videoCards = mappedResourceCategory.cards.filter(
-    (card) => card.category === "video"
+    (card) => card.category === "stock market"
   );
 
   // Slice the first 4 video cards

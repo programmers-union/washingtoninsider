@@ -10,7 +10,6 @@ import Story from "./components/Story/Story";
 export default function Home() {
   return (
     <>
-    
     <Navbar/>
     <Story/>
     <Atw/>

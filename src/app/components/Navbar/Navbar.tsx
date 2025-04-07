@@ -107,7 +107,7 @@ const Navbar = () => {
           </span>
             <Link href="/">
             <span className={styles["navbar-title"]}>
-            Global Investigative <br /> Journalism Network
+            washingtoninsider
           </span>
             </Link>
           

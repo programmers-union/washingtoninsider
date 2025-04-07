@@ -40,7 +40,7 @@ export default function ClientStory({ stories, categorySlug }: ClientStoryProps)
     <>
       <div className={styles["story-section-controls"]}>
         <div className={styles["story-section-label"]}>
-          <Link href={`/${categorySlug}`}>Stories</Link>
+          <Link href={`/${categorySlug}`}>Real estate</Link>
         </div>
         <div className={styles["story-section-controls-right"]}>
           <div className={styles["story-section-dots"]}>

@@ -31,7 +31,7 @@
     display: flex;
     flex-direction: column;
     transition: transform 0.2s ease;
-    height: 25rem;
+    height: 30rem;
   }
   
   .videosectionCard:hover {
@@ -55,10 +55,10 @@
   }
   
   /* Next.js Image itself */
-  /* .videosectionImage {
-    height: 10rem;
+  .videosectionImage {
+    object-fit: cover;
     
-  } */
+  }
   
   /* Content inside each card */
   .videosectionCardContent {

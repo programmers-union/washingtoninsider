@@ -42,7 +42,6 @@ interface ExtendedCategory {
   id: number;
   categorySlug: string;
   mainTitle: string;
-  searchPlaceholder: string;
   postCount: number;
   cards: ExtendedCard[];
 }
@@ -63,7 +62,7 @@ export default async function Story() {
   })) as ExtendedCategory | null;
 
   const gijnHubCategory = (await prisma.category.findUnique({
-    where: { categorySlug: "metaverse-virtual-real-estate" },
+    where: { categorySlug: "cryptocurrency" },
     include: { cards: true },
   })) as ExtendedCategory | null;
 
@@ -152,7 +151,7 @@ export default async function Story() {
             className={styles.substoryContinue}
             href={`/${mappedStoriesCategory.categorySlug}`}
           >
-            Continue to all Stories →
+            Continue to all Real estate →
           </Link>
         </div>
       </div>
@@ -230,142 +229,142 @@ export default async function Story() {
           </h2>
           {mappedGijnHubCategory.cards.map((item, index) => {
             // Jobs Board Card
-            if (item.variant === "jobs") {
-              return (
-                <Link
-                  href={`/${mappedGijnHubCategory.categorySlug}/${item.slug}`}
-                  key={index}
-                >
-                  <div className={styles["gh-section-card-jobs"]}>
-                    <p className={styles["gh-section-jobs-label"]}>
-                      {item.type?.toUpperCase()} <span>↗</span>
-                    </p>
-                    {item.jobs?.map((job: any, jIdx: number) => (
-                      <div key={jIdx} className={styles["gh-section-job"]}>
-                        <h4>{job.title}</h4>
-                        <p>{job.org}</p>
-                        <p>{job.location}</p>
-                        <p>Deadline: {job.deadline}</p>
-                      </div>
-                    ))}
-                  </div>
-                </Link>
-              );
-            }
+            // if (item.variant === "jobs") {
+            //   return (
+            //     <Link
+            //       href={`/${mappedGijnHubCategory.categorySlug}/${item.slug}`}
+            //       key={index}
+            //     >
+            //       <div className={styles["gh-section-card-jobs"]}>
+            //         <p className={styles["gh-section-jobs-label"]}>
+            //           {item.type?.toUpperCase()} <span>↗</span>
+            //         </p>
+            //         {item.jobs?.map((job: any, jIdx: number) => (
+            //           <div key={jIdx} className={styles["gh-section-job"]}>
+            //             <h4>{job.title}</h4>
+            //             <p>{job.org}</p>
+            //             <p>{job.location}</p>
+            //             <p>Deadline: {job.deadline}</p>
+            //           </div>
+            //         ))}
+            //       </div>
+            //     </Link>
+            //   );
+            // }
 
             // Donate Card
-            if (item.variant === "donate") {
-              return (
-                <Link
-                  href={`/${mappedGijnHubCategory.categorySlug}/${item.slug}`}
-                  key={index}
-                >
-                  <div
-                    className={`${styles["gh-section-card"]} ${styles["gh-donate"]}`}
-                  >
-                    <div className={styles["gh-donate-image-wrapper"]}>
-                      {item.image && (
-                        <Image
-                          src={item.image}
-                          alt={item.variant || "Donate"}
-                          width={400}
-                          height={200}
-                          className={styles["gh-section-image"]}
-                        />
-                      )}
-                      <div className={styles["gh-donate-overlay"]}>
-                        <div>
-                          <h3 className={styles["gh-donate-title"]}>
-                            {item.type}
-                          </h3>
-                          <p className={styles["gh-donate-description"]}>
-                            {item.description}
-                          </p>
-                        </div>
-                        <span className={styles["gh-donate-btn"]}>↗</span>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              );
-            }
+            // if (item.variant === "donate") {
+            //   return (
+            //     <Link
+            //       href={`/${mappedGijnHubCategory.categorySlug}/${item.slug}`}
+            //       key={index}
+            //     >
+            //       <div
+            //         className={`${styles["gh-section-card"]} ${styles["gh-donate"]}`}
+            //       >
+            //         <div className={styles["gh-donate-image-wrapper"]}>
+            //           {item.image && (
+            //             <Image
+            //               src={item.image}
+            //               alt={item.variant || "Donate"}
+            //               width={400}
+            //               height={200}
+            //               className={styles["gh-section-image"]}
+            //             />
+            //           )}
+            //           <div className={styles["gh-donate-overlay"]}>
+            //             <div>
+            //               <h3 className={styles["gh-donate-title"]}>
+            //                 {item.type}
+            //               </h3>
+            //               <p className={styles["gh-donate-description"]}>
+            //                 {item.description}
+            //               </p>
+            //             </div>
+            //             <span className={styles["gh-donate-btn"]}>↗</span>
+            //           </div>
+            //         </div>
+            //       </div>
+            //     </Link>
+            //   );
+            // }
 
             // Newsletter Card
-            if (item.variant === "newsletter") {
-              return (
-                <Link
-                  href={`/${mappedGijnHubCategory.categorySlug}/${item.slug}`}
-                  key={index}
-                >
-                  <div
-                    className={`${styles["gh-section-card"]} ${styles["gh-newsletter"]}`}
-                  >
-                    <div className={styles["gh-newsletter-image-wrapper"]}>
-                      {item.image && (
-                        <Image
-                          src={item.image}
-                          alt={item.variant || "newsletter"}
-                          width={400}
-                          height={200}
-                          className={styles["gh-section-image"]}
-                        />
-                      )}
-                      <div className={styles["gh-newsletter-overlay"]}>
-                        <h3 className={styles["gh-newsletter-title"]}>
-                          {item.title}
-                        </h3>
-                        {item.cta && (
-                          <span className={styles["gh-section-cta"]}>
-                            {item.cta}
-                          </span>
-                        )}
-                        {item.description && (
-                          <p className={styles["gh-newsletter-description"]}>
-                            {item.description}
-                          </p>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              );
-            }
+            // if (item.variant === "newsletter") {
+            //   return (
+            //     <Link
+            //       href={`/${mappedGijnHubCategory.categorySlug}/${item.slug}`}
+            //       key={index}
+            //     >
+            //       <div
+            //         className={`${styles["gh-section-card"]} ${styles["gh-newsletter"]}`}
+            //       >
+            //         <div className={styles["gh-newsletter-image-wrapper"]}>
+            //           {item.image && (
+            //             <Image
+            //               src={item.image}
+            //               alt={item.variant || "newsletter"}
+            //               width={400}
+            //               height={200}
+            //               className={styles["gh-section-image"]}
+            //             />
+            //           )}
+            //           <div className={styles["gh-newsletter-overlay"]}>
+            //             <h3 className={styles["gh-newsletter-title"]}>
+            //               {item.title}
+            //             </h3>
+            //             {item.cta && (
+            //               <span className={styles["gh-section-cta"]}>
+            //                 {item.cta}
+            //               </span>
+            //             )}
+            //             {item.description && (
+            //               <p className={styles["gh-newsletter-description"]}>
+            //                 {item.description}
+            //               </p>
+            //             )}
+            //           </div>
+            //         </div>
+            //       </div>
+            //     </Link>
+            //   );
+            // }
 
             // Calendar & Membership Cards
-            if (item.variant === "calendar" || item.variant === "membership") {
-              return (
-                <Link
-                  href={`/${mappedGijnHubCategory.categorySlug}/${item.slug}`}
-                  key={index}
-                >
-                  <div
-                    className={`${styles["gh-section-card"]} ${
-                      styles[`gh-${item.variant}`] || ""
-                    }`}
-                  >
-                    {item.image && (
-                      <div className={styles["gh-section-image-wrapper"]}>
-                        <Image
-                          src={item.image}
-                          alt={item.variant || "calendar"}
-                          width={400}
-                          height={200}
-                          className={styles["gh-section-image"]}
-                        />
-                      </div>
-                    )}
-                    <div className={styles["gh-section-card-content"]}>
-                      <div className={styles["gh-arrow-title-row"]}>
-                        <h3 className={styles["gh-section-card-title"]}>
-                          {item.type}
-                        </h3>
-                        <span className={styles["gh-arrow"]}>→</span>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              );
-            }
+            // if (item.variant === "calendar" || item.variant === "membership") {
+            //   return (
+            //     <Link
+            //       href={`/${mappedGijnHubCategory.categorySlug}/${item.slug}`}
+            //       key={index}
+            //     >
+            //       <div
+            //         className={`${styles["gh-section-card"]} ${
+            //           styles[`gh-${item.variant}`] || ""
+            //         }`}
+            //       >
+            //         {item.image && (
+            //           <div className={styles["gh-section-image-wrapper"]}>
+            //             <Image
+            //               src={item.image}
+            //               alt={item.variant || "calendar"}
+            //               width={400}
+            //               height={200}
+            //               className={styles["gh-section-image"]}
+            //             />
+            //           </div>
+            //         )}
+            //         <div className={styles["gh-section-card-content"]}>
+            //           <div className={styles["gh-arrow-title-row"]}>
+            //             <h3 className={styles["gh-section-card-title"]}>
+            //               {item.type}
+            //             </h3>
+            //             <span className={styles["gh-arrow"]}>→</span>
+            //           </div>
+            //         </div>
+            //       </div>
+            //     </Link>
+            //   );
+            // }
 
             // Default Card: for "event" and other variants
             const variantClass = item.variant ? `gh-${item.variant}` : "";

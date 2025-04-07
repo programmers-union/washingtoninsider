@@ -53,7 +53,7 @@ const Projects = async () => {
                 className={`${styles['project-section-description']} ${styles[`project-section-${color}`]}`}
               >
                 <p>{project.excerpt}</p>
-                <button>Explore this Project →</button>
+                {/* <button>Explore this Project →</button> */}
               </div>
             </Link>
           );

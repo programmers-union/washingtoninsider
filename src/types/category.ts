@@ -30,7 +30,6 @@ export interface CategoryData {
   id: number;
   categorySlug: string;
   mainTitle: string;
-  searchPlaceholder: string;
   postCount: number;
   cards: Card[];
 }

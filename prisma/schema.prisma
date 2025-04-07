@@ -15,7 +15,6 @@ model Category {
 
   categorySlug      String @unique 
   mainTitle         String
-  searchPlaceholder String
   postCount         Int
   cards             Card[]
 }
