@@ -5,9 +5,9 @@ import styles from './Projects.module.css';
 import prisma from '@/lib/db'; // <-- Prisma client
 
 const Projects = async () => {
-  // Fetch the specific category by ID (category3 corresponds to ID: 3)
+  // Fetch the specific category by ID (category3 corresponds to ID: 8)
   const projectCategory = await prisma.category.findUnique({
-    where: { id: 3 },
+    where: { id: 8 },
     include: { cards: true },
   });
 
@@ -24,10 +24,19 @@ const Projects = async () => {
 
   return (
     <section className={styles['project-section']}>
-      <h2 className={styles['project-section-title']}>{projectCategory.mainTitle}</h2>
+      <h2 className={styles['project-section-title']}>
+        {projectCategory.mainTitle}
+      </h2>
       <div className={styles['project-section-grid']}>
         {projectCards.map((project, index) => {
           const color = colorMapping[project.title] || 'default';
+
+          // Safely handle 'project.content1' using nullish coalescing (??)
+          const contentToDisplay = project.content1 ?? '';
+          const truncatedContent =
+            contentToDisplay.length > 500
+              ? contentToDisplay.substring(0, 500) + '...'
+              : contentToDisplay;
 
           return (
             <Link
@@ -45,15 +54,18 @@ const Projects = async () => {
                 />
                 <div className={styles['project-section-overlay']}>
                   <h3 className={styles['project-section-overlay-title']}>
-                    {project.title}
+                    {project.detailSubtitle}
                   </h3>
                 </div>
               </div>
               <div
                 className={`${styles['project-section-description']} ${styles[`project-section-${color}`]}`}
               >
-                <p>{project.excerpt}</p>
-                {/* <button>Explore this Project →</button> */}
+                <p>{truncatedContent}</p>
+                {/* Replace the button with a styled span */}
+                <span className={styles['explore-button']}>
+                  Explore this news →
+                </span>
               </div>
             </Link>
           );

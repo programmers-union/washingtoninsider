@@ -3,6 +3,7 @@
     background-color: #F84449; /* Adjust to match your screenshot's background */
     padding: 2rem;
     color: #ffffff;
+    height: auto;
   }
   
   /* Main heading for the section */
@@ -31,7 +32,7 @@
     display: flex;
     flex-direction: column;
     transition: transform 0.2s ease;
-    height: 30rem;
+    height: 28rem;
   }
   
   .videosectionCard:hover {
@@ -125,6 +126,9 @@
   
   /* For screens 480px wide or smaller (mobile) */
   @media (max-width: 680px) {
+    .videosectionCard{
+      height: 25rem;
+    }
     .videosectionImageWrapper{
       
       height: 13rem;

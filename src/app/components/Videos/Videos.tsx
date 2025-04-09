@@ -9,7 +9,7 @@ import styles from "./Videos.module.css";
 export default async function Videos() {
   // Fetch the resource category with the unique categorySlug "stocks"
   const resourceCategory = await prisma.category.findUnique({
-    where: { categorySlug: "stocks" },
+    where: { categorySlug: "private-equity-and-venture-capital" },
     include: { cards: true },
   });
 
@@ -29,7 +29,7 @@ export default async function Videos() {
 
   // Filter the cards so that only those with category "video" remain.
   const videoCards = mappedResourceCategory.cards.filter(
-    (card) => card.category === "stock market"
+    (card) => card.category === "Venture capital"
   );
 
   // Slice the first 4 video cards
@@ -37,7 +37,7 @@ export default async function Videos() {
 
   return (
     <section className={styles.videosectionContainer}>
-      <h2 className={styles.videosectionHeading}>Videos</h2>
+      <h2 className={styles.videosectionHeading}>Venture Capital</h2>
       <div className={styles.videosectionGrid}>
         {displayedVideos.map((card, index) => (
           <Link
@@ -55,9 +55,9 @@ export default async function Videos() {
                 />
               </div>
               <div className={styles.videosectionCardContent}>
-                <p className={styles.videosectionResource}>
-                  {mappedResourceCategory.categorySlug} : videos
-                </p>
+                {/* <p className={styles.videosectionResource}>
+                  {mappedResourceCategory.mainTitle} : Venture Capital
+                </p> */}
                 <h3 className={styles.videosectionTitle}>{card.title}</h3>
                 <p className={styles.videosectionDescription}>
                   {card.excerpt}

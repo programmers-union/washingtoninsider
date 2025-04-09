@@ -214,7 +214,7 @@ const Navbar = () => {
             </li>
             </Link>
             
-            <Link href="/private-equity-venture-capital">
+            <Link href="/private-equity-and-venture-capital">
             <li>
               <span className={styles["navbar-itemTitle"]}>Private Equity & Venture Capital</span>
               <span className={styles["navbar-itemDesc"]}>
@@ -223,7 +223,7 @@ const Navbar = () => {
               <span className={styles["navbar-itemArrow"]}>→</span>
             </li>
             </Link>
-            <Link href="/metaverse-virtual-real-estate">
+            <Link href="/metaverse-and-virtual-real-estate">
             <li>
               <span className={styles["navbar-itemTitle"]}>
               Metaverse & Virtual Real Estate

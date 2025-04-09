@@ -31,16 +31,9 @@ function sanitizeCard(card: any): CardType {
     date: card.date ?? "",
     excerpt: card.excerpt ?? "",
     content1: card.content1 ?? "",
-    content2: card.content2 ?? "",
     detailSubtitle: card.detailSubtitle ?? "",
     detailGraphImage: card.detailGraphImage ?? "",
-    chapterLabel: card.chapterLabel ?? "",
-    chapters: card.chapters ?? [],
-    more: card.more ?? "",
-    variant: card.variant ?? "",
-    type: card.type ?? "",
-    cta: card.cta ?? "",
-    jobs: card.jobs ?? [],
+    content2: card.content2 ?? "",
   };
 }
 

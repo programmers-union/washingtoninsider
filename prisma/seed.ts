@@ -30,7 +30,6 @@ async function main() {
 
           categorySlug:      categoryData.categorySlug,
           mainTitle:         categoryData.mainTitle,
-          searchPlaceholder: categoryData.searchPlaceholder,
           postCount:         categoryData.postCount,
 
           // Nested create for Cards
@@ -44,18 +43,9 @@ async function main() {
               date:             card.date,
               excerpt:          card.excerpt,
               content1:         card.content1,
-              content2:         card.content2,
               detailSubtitle:   card.detailSubtitle,
               detailGraphImage: card.detailGraphImage,
-              chapterLabel:     card.chapterLabel,
-              chapters:         card.chapters || [],
-              more:             card.more,
-              variant:          card.variant,
-              type:             card.type,
-              description:      card.description,
-              cta:              card.cta,
-              // For jobs, store it as JSON if present
-              jobs: card.jobs ? card.jobs : undefined,
+              content2:         card.content2
             })),
           },
         },

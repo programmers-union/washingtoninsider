@@ -32,17 +32,9 @@ model Card {
   date             String?
   excerpt          String?
   content1         String?
-  content2         String?
   detailSubtitle   String?
   detailGraphImage String?
-  chapterLabel     String?
-  chapters         String[] @default([])
-  more             String?
-  variant          String?
-  type             String?
-  description      String?
-  cta              String?
-  jobs             Json?
+  content2         String?
 
   category         Category @relation(fields: [categoryId], references: [id])
 }

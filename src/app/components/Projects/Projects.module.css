@@ -71,7 +71,7 @@
     margin-bottom: 1rem;
   }
   
-  .project-section-description button {
+  .explore-button {
     width: 50%;
     background-color: rgba(255, 255, 255, 0.15);
     border: none;
@@ -88,23 +88,23 @@
     background-color: #e0e0e0;
   }
   
-  .project-section-orange {
+  .project-section-grid > a:nth-child(1) .project-section-description {
     background-color: #DD9933;
     color: white;
   }
   
-  .project-section-green {
+  .project-section-grid > a:nth-child(2) .project-section-description {
     
     background-color: #15661A;
     color: white;
   }
   
-  .project-section-blue {
+  .project-section-grid > a:nth-child(3) .project-section-description {
     background-color: #1E73BE;
     color: white;
   }
   
-  .project-section-darkblue {
+  .project-section-grid > a:nth-child(4) .project-section-description {
     background-color: #183E7C;
     color: white;
   }

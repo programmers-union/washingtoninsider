@@ -19,9 +19,9 @@ const Footer = () => {
         <div className={styles.FooterLogoSection}>
           <div className={styles.FooterLogoWrapper}>
             <img src="/images/logo.webp" alt="GIJN Logo" className={styles.FooterLogo} />
-            <h1 className={styles.FooterTitle}>Global Investigative <br /> Journalism Network</h1>
+            <h1 className={styles.FooterTitle}>washingtoninsider</h1>
           </div>
-          <p className={styles.FooterFollow}>FOLLOW GIJN</p>
+          <p className={styles.FooterFollow}>FOLLOW washingtoninsider</p>
           <div className={styles.FooterIcons}>
             <FaFacebookF />
             <FaXTwitter />
@@ -38,7 +38,7 @@ const Footer = () => {
 
         <div className={styles.FooterLinksSection}>
           <div className={styles.FooterColumn}>
-            <h3>GIJN</h3>
+            <h3>WASHINGTONINSIDER</h3>
             <ul>
               <li>Organizing Statement</li>
               <li>Staff & Consultants</li>
@@ -49,7 +49,7 @@ const Footer = () => {
           <div className={styles.FooterColumn}>
             <h3>NETWORK</h3>
             <ul>
-              <li>GIJN’s Global Network</li>
+              <li>washingtoninsider’s Global Network</li>
               <li>Our Members</li>
               <li>Global Conferences</li>
             </ul>
@@ -67,8 +67,8 @@ const Footer = () => {
       </div>
 
       <div className={styles.FooterBottom}>
-        <p>© Copyright 2025, Global Investigative Journalism Network</p>
-        <p>Site by Rectangle</p>
+        <p>© Copyright 2025, washingtoninsider</p>
+        <p>Site by washingtoninsider</p>
       </div>
     </footer>
   );

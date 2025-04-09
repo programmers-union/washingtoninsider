@@ -1,10 +1,3 @@
-export interface Job {
-  title: string;
-  org: string;
-  location: string;
-  deadline: string;
-}
-
 export interface Card {
   image: string;   
   category: string;
@@ -14,16 +7,10 @@ export interface Card {
   date: string;
   excerpt: string;
   content1: string;
-  content2: string;
   detailSubtitle: string;
   detailGraphImage: string;
-  chapters?: string[];      
-  more?: string;
-  chapterLabel?: string;
-  variant?: string;         
-  type?: string;           
-  cta?: string;                       
-  jobs?: Job[];            
+  content2: string;
+            
 }
 
 export interface CategoryData {
