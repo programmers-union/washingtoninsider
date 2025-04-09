@@ -43,6 +43,7 @@ export default async function Videos() {
           <Link
             key={index}
             href={`/${mappedResourceCategory.categorySlug}/${card.slug}`}
+            title={card.title}
           >
             <div className={styles.videosectionCard}>
               <div className={styles.videosectionImageWrapper}>

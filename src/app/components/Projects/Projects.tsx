@@ -43,14 +43,17 @@ const Projects = async () => {
               key={index}
               href={`/${projectCategory.categorySlug}/${project.slug}`}
               className={styles['project-section-card']}
+              title={project.title}
             >
               <div className={styles['project-section-image']}>
                 <Image
                   className={styles['project-section-image-img']}
                   src={project.image}
                   alt={project.title}
-                  fill
+                  width={400}
+                  height={200}
                   style={{ objectFit: 'cover' }}
+                  loading='lazy'
                 />
                 <div className={styles['project-section-overlay']}>
                   <h3 className={styles['project-section-overlay-title']}>

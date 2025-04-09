@@ -116,6 +116,7 @@ export default async function Story() {
             <Link
               href={`/${mappedStoriesCategory.categorySlug}/${story.slug}`}
               key={index}
+              title={story.title}
             >
               <div className={styles.substoryCard}>
                 <div className={styles.substoryImageWrapper}>
@@ -141,6 +142,7 @@ export default async function Story() {
           <Link
             className={styles.substoryContinue}
             href={`/${mappedStoriesCategory.categorySlug}`}
+            title="continue to all business"
           >
             Continue to all Business →
           </Link>
@@ -151,7 +153,7 @@ export default async function Story() {
         {/* Resource Center Section */}
         <div className={styles["rc-section-container"]}>
           <h2 className={styles["rc-section-title"]}>
-            <Link href={`/${mappedResourceCategory.categorySlug}`}>
+            <Link href={`/${mappedResourceCategory.categorySlug}`} title="stockmarket">
               Stock market
             </Link>
           </h2>
@@ -160,6 +162,7 @@ export default async function Story() {
             <Link
               href={`/${mappedResourceCategory.categorySlug}/${item.slug}`}
               key={index}
+              title={item.title}
             >
               <div
                 className={`${styles["rc-section-card"]} ${
@@ -173,11 +176,12 @@ export default async function Story() {
                     width={400}
                     height={200}
                     className={styles["rc-section-image"]}
+                    loading="lazy"
                   />
                 </div>
                 <div className={styles["rc-section-card-content"]}>
                   <p className={styles["rc-section-category"]}>{item.category}</p>
-                  <h2 className={styles["rc-section-card-title"]}>{item.title}</h2>
+                  <h3 className={styles["rc-section-card-title"]}>{item.title}</h3>
                   <p className={styles["rc-section-description"]}>
                     {item.excerpt}
                   </p>
@@ -189,6 +193,7 @@ export default async function Story() {
           <Link
             className={styles["rc-section-link"]}
             href={`/${mappedResourceCategory.categorySlug}`}
+            title="continue to all stocks"
           >
             Continue to all Stocks →
           </Link>
@@ -197,7 +202,7 @@ export default async function Story() {
         {/* GIJN Hub Section */}
         <div className={styles["gh-section-container"]}>
           <h2 className={styles["gh-section-title"]}>
-            <Link href={`/${mappedGijnHubCategory.categorySlug}`}>
+            <Link href={`/${mappedGijnHubCategory.categorySlug}`} title={mappedGijnHubCategory.mainTitle}>
               {mappedGijnHubCategory.mainTitle}
             </Link>
           </h2>
@@ -206,6 +211,7 @@ export default async function Story() {
             <Link
               href={`/${mappedGijnHubCategory.categorySlug}/${item.slug}`}
               key={index}
+              title={item.title}
             >
               {item.image && (
                 <div className={styles["gh-section-image-wrapper"]}>
@@ -215,6 +221,7 @@ export default async function Story() {
                     width={400}
                     height={200}
                     className={styles["gh-section-image"]}
+                    loading="lazy"
                   />
                   <span className={styles["gh-section-info-btn"]}>
                     <span>↗</span>
@@ -235,6 +242,7 @@ export default async function Story() {
           <Link
             className={styles["gh-section-link"]}
             href={`/${mappedGijnHubCategory.categorySlug}`}
+            title="continue to all cryptocurrency"
           >
             Continue to all cryptocurrency →
           </Link>

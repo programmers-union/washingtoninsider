@@ -9,7 +9,7 @@ import Story from "./components/Story/Story";
 
 export default function Home() {
   return (
-    <>
+    <main itemScope itemType="https://schema.org/NewsArticle">
     <Navbar/>
     <Story/>
     <Atw/>
@@ -17,6 +17,6 @@ export default function Home() {
     <Projects/>
    <Videos/>
    <Footer/>
-    </>
+    </main>
   );
 }

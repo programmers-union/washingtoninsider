@@ -34,7 +34,7 @@ export default function LoadMoreCards({ remainingCards, categorySlug }: Props) {
       {cardsToShow.length > 0 && (
         <section className={styles.categorypageGrid}>
           {cardsToShow.map((item, idx) => (
-            <Link key={idx} href={`/${categorySlug}/${item.slug}`}>
+            <Link key={idx} href={`/${categorySlug}/${item.slug}`} title={item.title}>
               <article className={styles.categorypageCard}>
                 <div className={styles.categorypageimagewrapper}>
                   <Image
@@ -42,6 +42,7 @@ export default function LoadMoreCards({ remainingCards, categorySlug }: Props) {
                     alt={item.title}
                     fill
                     className={styles.categorypageImage}
+                    loading="lazy"
                   />
                 </div>
                 <div className={styles.categorypageText}>

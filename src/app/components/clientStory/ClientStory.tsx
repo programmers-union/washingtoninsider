@@ -40,7 +40,7 @@ export default function ClientStory({ stories, categorySlug }: ClientStoryProps)
     <>
       <div className={styles["story-section-controls"]}>
         <div className={styles["story-section-label"]}>
-          <Link href={`/${categorySlug}`}>Business</Link>
+          <Link href={`/${categorySlug}`} title={stories[current].title}>Business</Link>
         </div>
         <div className={styles["story-section-controls-right"]}>
           <div className={styles["story-section-dots"]}>
@@ -64,7 +64,7 @@ export default function ClientStory({ stories, categorySlug }: ClientStoryProps)
         </div>
       </div>
 
-      <Link href={`/${categorySlug}/${stories[current].slug}`}>
+      <Link href={`/${categorySlug}/${stories[current].slug}`} title={stories[current].title}>
         <div className={styles["story-section-image-wrapper"]}>
           <Image
             src={stories[current].image}
@@ -72,15 +72,16 @@ export default function ClientStory({ stories, categorySlug }: ClientStoryProps)
             width={800}
             height={200}
             className={styles["story-section-image"]}
+           priority
           />
         </div>
         <div className={styles["story-section-text"]}>
           <p className={styles["story-section-category"]}>
             {stories[current].category}
           </p>
-          <h2 className={styles["story-section-title"]}>
+          <h1 className={styles["story-section-title"]}>
             {stories[current].title}
-          </h2>
+          </h1>
           {stories[current].author && stories[current].date && (
             <p className={styles["story-section-author"]}>
               <span className={styles["author-prefix"]}>by </span>

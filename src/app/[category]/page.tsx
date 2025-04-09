@@ -83,7 +83,7 @@ export default async function CategoryPage({
 
       <section className={styles.categorypageGrid}>
         {initialCards.map((item, idx) => (
-          <Link key={idx} href={`/${categoryData.categorySlug}/${item.slug}`}>
+          <Link key={idx} href={`/${categoryData.categorySlug}/${item.slug}`} title={item.title}>
             <article className={styles.categorypageCard}>
               <div className={styles.categorypageimagewrapper}>
                 <Image

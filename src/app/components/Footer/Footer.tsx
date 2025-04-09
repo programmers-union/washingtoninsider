@@ -19,7 +19,7 @@ const Footer = () => {
         <div className={styles.FooterLogoSection}>
           <div className={styles.FooterLogoWrapper}>
             <img src="/images/washingtoninsider-logo.webp" alt="GIJN Logo" className={styles.FooterLogo} />
-            <h1 className={styles.FooterTitle}>washingtoninsider</h1>
+            <h2 className={styles.FooterTitle}>washingtoninsider</h2>
           </div>
           <p className={styles.FooterFollow}>FOLLOW washingtoninsider</p>
           <div className={styles.FooterIcons}>

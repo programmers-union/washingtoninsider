@@ -53,7 +53,7 @@ const Qdm = async () => {
   const renderCards = (cards: any[], categorySlug: string, activeTabId: string) => (
     <div className={styles['qdm-card-grid']}>
       {cards.map((card, index) => (
-        <Link href={`/${categorySlug}/${card.slug}`} key={index}>
+        <Link href={`/${categorySlug}/${card.slug}`} key={index} title={card.title}>
           <div className={styles['qdm-card']}>
             <div className={styles['qdm-card-img']}>
               <Image
@@ -61,15 +61,16 @@ const Qdm = async () => {
                 src={card.image}
                 alt={card.title}
                 fill
+                loading='lazy'
               />
             </div>
             <div className={styles['qdm-card-body']}>
               {card.category ? (
-                <h4 className={styles['qdm-card-tag']}>{card.category}</h4>
+                <h3 className={styles['qdm-card-tag']}>{card.category}</h3>
               ) : activeTabId === 'category4' ? (
-                <h4 className={styles['qdm-card-tag']}>category</h4>
+                <h3 className={styles['qdm-card-tag']}>category</h3>
               ) : null}
-              <h3 className={styles['qdm-card-title']}>{card.title}</h3>
+              <h2 className={styles['qdm-card-title']}>{card.title}</h2>
               <p className={styles['qdm-card-meta']}>
                 by <span className={styles['qdm-card-author']}>{card.author}</span> • {card.date}
               </p>

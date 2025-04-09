@@ -133,7 +133,7 @@ export default async function DetailPage({
         <div className={styles.detailpageTitleHeaderLeft}>
           <p className={styles.detailpageBreadcrumbs}>
             {card.category} •{' '}
-            <Link href={`/${categoryData.categorySlug}`}>
+            <Link href={`/${categoryData.categorySlug}`} title={card.title}>
               <span>{categoryData.categorySlug}</span>
             </Link>
           </p>
@@ -219,6 +219,7 @@ export default async function DetailPage({
                   <Link
                     key={index}
                     href={`/${nextCategoryData.categorySlug}/${resCard.slug}`}
+                    title={resCard.title}
                   >
                     <div className={styles.detailpageResourceCard}>
                       <Image
@@ -235,8 +236,8 @@ export default async function DetailPage({
                   </Link>
                 ))}
               </div>
-              <Link href={`/${nextCategoryData.categorySlug}`}>
-                <span className={styles.moreStoriesLink}>More Stories →</span>
+              <Link href={`/${nextCategoryData.categorySlug}`} title="more stories">
+                <span className={styles.moreStoriesLink}>More News →</span>
               </Link>
             </div>
           )}
@@ -383,6 +384,7 @@ export default async function DetailPage({
                 <Link
                   key={idx}
                   href={`/${nextNextCategoryData.categorySlug}/${storyCard.slug}`}
+                  title={storyCard.title}
                 >
                   <div className={styles.detailpageStoryCard}>
                     <Image
@@ -399,8 +401,8 @@ export default async function DetailPage({
                 </Link>
               ))}
             </div>
-            <Link href={`/${nextNextCategoryData.categorySlug}`}>
-              <span className={styles.moreStoriesLink}>More Stories →</span>
+            <Link href={`/${nextNextCategoryData.categorySlug}`} title="more stories">
+              <span className={styles.moreStoriesLink}>More News →</span>
             </Link>
           </div>
         )}
@@ -444,7 +446,7 @@ export default async function DetailPage({
           </p>
           <div className={styles.detailpageTagList}>
             {tagLinks.map((item, index) => (
-              <Link key={index} href={item.href}>
+              <Link key={index} href={item.href} title={item.tag}>
                 <span className={styles.detailpageTag}>{item.tag}</span>
               </Link>
             ))}
@@ -457,7 +459,7 @@ export default async function DetailPage({
         <h2 className={styles.detailpageReadNextHeading}>Read Next</h2>
         <div className={styles.detailpageReadNextGrid}>
           {readNextCards.map((nextCard, idx) => (
-            <Link key={idx} href={`/${categoryData.categorySlug}/${nextCard.slug}`}>
+            <Link key={idx} href={`/${categoryData.categorySlug}/${nextCard.slug}`} title={nextCard.title}>
               <div className={styles.detailpageCard}>
                 <div className={styles.detailpageCardImageDiv}>
                   <Image

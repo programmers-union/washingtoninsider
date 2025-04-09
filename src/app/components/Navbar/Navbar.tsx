@@ -103,9 +103,10 @@ const Navbar = () => {
               alt="Global Investigative Journalism Network"
               width={50}
               height={50}
+              priority
             />
           </span>
-            <Link href="/">
+            <Link href="/" title="washington insider">
             <span className={styles["navbar-title"]}>
             washingtoninsider
           </span>
@@ -296,9 +297,9 @@ const Navbar = () => {
     {isAccessibilityOpen && (
             <div className={styles["navbar-accessibilityDropdown"]}>
               <div className={styles["navbar-accessibility-left"]}>
-                <h3 className={styles["navbar-accessibilityTitle"]}>
+                <h2 className={styles["navbar-accessibilityTitle"]}>
                   ACCESSIBILITY SETTINGS
-                </h3>
+                </h2>
 
                 {/* Reset Button */}
                 <button className={styles["navbar-accessibilityReset"]}>
@@ -311,14 +312,14 @@ const Navbar = () => {
                 <div className={styles["navbar-accessibilityGrid"]}>
                   {/* Text Size */}
                   <div>
-                    <h4>TEXT SIZE</h4>
+                    <h3>TEXT SIZE</h3>
                     <button>— decrease</button>
                     <button>+ increase</button>
                   </div>
 
                   {/* Color Options */}
                   <div>
-                    <h4>COLOR OPTIONS</h4>
+                    <h3>COLOR OPTIONS</h3>
                     <button>monochrome</button>
                     <button>muted color</button>
                     <button>dark</button>
@@ -326,14 +327,14 @@ const Navbar = () => {
 
                   {/* Reading Tools */}
                   <div>
-                    <h4>READING TOOLS</h4>
+                    <h3>READING TOOLS</h3>
                     <button>isolation</button>
                     <button>ruler</button>
                   </div>
 
                   {/* Other */}
                   <div>
-                    <h4>OTHER</h4>
+                    <h3>OTHER</h3>
                     <button>no motion</button>
                     <button>large cursor</button>
                   </div>

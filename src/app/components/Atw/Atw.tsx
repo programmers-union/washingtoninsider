@@ -33,7 +33,7 @@ const Atw = async () => {
           const categorySlug = atwCategory.categorySlug || 'private-equity-and-venture-capital';
 
           return (
-            <Link key={index} href={`/${categorySlug}/${item.slug}`}>
+            <Link key={index} href={`/${categorySlug}/${item.slug}`} title='{item.title}'>
               <div className={styles['ATW-section-card']}>
                 <h3 className={styles['ATW-section-heading']}>{item.title}</h3>
                 <p className={styles['ATW-section-source']}>Date: {item.date}</p>
