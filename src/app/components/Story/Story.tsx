@@ -42,7 +42,7 @@ interface ExtendedCategory {
 export default async function Story() {
   // Fetch each Category by its unique slug:
   const storiesCategory = (await prisma.category.findUnique({
-    where: { categorySlug: "realestate" },
+    where: { categorySlug: "business" },
     include: { cards: true },
   })) as ExtendedCategory | null;
 
@@ -142,7 +142,7 @@ export default async function Story() {
             className={styles.substoryContinue}
             href={`/${mappedStoriesCategory.categorySlug}`}
           >
-            Continue to all Real estate →
+            Continue to all Business →
           </Link>
         </div>
       </div>

@@ -81,7 +81,7 @@
     height: auto;
     object-fit: cover;
     display: block;
-    aspect-ratio: 4 / 2.2; /* Ensures consistent visual height for all */
+    aspect-ratio: 4 / 2.5; /* Ensures consistent visual height for all */
   }
   
   

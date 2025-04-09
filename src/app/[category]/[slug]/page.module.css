@@ -441,15 +441,17 @@ height: 1rem;
   
 }
 .detailpageCardImageDiv{
+  
   position: relative;
   width: 100%;
-  height: 11rem; 
+  height: 12rem; 
   background-color: #f2f2f2; 
   overflow: hidden;
 }
 
 .detailpageCardImage {
   width: 100%;
+  
   /* height: auto; */
   object-fit: cover;
   
@@ -482,6 +484,44 @@ height: 1rem;
  color: #B4B4B3;
   line-height: 1.5;
 }
+
+/* ----------------- New Styles for the Special Center Portion ----------------- */
+.specialCenter {
+  width: 50%;
+  padding: 1rem;
+  height: auto;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #333;
+  /* border: 1px solid #ddd; */
+  border-radius: 4px;
+  margin: 1rem auto;
+  /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
+}
+
+.specialHeading {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 1rem 0 0.5rem;
+  color: #111;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+.specialParagraph {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+.specialList {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
 
 @media (min-width: 681px) and (max-width: 1200px) {
   /* TOP SECTION */
@@ -629,6 +669,26 @@ height: 1rem;
   .detailpageCardExcerpt {
     font-size: 0.9rem;
   }
+
+  .specialCenter {
+    /* width: 90%; */
+    padding: 0.8rem;
+    margin: 0.8rem auto;
+    font-size: 0.95rem;
+  }
+  .specialHeading {
+    font-size: 1.3rem;
+    margin: 0.9rem 0 0.5rem;
+  }
+  .specialParagraph {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .specialList {
+    font-size: 0.95rem;
+    padding-left: 1.3rem;
+    margin-bottom: 1rem;
+  }
   
 }
 
@@ -754,9 +814,6 @@ height: 1rem;
     background-color: #1E1E1B;
     height: auto;
   }
-  .detailpageCardImage{
-    object-fit: contain;
-  }
 
   /* .detailpageCardImage {
     width: 100%;
@@ -839,6 +896,28 @@ height: 1rem;
 .detailpageCardExcerpt{
   font-size: 0.75rem;
 }
+
+
+.specialCenter {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem auto;
+  font-size: 0.9rem;
+}
+.specialHeading {
+  font-size: 1.2rem;
+  margin: 0.8rem 0 0.4rem;
+}
+.specialParagraph {
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+.specialList {
+  font-size: 0.9rem;
+  padding-left: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
 
 }
 

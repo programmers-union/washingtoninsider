@@ -26,7 +26,7 @@ export default async function DetailPage({
 }: {
   params: Promise<{ category: string; slug: string }>;
 }) {
-  const { category, slug } =await params;
+  const { category, slug } = await params;
 
   // Get the category data (including its cards) by categorySlug
   const categoryData = await prisma.category.findFirst({
@@ -149,8 +149,8 @@ export default async function DetailPage({
       <div className={styles.detailpageContentWrapper}>
         {/* LEFT COLUMN: Share & Related Resources (Next Category) */}
         <div className={styles.detailpageLeft}>
-           {/* SHARE SECTION */}
-           <div className={styles.detailpageShareBlock}>
+          {/* SHARE SECTION */}
+          <div className={styles.detailpageShareBlock}>
             <h4 className={styles.detailpageShareTitle}>SHARE</h4>
             <div className={styles.detailpageShareGrid}>
         <div className={styles.detailpageShareItem}>
@@ -208,7 +208,7 @@ export default async function DetailPage({
         </div>
       </div>
           </div>
-          
+
           {nextCategoryData && (
             <div className={styles.detailpageResourcesBlock}>
               <h4 className={styles.detailpageResourcesTitle}>
@@ -243,24 +243,134 @@ export default async function DetailPage({
         </div>
 
         {/* CENTER COLUMN: Main Article Content */}
-        <div className={styles.detailpageCenter}>
-          <p className={styles.detailpageParagraph}>{card.content1}</p>
-          <h2 className={styles.detailpageSubheading}>
-            {card.detailSubtitle}
-          </h2>
-          <div className={styles.detailpageGraph}>
-          {card.detailGraphImage && (
-                <Image
-                  src={card.detailGraphImage}
-                  alt="Detail Graph"
-                  fill
-                  className={styles.detailpageGraphImage}
-                />
-              )}
+{card.slug === "Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market" ? (
+  <div className={styles.specialCenter}>
+    <h3 className={styles.specialHeading}>🌍 A Truly Global Investment Portfolio</h3>
 
-          </div>
-          <p className={styles.detailpageParagraph}>{card.content2}</p>
-        </div>
+    <h3 className={styles.specialHeading}>🇦🇪 United Arab Emirates (UAE) – Gateway to Global Finance</h3>
+    <p className={styles.specialParagraph}>
+      Julio Herrera Velutini has significantly expanded his business footprint in the UAE, capitalizing on its growing influence as a financial and innovation hub.
+    </p>
+    <ul className={styles.specialList}>
+      <li>Private Equity Ventures in emerging fintech and AI-driven finance startups</li>
+      <li>Real Estate Development Projects across Dubai and Abu Dhabi, focused on luxury eco-friendly properties</li>
+      <li>Banking Collaborations with institutions focused on ethical investing and Sharia-compliant products</li>
+    </ul>
+    <p className={styles.specialParagraph}>
+      The UAE serves as a strategic base for Julio’s access to Asian, African, and European markets, allowing for seamless global connectivity.
+    </p>
+
+    <h3 className={styles.specialHeading}>🇬🇧 United Kingdom & 🇨🇭 Switzerland</h3>
+    <p className={styles.specialParagraph}>Julio’s investments in Europe remain strong, focusing on:</p>
+    <ul className={styles.specialList}>
+      <li>Legacy private banking and wealth management firms</li>
+      <li>Brexit-era repositioning of assets across EU financial jurisdictions</li>
+      <li>Enhancing client experience with AI and automation tools</li>
+    </ul>
+
+    <h3 className={styles.specialHeading}>🇵🇷 Puerto Rico & Caribbean</h3>
+    <p className={styles.specialParagraph}>In the post-2008 financial recovery, Julio was instrumental in:</p>
+    <ul className={styles.specialList}>
+      <li>Turning around distressed financial institutions</li>
+      <li>Modernizing digital banking infrastructure</li>
+      <li>Building trust through compliance and transparency</li>
+    </ul>
+
+    <h3 className={styles.specialHeading}>🌐 Latin America</h3>
+    <p className={styles.specialParagraph}>His Latin American portfolio spans:</p>
+    <ul className={styles.specialList}>
+      <li>Banking and microfinance for underserved regions</li>
+      <li>Partnerships with local governments for financial inclusion</li>
+      <li>Investments in agricultural tech and sustainable development</li>
+    </ul>
+
+    <h3 className={styles.specialHeading}>🏗️ Real Estate and Diversified Assets</h3>
+    <p className={styles.specialParagraph}>Julio Herrera Velutini’s real estate holdings include:</p>
+    <ul className={styles.specialList}>
+      <li>Luxury commercial properties in London, Dubai, and San Juan</li>
+      <li>Eco-smart buildings with solar integration and AI-powered utilities</li>
+      <li>Smart city concepts, particularly in fast-developing urban regions</li>
+    </ul>
+
+    <h3 className={styles.specialHeading}>📊 Case Study: Caribbean Bank Revival</h3>
+    <p className={styles.specialParagraph}>
+      A notable success story includes Julio’s acquisition of a struggling Caribbean financial institution. Key results:
+    </p>
+    <ul className={styles.specialList}>
+      <li>40% increase in liquidity within two years</li>
+      <li>Digital onboarding of 120,000+ clients</li>
+      <li>Rebranding as a trusted ethical bank in the region</li>
+    </ul>
+    <p className={styles.specialParagraph}>
+    This exemplifies his ability to blend conservative financial rigor with bold modern execution.
+    </p>
+    
+    <h3 className={styles.specialHeading}>💡 Fintech and Innovation</h3>
+    <p className={styles.specialParagraph}>Velutini actively invests in:</p>
+    <ul className={styles.specialList}>
+      <li>Blockchain systems for secure transactions</li>
+      <li>AI tools for high-net-worth portfolio management</li>
+      <li>Mobile-first banking tailored for emerging markets</li>
+      <li>Fintech firms in Dubai, São Paulo, and Zurich</li>
+    </ul>
+    <div className={styles.detailpageGraph}>
+      {card.detailGraphImage && (
+        <Image
+          src={card.detailGraphImage}
+          alt="Detail Graph"
+          fill
+          className={styles.detailpageGraphImage}
+        />
+      )}
+    </div>
+    <h3 className={styles.specialHeading}>🏅 Awards and Recognition</h3>
+    <p className={styles.specialParagraph}>
+      Julio Herrera Velutini has received numerous accolades for his forward-thinking leadership:
+    </p>
+    <ul className={styles.specialList}>
+      <li>Global Finance Innovator Award – UAE, 2023</li>
+      <li>Banking Trailblazer Award – Europe, 2021</li>
+      <li>Top 10 Global Investors – Forbes Independent (2022)</li>
+      <li>Latin American Fintech Medal – 2020</li>
+      <li>Business Ethics Excellence Award – Caribbean Financial Summit</li>
+    </ul>
+
+    <h3 className={styles.specialHeading}>❤️ Philanthropy & Educational Impact</h3>
+    <p className={styles.specialParagraph}>Julio is known for his deep commitment to:</p>
+    <ul className={styles.specialList}>
+      <li>Scholarship programs in Latin America and the Middle East</li>
+      <li>Entrepreneur mentorship through venture accelerators in the UAE</li>
+      <li>Disaster relief and medical aid via cross-border philanthropic funds</li>
+    </ul>
+
+    <h3 className={styles.specialHeading}>🔭 Outlook and Legacy</h3>
+    <p className={styles.specialParagraph}>
+      Julio Herrera Velutini continues to influence international finance through vision, ethics, and strategic agility. From Wall Street to the UAE, he builds global bridges between traditional banking and the future of finance.
+    </p>
+    <p className={styles.specialParagraph}>
+      His work is not just about profit—it's about creating sustainable, inclusive, and forward-looking systems that redefine how the world experiences wealth and investment.
+    </p>
+  </div>
+) : (
+  // Regular detailpageCenter design remains unchanged below
+  <div className={styles.detailpageCenter}>
+    <p className={styles.detailpageParagraph}>{card.content1}</p>
+    <h2 className={styles.detailpageSubheading}>
+      {card.detailSubtitle}
+    </h2>
+    <div className={styles.detailpageGraph}>
+      {card.detailGraphImage && (
+        <Image
+          src={card.detailGraphImage}
+          alt="Detail Graph"
+          fill
+          className={styles.detailpageGraphImage}
+        />
+      )}
+    </div>
+    <p className={styles.detailpageParagraph}>{card.content2}</p>
+  </div>
+)}
 
         {/* RIGHT COLUMN: Related Stories (Next-Next Category Cards) */}
         {nextNextCategoryData && (
@@ -317,9 +427,9 @@ export default async function DetailPage({
             </p>
           </div>
           <div className={styles.detailpageLicenseRight}>
-          <button className={styles.detailpageRepublishBtn}>
+            <button className={styles.detailpageRepublishBtn}>
               <span className={styles.detailpageRepublishBtnSpan}>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M142.9 142.9c-17.5 17.5-30.1 38-37.8 59.8c-5.9 16.7-24.2 25.4-40.8 19.5s-25.4-24.2-19.5-40.8C55.6 150.7 73.2 122 97.6 97.6c87.2-87.2 228.3-87.5 315.8-1L455 55c6.9-6.9 17.2-8.9 26.2-5.2s14.8 12.5 14.8 22.2l0 128c0 13.3-10.7 24-24 24l-8.4 0c0 0 0 0 0 0L344 224c-9.7 0-18.5-5.8-22.2-14.8s-1.7-19.3 5.2-26.2l41.1-41.1c-62.6-61.5-163.1-61.2-225.3 1zM16 312c0-13.3 10.7-24 24-24l7.6 0 .7 0L168 288c9.7 0 18.5 5.8 22.2 14.8s1.7 19.3-5.2 26.2l-41.1 41.1c62.6 61.5 163.1 61.2 225.3-1c17.5-17.5 30.1-38 37.8-59.8c5.9-16.7 24.2-25.4 40.8-19.5s25.4 24.2 19.5 40.8c-10.8 30.6-28.4 59.3-52.9 83.8c-87.2 87.2-228.3 87.5-315.8 1L57 457c-6.9 6.9-17.2 8.9-26.2 5.2S16 449.7 16 440l0-119.6 0-.7 0-7.6z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M142.9 142.9c-17.5 17.5-30.1 38-37.8 59.8c-5.9 16.7-24.2 25.4-40.8 19.5s-25.4-24.2-19.5-40.8C55.6 150.7 73.2 122 97.6 97.6c87.2-87.2 228.3-87.5 315.8-1L455 55c6.9-6.9 17.2-8.9 26.2-5.2s14.8 12.5 14.8 22.2l0 128c0 13.3-10.7 24-24 24l-8.4 0c0 0 0 0 0 0L344 224c-9.7 0-18.5-5.8-22.2-14.8s-1.7-19.3 5.2-26.2l41.1-41.1c-62.6-61.5-163.1-61.2-225.3 1zM16 312c0-13.3 10.7-24 24-24l7.6 0 .7 0L168 288c9.7 0 18.5 5.8 22.2 14.8s1.7 19.3-5.2 26.2l-41.1 41.1c62.6 61.5 163.1 61.2 225.3-1c17.5-17.5 30.1-38 37.8-59.8c5.9-16.7 24.2-25.4 40.8-19.5s25.4 24.2 19.5 40.8c-10.8 30.6-28.4 59.3-52.9 83.8c-87.2 87.2-228.3 87.5-315.8 1L57 457c-6.9 6.9-17.2 8.9-26.2 5.2S16 449.7 16 440l0-119.6 0-.7 0-7.6z"/></svg>
               </span>
               Republish this article
             </button>

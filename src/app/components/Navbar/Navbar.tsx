@@ -99,7 +99,7 @@ const Navbar = () => {
         <div className={styles["navbar-centerSection"]}>
           <span className="navbar-logo-icon">
             <Image
-              src="/images/logo.webp"
+              src="/images/washingtoninsider-logo.webp"
               alt="Global Investigative Journalism Network"
               width={50}
               height={50}
@@ -157,11 +157,11 @@ const Navbar = () => {
     {isMenuOpen && (
         <div className={styles["navbar-dropdown"]}>
           <ul className={styles["navbar-menuList"]}>
-            <Link href="/realestate">
+            <Link href="/business">
             <li>
-              <span className={styles["navbar-itemTitle"]}>Real estate</span>
+              <span className={styles["navbar-itemTitle"]}>Business</span>
               <span className={styles["navbar-itemDesc"]}>
-                Reporting from around the world
+              Trends and insights shaping global  markets
               </span>
               <span className={styles["navbar-itemArrow"]}>→</span>
             </li>
@@ -172,7 +172,7 @@ const Navbar = () => {
               Stocks
               </span>
               <span className={styles["navbar-itemDesc"]}>
-                A library of resources for journalists
+              Daily updates and strategies for smart investing
               </span>
               <span className={styles["navbar-itemArrow"]}>→</span>
             </li>
@@ -181,7 +181,7 @@ const Navbar = () => {
             <li>
               <span className={styles["navbar-itemTitle"]}>Cryptocurrency</span>
               <span className={styles["navbar-itemDesc"]}>
-                Find out about our organization
+              Digital assets, blockchain news, and crypto trends
               </span>
               <span className={styles["navbar-itemArrow"]}>→</span>
             </li>
@@ -190,7 +190,7 @@ const Navbar = () => {
             <li>
               <span className={styles["navbar-itemTitle"]}>REITs</span>
               <span className={styles["navbar-itemDesc"]}>
-                Find out about our members and joining
+              Smart ways to invest in income-generating properties
               </span>
               <span className={styles["navbar-itemArrow"]}>→</span>
             </li>
@@ -199,7 +199,7 @@ const Navbar = () => {
             <li>
               <span className={styles["navbar-itemTitle"]}>Artificial Intelligence (AI) & Tech Startups</span>
               <span className={styles["navbar-itemDesc"]}>
-                Our bi-annual conferences
+              The latest in innovation, automation, and disruption
               </span>
               <span className={styles["navbar-itemArrow"]}>→</span>
             </li>
@@ -208,7 +208,7 @@ const Navbar = () => {
             <li>
               <span className={styles["navbar-itemTitle"]}>Sustainable & ESG Investments</span>
               <span className={styles["navbar-itemDesc"]}>
-                Awards honoring investigative journalism
+              Finance that fuels a better, greener future
               </span>
               <span className={styles["navbar-itemArrow"]}>→</span>
             </li>
@@ -218,7 +218,7 @@ const Navbar = () => {
             <li>
               <span className={styles["navbar-itemTitle"]}>Private Equity & Venture Capital</span>
               <span className={styles["navbar-itemDesc"]}>
-                Opportunities within the GIJN Network
+              Inside deals, funding rounds, and startup success
               </span>
               <span className={styles["navbar-itemArrow"]}>→</span>
             </li>
@@ -229,7 +229,7 @@ const Navbar = () => {
               Metaverse & Virtual Real Estate
               </span>
               <span className={styles["navbar-itemDesc"]}>
-                Our regional homepages and partners
+              Exploring digital spaces and next-gen property markets
               </span>
               <span className={styles["navbar-itemArrow"]}>→</span>
             </li>
