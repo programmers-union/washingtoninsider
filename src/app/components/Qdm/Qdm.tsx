@@ -60,7 +60,8 @@ const Qdm = async () => {
                 className={styles['qdm-card-image']}
                 src={card.image}
                 alt={card.title}
-                fill
+                width={400}
+                height={200}
                 loading='lazy'
               />
             </div>

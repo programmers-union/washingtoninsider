@@ -52,7 +52,6 @@ const Projects = async () => {
                   alt={project.title}
                   width={400}
                   height={200}
-                  style={{ objectFit: 'cover' }}
                   loading='lazy'
                 />
                 <div className={styles['project-section-overlay']}>

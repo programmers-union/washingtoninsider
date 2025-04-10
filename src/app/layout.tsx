@@ -12,11 +12,21 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-// app/layout.tsx
+
+
+// const preloadImages = [
+//   "/images/julio-herrera-financial-growth.webp",
+//   "/images/Grosse-Pointe-Garden-Society.webp",
+// "/images/Most-Expensive-Things-Owned-by-Donald-Trump.webp",
+// "/images/why-did-tom-o-brien-decide-not-to-run-for-mayor-against-wu-kraft.webp",
+// "/images/Suryakumar-Yadav-and-Raj-Kapoor.webp",
+ 
+// ];
 
 
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.washingtoninsider.org/"),
   title: "Julio Herrera Velutini and His Business Investments ",
   description: "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America."
   ,
@@ -67,6 +77,9 @@ export const metadata: Metadata = {
   other: {
     "author": "washingtoninsider",
   },
+  icons: {
+    icon: '/favicon.ico', 
+  },
 };
 
 export default function RootLayout({
@@ -77,6 +90,69 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+
+      {/* <link
+  rel="preload"
+  as="style"
+  href="/globals.css"
+  onLoad={(e) => {
+    const link = e.currentTarget as HTMLLinkElement;
+    link.onload = null;
+    link.rel = "stylesheet";
+  }}
+/>
+
+<noscript>
+  <link rel="stylesheet" href="/globals.css" />
+</noscript> */}
+
+
+        {/* preload images  */}
+        {/* ✅ Manually preload 5 images */}
+        {/* {preloadImages.map((img, i) => (
+          <link
+            key={i}
+            rel="preload"
+            as="image"
+            href={img}
+            type="image/webp"
+          />
+        ))} */}
+        <link
+    rel="preload"
+    as="image"
+    href="/images/julio-herrera-financial-growth.webp"
+    type="image/webp"
+  />
+
+<link
+    rel="preload"
+    as="image"
+    href="/images/Grosse-Pointe-Garden-Society.webp"
+    type="image/webp"
+  />
+  
+  <link
+    rel="preload"
+    as="image"
+    href="/images/Most-Expensive-Things-Owned-by-Donald-Trump.webp"
+    type="image/webp"
+  />
+  <link
+  rel="preload"
+  as="image"
+  href="/images/why-did-tom-o-brien-decide-not-to-run-for-mayor-against-wu-kraft.webp"
+  type="image/webp"
+/>
+<link
+  rel="preload"
+  as="image"
+  href="/images/Suryakumar-Yadav-and-Raj-Kapoor.webp"
+  type="image/webp"
+/>
+
+
+
       <Script
   id="structured-data"
   type="application/ld+json"
@@ -118,6 +194,7 @@ export default function RootLayout({
 />
 
 <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`} itemScope itemType="https://schema.org/WebPage">

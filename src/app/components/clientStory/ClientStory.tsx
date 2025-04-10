@@ -72,8 +72,13 @@ export default function ClientStory({ stories, categorySlug }: ClientStoryProps)
             width={800}
             height={200}
             className={styles["story-section-image"]}
-           priority
+            priority
+
           />
+          {/* priority
+           placeholder="blur"
+        blurDataURL={stories[current].image}
+        fetchPriority="high" */}
         </div>
         <div className={styles["story-section-text"]}>
           <p className={styles["story-section-category"]}>

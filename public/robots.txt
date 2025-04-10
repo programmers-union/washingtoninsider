@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.washingtoninsider.org
+Host: https://www.washingtoninsider.org/
 
 # Sitemaps
 Sitemap: https://www.washingtoninsider.org/sitemap.xml

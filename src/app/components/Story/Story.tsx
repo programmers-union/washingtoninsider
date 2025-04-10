@@ -123,8 +123,11 @@ export default async function Story() {
                   <Image
                     src={story.image}
                     alt={story.title ?? ""}
-                    fill
+                    width={400}
+                    height={200}
                     className={styles.substoryImage}
+                    sizes="(max-width: 768px) 100vw, 400px"
+                    priority
                   />
                 </div>
                 <div className={styles.substoryText}>

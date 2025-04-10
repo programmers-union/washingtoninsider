@@ -39,27 +39,34 @@
     transform: translateY(-4px);
   }
   
-  /* 
-    Wrapper for Next.js Image so that it can maintain 
-    a consistent aspect ratio with layout="responsive"
-  */
   .videosectionImageWrapper {
+    position: relative;
     width: 100%;
-    /* The height is determined by the width/height props in <Image />. 
-       If you'd like a fixed height, you can define it here and switch to 
-       layout="fill" or a different approach. */
+    height: auto; 
+    /* background-color: #f2f2f2;  */
+    overflow: hidden;
+
+  }
+  
+  .videosectionImage {
+    width: 100%;
+    height: 11rem;
+    object-fit: cover;
+    /* display: block;  */
+  }
+  /* .videosectionImageWrapper {
+    width: 100%;
     position: relative; 
     padding: 0;
     
     height: 12rem;
     
   }
-  
-  /* Next.js Image itself */
+
   .videosectionImage {
     object-fit: cover;
     
-  }
+  } */
   
   /* Content inside each card */
   .videosectionCardContent {
@@ -106,10 +113,7 @@
     .videosectionCardContent {
       padding: 1rem;
     }
-    .videosectionImageWrapper{
-      
-      height: 15rem;
-    }
+    
   }
   
   /* For screens 768px wide or smaller */
@@ -129,12 +133,9 @@
     .videosectionCard{
       height: 25rem;
     }
-    .videosectionImageWrapper{
-      
-      height: 13rem;
-    }
+    
     .videosectionImage{
-      height: 13rem;
+      height: 10rem;
     }
     
     .videosectionGrid {

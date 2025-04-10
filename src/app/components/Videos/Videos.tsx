@@ -50,8 +50,9 @@ export default async function Videos() {
                 <Image
                   src={card.image}
                   alt={card.title}
-                  layout="fill"
-                  objectFit="cover"
+                  width={400}
+                  height={200}
+                  loading="lazy"
                   className={styles.videosectionImage}
                 />
               </div>
