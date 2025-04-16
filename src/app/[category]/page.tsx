@@ -1,12 +1,96 @@
-import styles from './page.module.css';
-import Navbar from '@/app/components/Navbar/Navbar';
-import Footer from '@/app/components/Footer/Footer';
-import { notFound } from 'next/navigation';
-import prisma from '@/lib/db';
-import Pagination from '../components/Pagination/Pagination';
-import Link from 'next/link';
-import Image from 'next/image';
-import type { Card as CardType } from '@/types/category';
+import styles from "./page.module.css";
+import Navbar from "@/app/components/Navbar/Navbar";
+import Footer from "@/app/components/Footer/Footer";
+import { notFound } from "next/navigation";
+import prisma from "@/lib/db";
+import Pagination from "../components/Pagination/Pagination";
+import Link from "next/link";
+import Image from "next/image";
+import type { Card as CardType } from "@/types/category";
+
+// seo
+import type { Metadata } from "next";
+import Script from "next/script";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ category: string }>;
+}): Promise<Metadata> {
+  // If the category is "business", return the fixed SEO details:
+  if ((await params).category === "business") {
+    return {
+      title: "Julio Herrera Velutini and His Business Investments",
+      description:
+        "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America",
+      keywords: [
+        "julio herrera velutini",
+        "julio herrera velutini breaking news",
+        "julio herrera",
+        "Julio Herrera Velutini and His Business Investments in the Global Market",
+        "Julio Herrera Velutini is a renowned global investor",
+        "private banking strategist",
+        "washingtoninsider",
+        "washington insider news",
+        "latest news about julio herrera velutini",
+        "Who is Julio Herrera Velutini",
+        "Julio Herrera Velutini net worth",
+        "Julio Herrera Velutini background",
+        "Julio Herrera Velutini banking strategies",
+        "Britannia Financial Group global investments",
+        "Herrera Velutini banking history",
+        "Julio Herrera Velutini financial controversies",
+        "Latin American banking industry",
+        "private wealth management in Europe",
+        "high-net-worth banking strategies",
+        "investment banking leadership",
+      ],
+      openGraph: {
+        title: "Julio Herrera Velutini and His Business Investments",
+        description:
+          "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America",
+        url: "https://www.washingtoninsider.org/business/",
+        siteName: "Washington Insider",
+        type: "website",
+        images: [
+          {
+            url: "https://www.washingtoninsider.org/images/washingtoninsider-logo.webp",
+            width: 1200,
+            height: 630,
+            alt: "Washington Insider",
+          },
+        ],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: "Julio Herrera Velutini and His Business Investments",
+        description:
+          "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America",
+        images: [
+          "https://www.washingtoninsider.org/images/washingtoninsider-logo.webp",
+        ],
+      },
+      alternates: {
+        canonical: "https://www.washingtoninsider.org/business/",
+      },
+      other: {
+        author: "Washington Insider",
+      },
+    };
+  }
+
+  // For other categories, return generic dynamic metadata.
+
+  return {
+    title: `${
+      (await params).category.charAt(0).toUpperCase() +
+      (await params).category.slice(1)
+    } - Washington Insider`,
+    description: `${
+      (await params).category
+    } category page on Washington Insider.`,
+  };
+}
 
 export const dynamicParams = false;
 
@@ -22,11 +106,9 @@ export async function generateStaticParams() {
 function sanitizeCard(card: any): CardType {
   return {
     image: card.image,
-    // Map "cardCategory" (from the DB) to "category" (for our UI)
     category: card.cardCategory,
     title: card.title,
     slug: card.slug,
-    // Provide fallback values for nullable fields
     author: card.author ?? "",
     date: card.date ?? "",
     excerpt: card.excerpt ?? "",
@@ -42,7 +124,7 @@ export default async function CategoryPage({
 }: {
   params: Promise<{ category: string }>;
 }) {
-  const { category } =await params;
+  const { category } = await params;
 
   // Find category by slug and include its cards
   const categoryData = await prisma.category.findFirst({
@@ -68,6 +150,40 @@ export default async function CategoryPage({
   return (
     <main className={styles.categorypageWrapper}>
       <Navbar />
+      {/* structured data  */}
+      {category === "business" && (
+        <Script
+          id="structured-data"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "CollectionPage",
+                headline: "Julio Herrera Velutini and His Business Investments",
+                description:
+                  "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America",
+                url: "https://www.washingtoninsider.org/business/",
+                publisher: {
+                  "@type": "Organization",
+                  name: "Washington Insider",
+                  logo: {
+                    "@type": "ImageObject",
+                    url: "https://www.washingtoninsider.org/images/washingtoninsider-logo.webp",
+                    width: 1200,
+                    height: 630,
+                  },
+                  datePublished:"2025-04-10",
+                  dateModified:"2025-04-16",
+                },
+              },
+              null,
+              2
+            ),
+          }}
+        />
+      )}
 
       <section className={styles.categorypageHeader}>
         <div className={styles.categorypageHeaderInner}>
@@ -83,13 +199,19 @@ export default async function CategoryPage({
 
       <section className={styles.categorypageGrid}>
         {initialCards.map((item, idx) => (
-          <Link key={idx} href={`/${categoryData.categorySlug}/${item.slug}`} title={item.title}>
+          <Link
+            key={idx}
+            href={`/${categoryData.categorySlug}/${item.slug}`}
+            title={item.title}
+          >
             <article className={styles.categorypageCard}>
               <div className={styles.categorypageimagewrapper}>
                 <Image
                   src={item.image}
                   alt={item.title}
-                  fill
+                  priority
+                  width={200}
+                  height={200}
                   className={styles.categorypageImage}
                 />
               </div>
@@ -97,10 +219,10 @@ export default async function CategoryPage({
                 <p className={styles.categorypageCategory}>{item.category}</p>
                 <h2 className={styles.categorypageHeading}>{item.title}</h2>
                 <p className={styles.categorypageMeta}>
-                  by{' '}
+                  by{" "}
                   <span className={styles.categorypageMetaAuthor}>
                     {item.author}
-                  </span>{' '}
+                  </span>{" "}
                   • {item.date}
                 </p>
                 <p className={styles.categorypageExcerpt}>{item.excerpt}</p>

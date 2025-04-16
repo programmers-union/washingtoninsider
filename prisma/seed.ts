@@ -16,16 +16,15 @@ async function main() {
     const rawData = fs.readFileSync(filePath, 'utf-8')
     const data = JSON.parse(rawData)
 
-    // 4) Loop over each category key in the JSON object
+    // Loop over each category key in the JSON object
     for (const key of Object.keys(data)) {
       const categoryData = data[key]
 
       console.log(`Seeding category: ${categoryData.categorySlug}`)
 
-      // 5) Create a Category with nested Card[] records
+      // Create a Category with nested Card[] records
       await prisma.category.create({
         data: {
-          // If you want to set Category.id from JSON, include it here:
           id: categoryData.id,
 
           categorySlug:      categoryData.categorySlug,
@@ -36,7 +35,7 @@ async function main() {
           cards: {
             create: categoryData.cards.map((card: any) => ({
               image:            card.image,
-              cardCategory:     card.category,   // JSON "category" -> DB "cardCategory"
+              cardCategory:     card.category,   
               title:            card.title,
               slug:             card.slug,
               author:           card.author,
@@ -57,10 +56,10 @@ async function main() {
     console.error('Error while seeding:', error)
     process.exit(1)
   } finally {
-    // 6) Disconnect Prisma
+    //  Disconnect Prisma
     await prisma.$disconnect()
   }
 }
 
-// 7) Run the seeding
+// Run the seeding
 main()

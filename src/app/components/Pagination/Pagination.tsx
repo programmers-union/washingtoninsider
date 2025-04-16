@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import styles from './Pagination.module.css';
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import styles from "./Pagination.module.css";
 
 type Card = {
   image: string;
@@ -34,13 +34,18 @@ export default function LoadMoreCards({ remainingCards, categorySlug }: Props) {
       {cardsToShow.length > 0 && (
         <section className={styles.categorypageGrid}>
           {cardsToShow.map((item, idx) => (
-            <Link key={idx} href={`/${categorySlug}/${item.slug}`} title={item.title}>
+            <Link
+              key={idx}
+              href={`/${categorySlug}/${item.slug}`}
+              title={item.title}
+            >
               <article className={styles.categorypageCard}>
                 <div className={styles.categorypageimagewrapper}>
                   <Image
                     src={item.image}
                     alt={item.title}
-                    fill
+                    width={200}
+                    height={200}
                     className={styles.categorypageImage}
                     loading="lazy"
                   />
@@ -49,10 +54,10 @@ export default function LoadMoreCards({ remainingCards, categorySlug }: Props) {
                   <p className={styles.categorypageCategory}>{item.category}</p>
                   <h2 className={styles.categorypageHeading}>{item.title}</h2>
                   <p className={styles.categorypageMeta}>
-                    by{' '}
+                    by{" "}
                     <span className={styles.categorypageMetaAuthor}>
                       {item.author}
-                    </span>{' '}
+                    </span>{" "}
                     • {item.date}
                   </p>
                   <p className={styles.categorypageExcerpt}>{item.excerpt}</p>

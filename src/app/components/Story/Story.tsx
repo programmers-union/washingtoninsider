@@ -1,5 +1,3 @@
-// File: src/app/story/page.tsx
-
 import React from "react";
 import styles from "./Story.module.css";
 import Link from "next/link";
@@ -7,10 +5,6 @@ import Image from "next/image";
 import prisma from "@/lib/db";
 import ClientStory from "../clientStory/ClientStory";
 
-/**
- * 1) Define TypeScript interfaces that match your Prisma models + extra fields.
- *    Adjust optional vs. required fields to match your schema exactly.
- */
 interface ExtendedCard {
   id: number;
   categoryId: number;
@@ -36,9 +30,6 @@ interface ExtendedCategory {
   cards: ExtendedCard[];
 }
 
-/**
- * 2) Fetch data from DB, map the "cardCategory" field to "category" for rendering.
- */
 export default async function Story() {
   // Fetch each Category by its unique slug:
   const storiesCategory = (await prisma.category.findUnique({
@@ -95,12 +86,9 @@ export default async function Story() {
   // For the Resource Center on the right, get the latest 5 cards:
   const resourceCenterData = mappedResourceCategory.cards.slice(0, 5);
 
-  // For the GIJN Hub section, show only the latest 6 cards:
+  // For the  Hub section, show only the latest 6 cards:
   const ghCards = mappedGijnHubCategory.cards.slice(0, 6);
 
-  /**
-   * 3) Render your existing JSX, referencing the mapped categories & slices.
-   */
   return (
     <div className={styles["story-section-container"]}>
       <div className={styles["story-section-left"]}>
@@ -127,7 +115,6 @@ export default async function Story() {
                     width={400}
                     height={200}
                     className={styles.substoryImage}
-                    // sizes="(max-width: 768px) 100vw, 400px"
                     priority
                   />
                 </div>
@@ -135,7 +122,9 @@ export default async function Story() {
                   <p className={styles.substoryCategory}>{story.category}</p>
                   <h2 className={styles.substoryTitle}>{story.title}</h2>
                   <p className={styles.substoryMeta}>
-                    <span className={styles.substoryAuthor}>by {story.author}</span>{" "}
+                    <span className={styles.substoryAuthor}>
+                      by {story.author}
+                    </span>{" "}
                     • {story.date}
                   </p>
                   <p className={styles.substoryDescription}>{story.excerpt}</p>
@@ -157,7 +146,10 @@ export default async function Story() {
         {/* Resource Center Section */}
         <div className={styles["rc-section-container"]}>
           <h2 className={styles["rc-section-title"]}>
-            <Link href={`/${mappedResourceCategory.categorySlug}`} title="stockmarket">
+            <Link
+              href={`/${mappedResourceCategory.categorySlug}`}
+              title="stockmarket"
+            >
               Stock market
             </Link>
           </h2>
@@ -185,8 +177,12 @@ export default async function Story() {
                   />
                 </div>
                 <div className={styles["rc-section-card-content"]}>
-                  <p className={styles["rc-section-category"]}>{item.category}</p>
-                  <h3 className={styles["rc-section-card-title"]}>{item.title}</h3>
+                  <p className={styles["rc-section-category"]}>
+                    {item.category}
+                  </p>
+                  <h3 className={styles["rc-section-card-title"]}>
+                    {item.title}
+                  </h3>
                   <p className={styles["rc-section-description"]}>
                     {item.excerpt}
                   </p>
@@ -204,10 +200,13 @@ export default async function Story() {
           </Link>
         </div>
 
-        {/* GIJN Hub Section */}
+        {/* Hub Section */}
         <div className={styles["gh-section-container"]}>
           <h2 className={styles["gh-section-title"]}>
-            <Link href={`/${mappedGijnHubCategory.categorySlug}`} title={mappedGijnHubCategory.mainTitle}>
+            <Link
+              href={`/${mappedGijnHubCategory.categorySlug}`}
+              title={mappedGijnHubCategory.mainTitle}
+            >
               {mappedGijnHubCategory.mainTitle}
             </Link>
           </h2>

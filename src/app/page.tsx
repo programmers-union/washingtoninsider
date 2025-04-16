@@ -1,4 +1,3 @@
-import styles from "./page.module.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Projects from "./components/Projects/Projects";
@@ -10,13 +9,13 @@ import Story from "./components/Story/Story";
 export default function Home() {
   return (
     <main itemScope itemType="https://schema.org/NewsArticle">
-    <Navbar/>
-    <Story/>
-    <Atw/>
-    <Qdm/>
-    <Projects/>
-   <Videos/>
-   <Footer/>
+      <Navbar />
+      <Story />
+      <Atw />
+      <Qdm />
+      <Projects />
+      <Videos />
+      <Footer />
     </main>
   );
 }

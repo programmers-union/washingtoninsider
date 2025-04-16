@@ -1,15 +1,13 @@
-
-
 .navbar-container {
   z-index: 9999;
-  top:0;
-  /* position: fixed; */
+  top: 0;
+
   position: sticky;
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
-  background-color: #302F2C;
+  background-color: #302f2c;
   color: white;
 }
 
@@ -31,16 +29,13 @@
   text-decoration: underline;
 }
 
-/* Main Navbar */
 .navbar-mainNav {
- 
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.9375rem 1.25rem;
   position: relative;
 }
-
 
 .navbar-leftSection {
   display: flex;
@@ -50,7 +45,7 @@
   cursor: pointer;
   width: 30%;
 }
-/* Search Bar Container */
+
 .navbar-searchBar {
   display: flex;
   align-items: center;
@@ -59,32 +54,27 @@
   padding: 0.5rem;
   position: absolute;
   left: 1rem;
-  top: 3rem; /* Adjust based on navbar position */
+  top: 3rem;
   width: auto;
   transition: all 0.3s ease-in-out;
 }
 
-/* Input Field */
-/* Search Wrapper */
 .navbar-searchWrapper {
   display: flex;
   align-items: center;
   position: relative;
 }
-.navbar-searchWrapper span{
+.navbar-searchWrapper span {
   padding-left: 1rem;
 }
 
-/* Search Icon */
 .navbar-icon {
   font-size: 1.2rem;
   cursor: pointer;
-  
 }
 
-/* Search Input */
 .navbar-searchInput {
-  margin-left: 0.5rem;  /* Moves input to the right of the icon */
+  margin-left: 0.5rem;
   padding: 0.4rem 0.6rem;
   font-size: 1rem;
   border: none;
@@ -95,7 +85,6 @@
   width: 12rem;
 }
 
-/* Search Button (Arrow Icon) */
 .navbar-searchButton {
   background: linear-gradient(to right, #444, #222);
   border: none;
@@ -109,10 +98,7 @@
   font-size: 1rem;
 }
 
-
-
 .navbar-centerSection {
-  /* background-color: #c72535; */
   width: 40%;
   display: flex;
   align-items: center;
@@ -120,8 +106,6 @@
   flex: 1;
   padding-left: 3rem;
   gap: 1rem;
-  
-  
 }
 
 .navbar-title {
@@ -132,7 +116,6 @@
   text-align: left;
 }
 
-
 .navbar-rightSection {
   display: flex;
   align-items: center;
@@ -140,7 +123,6 @@
   gap: 1.25rem;
   width: 30%;
 }
-
 
 .navbar-menuButton {
   position: relative;
@@ -155,47 +137,40 @@
   gap: 0.3125rem;
 }
 
-
-
-
-
-.navbar-accessibilityIcon{
+.navbar-accessibilityIcon {
   cursor: pointer;
-font-size:1.5rem;
+  font-size: 1.5rem;
 }
 .navbar-accessibilityDropdown {
   display: flex;
-  justify-content: space-between;  
-  position: fixed;  
-  /* top: 20vh;  */
+  justify-content: space-between;
+  position: fixed;
+
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  background-color: #EEE9E0;
+  background-color: #eee9e0;
   padding: 1.5rem;
- color: black;
-  z-index: 1000; 
+  color: black;
+  z-index: 1000;
   height: auto;
-  
 }
 
-.navbar-accessibility-left{
+.navbar-accessibility-left {
   display: flex;
-  
+
   flex-direction: column;
   width: 20%;
 }
-/* Title at the top-left */
+
 .navbar-accessibilityTitle {
   font-size: 0.8rem;
   font-weight: 500;
   margin-bottom: 1rem;
   text-transform: uppercase;
   color: black;
-  
 }
 
-/* "reset all" button */
 .navbar-accessibilityReset {
   color: black;
   background-color: #fff;
@@ -206,21 +181,19 @@ font-size:1.5rem;
   width: 30%;
   border-radius: 4px;
   margin-bottom: 1rem;
-  text-transform: lowercase; /* 'reset all' in screenshot is lowercase */
+  text-transform: lowercase;
 }
 
 .navbar-accessibilityReset:hover {
   background-color: #ddd;
 }
-.navbar-accessibility-right{
-  /* padding-left: 8rem; */
+.navbar-accessibility-right {
   width: 80%;
-  /* background-color: #c72535; */
+
   display: flex;
   justify-content: end;
 }
 
-/* Grid containing text size, color options, reading tools, other */
 .navbar-accessibilityGrid {
   margin-right: 5rem;
   width: 60%;
@@ -230,7 +203,6 @@ font-size:1.5rem;
   margin-bottom: 1rem;
 }
 
-/* Each block inside the grid */
 .navbar-accessibilityGrid > div {
   display: flex;
   flex-direction: column;
@@ -260,7 +232,6 @@ font-size:1.5rem;
   background-color: #ddd;
 }
 
-/* Close Button (top-right corner) */
 .navbar-accessibilityClose {
   position: absolute;
   top: 1rem;
@@ -277,8 +248,6 @@ font-size:1.5rem;
   color: #e63946;
 }
 
-
-
 .navbar-donateButton {
   background-color: #e63946;
   color: white;
@@ -294,25 +263,22 @@ font-size:1.5rem;
 }
 
 .navbar-dropdown {
-  position: fixed;  
-  /* position: absolute; */
+  position: fixed;
+
   height: auto;
-  /* top: auto; */
-  /* top: 20vh;  */
+
   left: 50%;
   transform: translateX(-50%);
   width: 40%;
- 
-  background-color: #302F2C;
+
+  background-color: #302f2c;
   padding: 1rem;
   z-index: 999;
   display: flex;
   flex-direction: column;
 }
 
-
 .navbar-footer {
- 
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -320,7 +286,6 @@ font-size:1.5rem;
   margin-top: 1rem;
   height: auto;
 }
-
 
 .navbar-socialIcons {
   display: flex;
@@ -344,7 +309,7 @@ font-size:1.5rem;
   border: none;
   padding: 0.5rem 0.5rem;
   font-size: 0.8rem;
-  /* border-radius: 5px; */
+
   cursor: pointer;
 }
 
@@ -358,14 +323,13 @@ font-size:1.5rem;
   padding: 0;
   height: auto;
 }
-.navbar-menuList:hover{
+.navbar-menuList:hover {
   color: white;
 }
 
-
 .navbar-menuList li {
   display: grid;
-  grid-template-columns: 1fr 2fr auto; 
+  grid-template-columns: 1fr 2fr auto;
   align-items: center;
   padding: 0.5rem 0.5rem;
   border-bottom: 1px solid #444;
@@ -374,41 +338,37 @@ font-size:1.5rem;
 }
 
 .navbar-menuList li:hover {
-  background-color: rgba(255, 255, 255, 0.1); 
+  background-color: rgba(255, 255, 255, 0.1);
   color: white;
-  
 }
 
 .navbar-itemTitle {
   font-size: 0.8rem;
   font-weight: bold;
-  color: #C9C8C8;
-  text-align: left; 
+  color: #c9c8c8;
+  text-align: left;
 }
-.navbar-itemTitle:hover{
+.navbar-itemTitle:hover {
   color: white;
 }
 
 .navbar-itemDesc {
   color: #969694;
   font-size: 0.8rem;
-  text-align: start; 
-  
+  text-align: start;
 }
-.navbar-itemDesc:hover{
+.navbar-itemDesc:hover {
   color: white;
 }
-
 
 .navbar-itemArrow {
   color: white;
-  text-align: right; 
+  text-align: right;
 }
-
 
 .navbar-languagesRow {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); 
+  grid-template-columns: repeat(5, 1fr);
   gap: 0.5rem;
   margin-top: 1rem;
   text-align: center;
@@ -430,46 +390,39 @@ font-size:1.5rem;
 .navbar-langButton:hover {
   background-color: #555;
 }
-/* separate mobile search code  */
-.search-mobile-div{
-  
-  position: fixed;  
-  /* position: absolute; */
-  /* padding: 0.5rem ; */
+
+.search-mobile-div {
+  position: fixed;
+
   z-index: 9999;
   display: none;
   cursor: pointer;
   width: 100%;
   min-height: 0;
   height: auto;
- 
 }
-.inside-search-mobile-div{
-  position: absolute;  
+.inside-search-mobile-div {
+  position: absolute;
   background-color: #999999;
-  padding: 0.5rem ;
+  padding: 0.5rem;
   cursor: pointer;
   width: 100%;
   min-height: 0;
   height: auto;
-  /* background-color: #999999 !important; */
 }
 .navbar-searchInput2 {
-  
   z-index: 1000;
   height: auto;
   width: 100%;
   padding: 0.4rem 1rem;
   font-size: 1rem;
-  border: 1px solid #FFCE40;
+  border: 1px solid #ffce40;
   background-color: #444;
   color: white;
   outline: none;
-  /* width: 12rem; */
-  /* margin: 0; */
 }
 
-@media(max-width:1024px){
+@media (max-width: 1024px) {
   .navbar-languageBar {
     display: flex;
     justify-content: space-evenly;
@@ -477,45 +430,40 @@ font-size:1.5rem;
     background-color: #111;
     font-size: 0.3rem;
   }
-  .navbar-leftSection{
-    
+  .navbar-leftSection {
     width: 15%;
   }
-  .navbar-centerSection{
+  .navbar-centerSection {
     display: flex;
     justify-content: center;
     width: 65%;
   }
-  .navbar-centerSection .navbar-title{
+  .navbar-centerSection .navbar-title {
     font-size: 1.3rem;
   }
-  .navbar-accessibility-right{
+  .navbar-accessibility-right {
     width: 20%;
   }
-  .navbar-searchInput{
+  .navbar-searchInput {
     width: 8rem;
   }
 }
 
-
-
-
 @media (max-width: 680px) {
-  .navbar-dropdown{
+  .navbar-dropdown {
     padding: 0.2rem;
     background-color: #222222;
   }
-  
-  /* Hide unnecessary elements */
+
   .navbar-languageBar,
-  .navbar-accessibilityIcon,.navbar-rightSection .navbar-donateButton {
+  .navbar-accessibilityIcon,
+  .navbar-rightSection .navbar-donateButton {
     display: none;
   }
-  .navbar-container{
+  .navbar-container {
     height: auto;
   }
-  
-  /* Navbar Layout Adjustments */
+
   .navbar-mainNav {
     display: flex;
     justify-content: space-between;
@@ -523,137 +471,89 @@ font-size:1.5rem;
     padding: 0.75rem;
   }
 
-  /* Left Section: Show only search icon */
   .navbar-leftSection {
     width: 10%;
   }
-  
-  /* Search Icon Only */
-  /* .navbar-searchWrapper span,
-  .navbar-searchInput {
+
+  .navbar-searchWrapper span {
     display: none;
-  } */
-/* Hide the "Search" text on small screens */
-.navbar-searchWrapper span {
-  display: none;
-}
+  }
 
-/* By default, hide the search input unless .searchOpen is active */
-.navbar-searchWrapper input {
-  display: none;
-}
+  .navbar-searchWrapper input {
+    display: none;
+  }
 
-/* Full-width search bar when open */
-/* .navbar-searchWrapper.searchOpen {
-  
-  position: absolute;
-  top: 8vh;
-  left: 0;
-  width: 100%;
-  background: #333; 
-  padding: 0.75rem;
-  display: flex; 
-  gap: 0.5rem;
-  z-index: 9999;
-  align-items: center;
-} */
+  .navbar-searchWrapper.searchOpen input {
+    display: block;
+    flex: 1;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 0.5rem;
+    background-color: #222;
+    color: #fff;
+    outline: none;
+  }
 
-/* Show input when .searchOpen is active */
-.navbar-searchWrapper.searchOpen input {
-  display: block;
-  flex: 1; 
-  border: 1px solid #444;
-  border-radius: 5px;
-  padding: 0.5rem;
-  background-color: #222;
-  color: #fff;
-  outline: none;
-}
+  .navbar-searchWrapper.searchOpen .navbar-icon {
+    font-size: 1.2rem;
+    color: #fff;
+  }
 
-/* Style the search icon inside the open bar */
-.navbar-searchWrapper.searchOpen .navbar-icon {
-  font-size: 1.2rem;
-  color: #fff;
-}
-  /* Center Section: Logo & Title */
   .navbar-centerSection {
-    /* background-color: #c72535; */
     padding-left: 2rem;
     position: relative;
     width: 90%;
     display: flex;
     gap: 1rem;
     justify-content: flex-start;
-    
-    /* align-items: center; */
   }
-  
+
   .navbar-menuButton {
     position: absolute;
-    right: 0; /* Align to right inside centerSection */
+    right: 0;
   }
-  .navbar-menuButton span{
+  .navbar-menuButton span {
     display: none;
   }
 
   .navbar-centerSection .navbar-title {
-    /* position: absolute; */
     font-size: 1rem;
     text-align: left;
     line-height: 1.2;
   }
-  
 
-  /* Right Section: Only Show Menu Icon */
   .navbar-rightSection {
     width: auto;
     display: flex;
     justify-content: flex-end;
   }
 
-  /* Fullscreen Menu */
   .navbar-dropdown {
-    
-    
     width: 100%;
-    /* left: 50%; */
-    /* transform: translateX(-50%); */
-     /* Prevent overflow */
-    overflow-y: auto; 
-    
+
+    overflow-y: auto;
   }
-  .navbar-footer{
+  .navbar-footer {
     padding: 1rem;
   }
-  .navbar-footer .navbar-donateButton{
+  .navbar-footer .navbar-donateButton {
     width: 0.6rem;
     font-size: 0.5rem;
   }
-  .navbar-socialIcons a{
+  .navbar-socialIcons a {
     font-size: 1rem;
   }
 
- 
-  /* Fullscreen Menu Items */
   .navbar-menuList {
     width: 100%;
   }
-  .navbar-itemTitle{
+  .navbar-itemTitle {
     font-size: 0.8rem;
   }
-  .navbar-itemDesc{
+  .navbar-itemDesc {
     display: none;
   }
 
-  /* .navbar-menuList li {
-    display: block;
-    width: 100%;
-    text-align: left;
-    padding: 1rem;
-    font-size: 1.1rem;
-  } */
-
-  /* Language & Social Links */
   .navbar-languagesRow {
     display: flex;
     flex-wrap: wrap;
@@ -666,89 +566,20 @@ font-size:1.5rem;
     text-align: center;
   }
 
-  /* Footer (Social Links & Donate) */
-  /* .navbar-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  } */
-
   .navbar-socialIcons {
     font-size: 0.5rem;
     justify-content: center;
-    /* margin-bottom: 1rem; */
   }
 
-  /* Donate Button */
   .navbar-footer .navbar-donateButton {
     width: 4rem;
-    
+
     text-align: center;
   }
-  .navbar-searchWrapper.searchOpen input{
+  .navbar-searchWrapper.searchOpen input {
     display: none;
   }
-  .search-mobile-div{
-display: block;
+  .search-mobile-div {
+    display: block;
   }
-  
 }
-
-
-   /* @media (min-width :769px) and  (max-width: 1024px) {
-    .navbar-dropdown{
-      
-      width: 60%;
-    }
-   
-    .navbar-container {
-      height: 20%; 
-    }
-  
-   
-    .navbar-mainNav {
-      padding: 0.75rem 1rem;
-    }
-  
-   
-    .navbar-title {
-      background-color: #c72535;
-      font-size: 1rem; 
-    }
-  
-   
-    .navbar-searchInput {
-      width: 10rem; 
-    }
-  } */
-  
-  
-  /* @media (min-width:550px) and (max-width: 768px) {
-    
-    .navbar-container {
-      height: auto;
-    }
-  
-    
-    .navbar-mainNav {
-      padding: 0.5rem 0.75rem;
-    }
-  
-  
-    .navbar-title {
-      font-size: 1.1rem;
-    }
-  
-    
-    .navbar-searchInput {
-      width: 8rem;
-    }
-    .navbar-dropdown{
-      
-      width: 60%;
-    }
-  }
-   */
-
-
-  

@@ -1,42 +1,46 @@
-
 .detailpageWrapper {
   background-color: #686767;
   width: 100%;
-  height:70vh; 
+  height: 70vh;
   position: relative;
   overflow: hidden;
   display: flex;
   justify-content: center;
   text-align: justify;
 }
-
 .detailpageBackground {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  z-index: 0;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
 }
 
 .detailpageBgImage {
   width: 100%;
+  height: 100%;
   object-fit: cover;
+  display: block;
   filter: blur(1rem);
   opacity: 0.3;
 }
-
 .detailpageForeground {
-  position: relative;
   width: 50%;
-  margin: 0 auto;
-  z-index: 1;
   height: auto;
-  /* aspect-ratio: 16 / 9; */
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+  top: 0;
+  margin: 0 auto;
 }
-
 .detailpageForegroundImage {
   object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .detailpageTitleHeader {
@@ -46,17 +50,15 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 1rem;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   border-bottom: 1px solid #ddd;
 }
 
 .detailpageTitleHeaderLeft {
   width: 25%;
   height: auto;
-  
- 
+
   color: #333;
-  
 }
 .detailpageBreadcrumbs {
   width: 100%;
@@ -65,7 +67,6 @@
   color: #333;
   line-height: 1.4;
   margin: 0;
-  /* white-space: nowrap; */
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -74,19 +75,15 @@
   color: #222;
 }
 
-
-
-
 .detailpageTitleHeaderCenter {
   width: 50%;
-  
+
   margin-right: auto;
   height: auto;
 }
 
 .detailpageMainTitle {
   font-size: 2rem;
-  /* font-weight: 500; */
   line-height: 1;
   letter-spacing: 0.025em;
   margin-bottom: 0.8rem;
@@ -97,10 +94,6 @@
   color: #363536;
 }
 
-
-/*********** 
-  BELOW TOP SECTION: 3-COLUMN LAYOUT
-************/
 .detailpageContentWrapper {
   width: 100%;
   height: auto;
@@ -108,13 +101,10 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 0.4rem;
-  /* gap: 2rem; */
   box-sizing: border-box;
 }
 
-/* Left Column */
 .detailpageLeft {
- 
   width: 25%;
   font-size: 1rem;
   line-height: 1.5;
@@ -123,33 +113,19 @@
   height: auto;
 }
 
-/***** LEFT COLUMN EXTENDED *****/
-/* .detailpageShareBlock {
-  margin-bottom: 3rem;
-} */
-
 .detailpageShareTitle {
   padding: 0.2rem;
   width: 100%;
   font-size: 0.9rem;
   font-weight: 500;
-  /* margin-bottom: 1rem; */
 }
-
-
-
-/* .detailpageShareBlock {
-  margin-top: 2rem;
-} */
-
-
 
 .detailpageShareGrid {
   width: 100%;
   height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   border-radius: 0.2rem;
   overflow: hidden;
 }
@@ -173,18 +149,10 @@
   border-bottom: none;
 }
 
-/* .detailpageShareIcon {
-  width: 1.2rem;
-  height: 1.2rem;
-  display: inline-flex;
-} */
-
 .detailpageShareIcon svg {
   width: 1rem;
   height: 1rem;
-  
 }
-
 
 .detailpageResourcesBlock {
   margin-top: 2rem;
@@ -198,7 +166,7 @@
 }
 
 .detailpageResourceCard {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   display: flex;
   gap: 1rem;
   align-items: flex-start;
@@ -209,70 +177,52 @@
 .detailpageResourceImage {
   border-radius: 0.4rem;
   object-fit: cover;
-  /* width: 5rem;
-  height: 5rem; */
 }
 
 .detailpageResourceText {
   font-size: 0.9rem;
   line-height: 1.2;
   font-weight: 600;
-  color:#202020;
+  color: #202020;
 }
-.moreStoriesLink{
- 
- font-size: 0.85rem;
+.moreStoriesLink {
+  font-size: 0.85rem;
   text-decoration: underline;
 }
 
-
-/* Center Column */
 .detailpageCenter {
   width: 50%;
   padding: 0.5rem;
   height: auto;
 }
 
-
-
-
-
 .detailpageParagraph {
   font-size: 1rem;
   line-height: 1.4;
   margin-bottom: 1.5rem;
-  /* letter-spacing: 0.0em; */
 }
 
 .detailpageSubheading {
   color: #666666;
   font-size: 1.3rem;
-  /* font-weight: 700; */
   margin: 2rem 0 1rem;
-  /* text-decoration: underline; */
 }
 
 .detailpageGraph {
   position: relative;
   width: 100%;
-  /* height: 25rem; */
   height: auto;
-  aspect-ratio: 16 / 9;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  background-color: #f2f2f2;
   overflow: hidden;
-  
 }
 
 .detailpageGraphImage {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-
-/* Right Column */
-/***** RIGHT COLUMN: RELATED STORIES (Exact Style) *****/
 .detailpageRight {
-  
   width: 25%;
   padding: 1rem;
   height: auto;
@@ -286,7 +236,7 @@
 }
 
 .detailpageStoryCard {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   display: flex;
   gap: 1rem;
   align-items: flex-start;
@@ -305,14 +255,13 @@
   font-size: 0.9rem;
   line-height: 1.2;
   font-weight: 600;
-  color:#202020;
+  color: #202020;
 }
 
 .detailpageMoreStories {
   display: inline-block;
   margin-top: 1rem;
   font-size: 0.9rem;
-  /* font-weight: 500; */
   color: #111;
   text-decoration: underline;
 }
@@ -321,13 +270,10 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  /* margin-top: 4rem; */
-  /* padding: 1rem; */
   background-color: #f6f2eb;
   gap: 2rem;
 }
 
-/* LEFT SIDE */
 .detailpageLicense {
   width: 50%;
   background-color: #ffd54f;
@@ -336,7 +282,6 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 2rem;
-  
 }
 
 .detailpageLicenseLeft {
@@ -346,13 +291,10 @@
   font-size: 0.8rem;
   flex-direction: column;
 }
-.detailpageFooternotImagewrapper{
-  
-  
-  /* height: 25rem; */
+.detailpageFooternotImagewrapper {
   height: auto;
 }
-.detailpageFooternotImage{
+.detailpageFooternotImage {
   object-fit: cover;
 }
 
@@ -374,22 +316,19 @@
   background-color: #e0b33c;
   border: none;
   padding: 0.5rem;
-  /* font-weight: 600; */
   border-radius: 0.3rem;
   cursor: pointer;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 0.5rem;  
+  gap: 0.5rem;
   font-size: 0.8rem;
 }
-.detailpageRepublishBtn svg{
-width: 1rem;
-height: 1rem;
+.detailpageRepublishBtn svg {
+  width: 1rem;
+  height: 1rem;
 }
-
-/* RIGHT SIDE - TAGS */
 .detailpageTags {
   width: 50%;
   padding: 1rem;
@@ -415,7 +354,7 @@ height: 1rem;
 }
 
 .detailpageReadNext {
-  background-color: #1E1E1B;
+  background-color: #1e1e1b;
   color: #fff;
   padding: 2rem;
 }
@@ -438,23 +377,18 @@ height: 1rem;
   background-color: transparent;
   display: flex;
   flex-direction: column;
-  
 }
-.detailpageCardImageDiv{
-  
+.detailpageCardImageDiv {
   position: relative;
   width: 100%;
-  height: 12rem; 
-  background-color: #f2f2f2; 
+  height: 12rem;
+  background-color: #f2f2f2;
   overflow: hidden;
 }
 
 .detailpageCardImage {
   width: 100%;
-  
-  /* height: auto; */
   object-fit: cover;
-  
 }
 
 .detailpageCardTag {
@@ -475,17 +409,15 @@ height: 1rem;
 .detailpageCardByline {
   font-size: 0.8rem;
   font-style: italic;
-  color: #A2A2A1;
+  color: #a2a2a1;
   margin-bottom: 0.8rem;
 }
 
 .detailpageCardExcerpt {
   font-size: 0.8rem;
- color: #B4B4B3;
+  color: #b4b4b3;
   line-height: 1.5;
 }
-
-/* ----------------- New Styles for the Special Center Portion ----------------- */
 .specialCenter {
   width: 50%;
   padding: 1rem;
@@ -494,10 +426,8 @@ height: 1rem;
   line-height: 1.6;
   background-color: #ffffff;
   color: #333;
-  /* border: 1px solid #ddd; */
   border-radius: 4px;
   margin: 1rem auto;
-  /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
 }
 
 .specialHeading {
@@ -522,18 +452,11 @@ height: 1rem;
   color: #555;
 }
 
-
 @media (min-width: 681px) and (max-width: 1200px) {
-  /* TOP SECTION */
   .detailpageWrapper {
     height: 30vh;
   }
 
-  .detailpageForeground {
-    width: 80%;
-  }
-
-  /* TITLE SECTION */
   .detailpageMainTitle {
     font-size: 1.6rem;
   }
@@ -542,7 +465,6 @@ height: 1rem;
     font-size: 0.95rem;
   }
 
-  /* 3-COLUMN LAYOUT */
   .detailpageLeft,
   .detailpageCenter,
   .detailpageRight {
@@ -553,15 +475,15 @@ height: 1rem;
     padding: 0.5rem;
     font-size: 0.8rem;
   }
-  .detailpageResourceText{
+  .detailpageResourceText {
     font-size: 0.75rem;
   }
-  .detailpageResourceCard{
+  .detailpageResourceCard {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
   }
-  .detailpageResourceImage{
+  .detailpageResourceImage {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -569,14 +491,12 @@ height: 1rem;
 
   .detailpageCenter {
     width: 50%;
-    /* font-size: 0.75rem; */
   }
 
   .detailpageRight {
     width: 25%;
   }
 
-  /* SHARE BLOCK */
   .detailpageShareTitle {
     font-size: 0.5rem;
   }
@@ -585,7 +505,6 @@ height: 1rem;
     font-size: 0.5rem;
   }
 
-  /* STORY CARD (RIGHT COLUMN): IMAGE ON TOP */
   .detailpageStoryCard {
     flex-direction: column;
     align-items: flex-start;
@@ -602,8 +521,6 @@ height: 1rem;
     font-size: 0.75rem;
     padding: 0;
   }
-
-  /* FOOTER SECTION */
   .detailpageLicense {
     flex-direction: row;
     padding: 1.5rem;
@@ -629,7 +546,6 @@ height: 1rem;
     padding: 0.3rem 0.7rem;
   }
 
-  /* READ NEXT SECTION */
   .detailpageReadNext {
     padding: 2rem;
   }
@@ -639,7 +555,7 @@ height: 1rem;
   }
 
   .detailpageReadNextGrid {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
 
@@ -671,7 +587,6 @@ height: 1rem;
   }
 
   .specialCenter {
-    /* width: 90%; */
     padding: 0.8rem;
     margin: 0.8rem auto;
     font-size: 0.95rem;
@@ -689,7 +604,6 @@ height: 1rem;
     padding-left: 1.3rem;
     margin-bottom: 1rem;
   }
-  
 }
 
 @media (max-width: 680px) {
@@ -700,56 +614,44 @@ height: 1rem;
   }
   .detailpageForeground {
     width: 100%;
-    
-    height: 20rem;       
   }
-
 
   .detailpageTitleHeader {
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem;
   }
-  
+
   .detailpageTitleHeaderLeft,
   .detailpageTitleHeaderCenter {
     width: 100%;
     margin-bottom: 1rem;
   }
- 
 
- 
   .detailpageContentWrapper {
     flex-direction: column;
     padding: 0.5rem;
   }
   .detailpageLeft {
     width: 100%;
-   
   }
 
-  
   .detailpageResourcesBlock {
     display: none;
   }
 
- 
   .detailpageCenter {
     width: 100%;
     margin-bottom: 2rem;
   }
-  
 
-  
   .detailpageRight {
     width: 100%;
   }
 
-
   .detailpageFooterNote {
     flex-direction: column;
     gap: 1.5rem;
-    
   }
 
   .detailpageLicense {
@@ -765,7 +667,6 @@ height: 1rem;
     width: 100%;
     font-size: 0.95rem;
   }
-  
 
   .detailpageRepublishBtn {
     width: 100%;
@@ -775,7 +676,7 @@ height: 1rem;
 
   .detailpageTags {
     width: 100%;
-    padding: 1rem ;
+    padding: 1rem;
   }
 
   .detailpageTagsHeading {
@@ -803,24 +704,17 @@ height: 1rem;
   }
 
   .detailpageReadNextGrid {
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
 
   .detailpageCard {
     padding: 0.5rem 0;
   }
-  .detailpageCardImageDiv{
-    background-color: #1E1E1B;
+  .detailpageCardImageDiv {
+    background-color: #1e1e1b;
     height: auto;
   }
-
-  /* .detailpageCardImage {
-    width: 100%;
-    height: auto;
-    margin-bottom: 0.8rem;
-    object-fit: cover;
-  } */
 
   .detailpageCardTag {
     font-size: 0.8rem;
@@ -844,80 +738,76 @@ height: 1rem;
     font-size: 0.85rem;
     color: #ddd;
   }
-  .detailpageMainTitle{
+  .detailpageMainTitle {
     font-size: 1.4rem;
     letter-spacing: 0.03em;
   }
-  .detailpageBreadcrumbs{
+  .detailpageBreadcrumbs {
     font-size: 0.75rem;
   }
-  .detailpageShareTitle{
+  .detailpageShareTitle {
     font-size: 0.8rem;
   }
-  .detailpageParagraph{
+  .detailpageParagraph {
     font-size: 0.9rem;
     line-height: 1.4;
   }
-  .detailpageSubheading{
+  .detailpageSubheading {
     font-size: 1rem;
   }
-  .detailpageRightHeading{
+  .detailpageRightHeading {
     font-size: 0.9rem;
   }
-  .detailpageLicenseLeft{
+  .detailpageLicenseLeft {
     font-size: 0.8rem;
   }
-  .detailpageLicenseRight{
+  .detailpageLicenseRight {
     font-size: 0.8rem;
   }
-.detailpageRepublishBtn {
-  width: 50%;
-  font-size: 0.8rem;
-}
-.detailpageTagsHeading{
-  font-size: 0.75rem;
-}
-.detailpageTagList span{
-  font-size: 0.75rem;
-}
-.detailpageReadNextHeading{
-  font-size: 1.2rem;
-}
-.detailpageCardTitle {
-  font-size: 0.9rem;
-  letter-spacing: 0em;
-}
-.detailpageCardTag{
-  font-size: 0.7rem;
-}
-.detailpageCardByline{
-  font-size: 0.75rem;
-}
-.detailpageCardExcerpt{
-  font-size: 0.75rem;
-}
+  .detailpageRepublishBtn {
+    width: 50%;
+    font-size: 0.8rem;
+  }
+  .detailpageTagsHeading {
+    font-size: 0.75rem;
+  }
+  .detailpageTagList span {
+    font-size: 0.75rem;
+  }
+  .detailpageReadNextHeading {
+    font-size: 1.2rem;
+  }
+  .detailpageCardTitle {
+    font-size: 0.9rem;
+    letter-spacing: 0em;
+  }
+  .detailpageCardTag {
+    font-size: 0.7rem;
+  }
+  .detailpageCardByline {
+    font-size: 0.75rem;
+  }
+  .detailpageCardExcerpt {
+    font-size: 0.75rem;
+  }
 
-
-.specialCenter {
-  width: 100%;
-  padding: 0.5rem;
-  margin: 0.5rem auto;
-  font-size: 0.9rem;
+  .specialCenter {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem auto;
+    font-size: 0.9rem;
+  }
+  .specialHeading {
+    font-size: 1.2rem;
+    margin: 0.8rem 0 0.4rem;
+  }
+  .specialParagraph {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+  .specialList {
+    font-size: 0.9rem;
+    padding-left: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
 }
-.specialHeading {
-  font-size: 1.2rem;
-  margin: 0.8rem 0 0.4rem;
-}
-.specialParagraph {
-  font-size: 0.9rem;
-  margin-bottom: 0.8rem;
-}
-.specialList {
-  font-size: 0.9rem;
-  padding-left: 1.2rem;
-  margin-bottom: 0.8rem;
-}
-
-
-}
-

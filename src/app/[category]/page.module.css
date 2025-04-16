@@ -1,310 +1,243 @@
-/* ========== Layout Wrapper ========== */
 .categorypageWrapper {
-    text-align: left;
-    padding: 0;
-    
-  }
-  
-  /* ========== Top Header Section ========== */
+  text-align: left;
+  padding: 0;
+}
+.categorypageHeader {
+  background: #eee9e0;
+  padding-bottom: 5rem;
+  position: relative;
+  height: auto;
+}
+
+.categorypageHeaderInner {
+  width: auto;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 0;
+  height: auto;
+}
+
+.categorypageTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+  height: auto;
+  color: #202020;
+}
+
+.categorypageFloatingSearchBox {
+  position: absolute;
+  width: 100%;
+  bottom: -2.5rem;
+  border-radius: 12px;
+  padding: 1rem 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.categorypageSearchWrapper {
+  display: flex;
+  align-items: center;
+  background: white;
+
+  padding: 0.75rem 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  width: 60%;
+}
+
+.categorypageSearchIcon {
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.categorypageSearchInput {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  width: 100%;
+  background: transparent;
+}
+
+.categorypageSelect {
+  cursor: pointer;
+
+  background: white;
+
+  border: none;
+  width: 10rem;
+}
+.categorypageSelectDiv {
+  padding: 0.75rem;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.categorypageSelect option {
+  font-size: 1.1rem;
+  color: #222;
+  padding: 0.25rem;
+}
+
+.categorypagePostCountDiv {
+  padding: 2rem;
+}
+.categorypagePostCount {
+  font-size: 0.9rem;
+  color: #222;
+  text-align: center;
+}
+
+.categorypageGrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+
+  padding: 1rem;
+}
+
+.categorypageCard {
+  background: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.categorypageimagewrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  overflow: hidden;
+}
+
+.categorypageImage {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+
+
+.categorypageCategory {
+  padding-top: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.categorypageHeading {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.categorypageMeta {
+  font-size: 0.8rem;
+  color: #626262;
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+.categorypageMetaAuthor {
+  text-decoration: underline;
+}
+
+.categorypageExcerpt {
+  font-size: 0.85rem;
+  color: #6d6d6d;
+  letter-spacing: 0.03em;
+}
+
+.categorypagePagination {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0 5rem;
+}
+
+.categorypagePaginationList {
+  border: 1px solid #eee9e0;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.categorypagePageItem {
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  color: #222;
+  background: #fff;
+  border-right: 1px solid #eee;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.categorypagePageItem:last-child {
+  border-right: none;
+}
+
+.categorypageActive {
+  background: #302f2c;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.categorypageNextLink {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+@media (max-width: 680px) {
   .categorypageHeader {
-    background: #EEE9E0;
-    padding-bottom: 5rem;
-    position: relative;
-    height: auto;
-   
+    padding-bottom: 1rem;
   }
-  
-  .categorypageHeaderInner {
-    width: auto;
-    margin: 0 auto;
-    padding: 2rem 1.5rem 0;
-    height: auto;
-   
-  }
-  
-  .categorypageTitle {
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: left;
-    height: auto;
-    color: #202020;
-  }
-  
-  /* ========== Floating Search + Select Box ========== */
+
   .categorypageFloatingSearchBox {
-    position: absolute;
-    /* margin: auto auto; */
+    position: static;
+    bottom: auto;
     width: 100%;
-    /* left: 50%; */
-    /* transform: translateX(-50%); */
-    bottom: -2.5rem;
-    
-    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); */
-    border-radius: 12px;
-    padding: 1rem 1rem;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    /* flex-wrap: wrap; */
-    z-index: 2;
-  }
-  
-  /* ========== Search Input ========== */
-  .categorypageSearchWrapper {
-    display: flex;
-    align-items: center;
-    background: white;
-    /* border-radius: 12px; */
-    padding: 0.75rem 1rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-    width: 60%;
-    /* margin: 0 auto; */
-  }
-  
-  .categorypageSearchIcon {
-    margin-right: 0.5rem;
-    font-size: 1rem;
-    color: #555;
-  }
-  
-  .categorypageSearchInput {
-    border: none;
-    outline: none;
-    font-size: 1rem;
-    width: 100%;
-    background: transparent;
-  }
-  
-  /* ========== Select Box ========== */
-  .categorypageSelect {
-    cursor: pointer;
-    
-    background: white;
-    /* border-radius: 12px; */
-   
-    
-    border: none;
-    width: 10rem;
-  }
-  .categorypageSelectDiv{
-    padding: 0.75rem ;
-    background: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-  }
-  
-  .categorypageSelect option {
-    
-    font-size: 1.1rem;
-    color: #222;
-    padding: 0.25rem;
-  }
-  
-  /* ========== Post Count ========== */
-  .categorypagePostCountDiv{
-    /* background-color: aqua; */
-/* background-color: aqua; */
-padding: 2rem;
-  }
-  .categorypagePostCount {
-    font-size: 0.9rem;
-    color: #222;   
-    text-align: center;
-  }
-  
-  /* ========== Grid Section ========== */
-  .categorypageGrid {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(4, 1fr);
-    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
-    padding: 1rem;
-  }
-  
-  /* ========== Card Styles ========== */
-  .categorypageCard {
-    background: white;
-    overflow: hidden;
+    margin: 1rem auto 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    height: 100%;
-  }
-  
-  .categorypageimagewrapper {
-    position: relative;
-    width: 100%;
-    height: 13rem;
-    background-color: #f2f2f2;
-    overflow: hidden;
-    
-  }
-  
-  .categorypageImage {
-    object-fit: cover;
-  }
-  
-  /* .categorypageText {
-    padding: 1rem;
-  } */
-  
-  .categorypageCategory {
-    padding-top: 0.4rem;
-    font-size: 0.75rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-  }
-  
-  .categorypageHeading {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
-  
-  .categorypageMeta {
-    font-size: 0.8rem;
-    color: #626262;
-    font-style: italic;
-    margin-bottom: 0.75rem;
-  }
-  
-  .categorypageMetaAuthor {
-    text-decoration: underline;
-  }
-  
-  .categorypageExcerpt {
-    font-size: 0.85rem;
-    color: #6D6D6D;
-    letter-spacing: 0.03em;
-  }
-  
-  /* ========== Pagination ========== */
-  .categorypagePagination {
-    display: flex;
-    justify-content: center;
-    margin: 3rem 0 5rem;
-  }
-  
-  .categorypagePaginationList {
-    border: 1px solid #EEE9E0;
-    display: flex;
-    list-style: none;
-    padding: 0;
-    border-radius: 5px;
-    overflow: hidden;
-  }
-  
-  .categorypagePageItem {
-    padding: 0.5rem 1.2rem;
-    font-size: 1rem;
-    color: #222;
-    background: #fff;
-    border-right: 1px solid #eee;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  
-  .categorypagePageItem:last-child {
-    border-right: none;
-  }
-  
-  .categorypageActive {
-    background: #302F2C;
-    color: #fff;
-    font-size: 0.8rem;
-  }
-  
-  .categorypageNextLink {
-    display: flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: 1rem;
   }
-  
 
-  /* @media (max-width: 680px) {
-      
-    .categorypageFloatingSearchBox {
-        
-        background-color: aqua;
-       
-     
-      width: 100%;
-      padding: 1rem;
-      bottom: 0rem;
-    }
-    
-  
-    .categorypageSearchWrapper {
-      width: 100%;
-      height: auto;
-    }
-  
-    .categorypageSelect {
-      width: 100%;
-      padding: 0.75rem 1rem;
-    }
-  
-    .categorypageHeaderInner {
-      padding: 2rem 1rem 0;
-      height: 15vh;
-    }
-  
-    .categorypageTitle {
-      font-size: 2rem;
-    }
+  .categorypageTitle {
+    font-size: 1.8rem;
   }
-   */
-   @media (max-width: 680px) {
-    .categorypageHeader{
-        padding-bottom: 1rem;
-    }
-    /* Make the floating box become a normal stacked container */
-    .categorypageFloatingSearchBox {
-      position: static;
-      bottom: auto;
-      width: 100%;
-      margin: 1rem auto 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* centers each element horizontally */
-      gap: 1rem;
-    }
-  
-    /* Title can be smaller or same, but typically we reduce a bit for mobile */
-    .categorypageTitle {
-      font-size: 1.8rem;
-    }
-  
-    /* Full width search bar */
-    .categorypageSearchWrapper {
-      width: 90%;
-      border-radius: 10px;
-    }
-  
-    /* Full width select box on next line */
-    .categorypageSelectDiv{
-        width: 90%;
-      padding: 0.75rem 1rem;
-      border-radius: 10px;
-    }
-    .categorypageSelect {
-      width: 100%;
-     
-    }
-  
-    /* Adjust spacing if you want the post count to appear a bit lower */
-    .categorypagePostCountDiv {
-      margin-top: 2rem;
-    }
-    .categorypageGrid {
-        grid-template-columns: 1fr;
-      }
-      .categorypageimagewrapper{
-        height: 13rem;
-      }
-      .categorypagePostCountDiv{
-        padding: 0.1rem;
-      }
+
+  .categorypageSearchWrapper {
+    width: 90%;
+    border-radius: 10px;
   }
-  
+
+  .categorypageSelectDiv {
+    width: 90%;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+  }
+  .categorypageSelect {
+    width: 100%;
+  }
+
+  .categorypagePostCountDiv {
+    margin-top: 2rem;
+  }
+  .categorypageGrid {
+    grid-template-columns: 1fr;
+  }
+  .categorypageImage{
+    height: 14rem;
+  }
+  .categorypagePostCountDiv {
+    padding: 0.1rem;
+  }
+}
