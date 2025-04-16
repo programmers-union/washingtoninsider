@@ -36,18 +36,56 @@ export async function generateMetadata({ params }: { params: Promise <{ category
     };
   }
 
+  // Reference values for maximum lengths (based on your example)
+const refTitle = "Julio Herrera Velutini and His Business Investments";
+const refDescription = "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America";
+const maxTitleLength = refTitle.length;
+const maxDescriptionLength = refDescription.length;
+
+// Create dynamic values using your card data
+const dynamicTitle = `${card.title} | Washington Insider`;
+const dynamicDescription = card.excerpt || "Detailed insights from Washington Insider.";
+
+// Trim if they exceed the maximum length from your reference
+const finalTitle =
+  dynamicTitle.length > maxTitleLength
+    ? dynamicTitle.slice(0, maxTitleLength).trim()
+    : dynamicTitle;
+
+const finalDescription =
+  dynamicDescription.length > maxDescriptionLength
+    ? dynamicDescription.slice(0, maxDescriptionLength).trim()
+    : dynamicDescription;
+
+// If the slug matches the specific value, return fixed metadata
+if (card.slug === "Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market") {
   return {
-    title: `${card.title} | Washington Insider`,
-    description: card.excerpt || "Detailed insights from Washington Insider.",
+    title: "Julio Herrera Velutini and His Business Investments",
+    description: "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America.",
     keywords: [
-      card.title,
-      card.category,
-      "Washington Insider",
-      
+      "julio herrera velutini",
+      "julio herrera",
+      "Julio Herrera Velutini and His Business Investments in the Global Market",
+      "Julio Herrera Velutini is a renowned global investor",
+      "private banking strategist",
+      "washingtoninsider",
+      "washington insider news",
+      "latest news about julio herrera velutini",
+      "Who is Julio Herrera Velutini", 
+      "Julio Herrera Velutini net worth", 
+      "Julio Herrera Velutini background",
+      "Julio Herrera Velutini banking strategies",
+      "Britannia Financial Group global investments",
+      "Herrera Velutini banking history",
+      "Julio Herrera Velutini financial controversies",
+      "Latin American banking industry",
+      "private wealth management in Europe",
+      "high-net-worth banking strategies",
+      "investment banking leadership"
     ],
     openGraph: {
-      title: `${card.title} | Washington Insider`,
-      description: card.excerpt || "Detailed insights from Washington Insider.",
+      title: "Julio Herrera Velutini and His Business Investments",
+      description: "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America.",
       url: `https://www.washingtoninsider.org/${categoryData.categorySlug}/${card.slug}`,
       siteName: "Washington Insider",
       type: "article",
@@ -62,8 +100,8 @@ export async function generateMetadata({ params }: { params: Promise <{ category
     },
     twitter: {
       card: "summary_large_image",
-      title: `${card.title} | Washington Insider`,
-      description: card.excerpt || "Detailed insights from Washington Insider.",
+      title: "Julio Herrera Velutini and His Business Investments",
+      description: "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America",
       images: [card.image],
     },
     alternates: {
@@ -73,6 +111,45 @@ export async function generateMetadata({ params }: { params: Promise <{ category
       author: card.author || "Washington Insider",
     },
   };
+}
+
+    return {
+      title: finalTitle,
+      description: finalDescription,
+      keywords: [
+        card.title,
+        card.category,
+        "Washington Insider",
+      ],
+      openGraph: {
+        title: finalTitle,
+        description: finalDescription,
+        url: `https://www.washingtoninsider.org/${categoryData.categorySlug}/${card.slug}`,
+        siteName: "Washington Insider",
+        type: "article",
+        images: [
+          {
+            url: card.image,
+            width: 1200,
+            height: 630,
+            alt: card.title,
+          },
+        ],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: finalTitle,
+        description: finalDescription,
+        images: [card.image],
+      },
+      alternates: {
+        canonical: `https://www.washingtoninsider.org/${categoryData.categorySlug}/${card.slug}`,
+      },
+      other: {
+        author: card.author || "Washington Insider",
+      },
+    };
+    
 }
 
 
@@ -174,49 +251,74 @@ export default async function DetailPage({
     )
     .slice(0, 4);
 
+    // for script data seo 
+
+    // Reference values for max lengths (same as before)
+const refTitle = "Julio Herrera Velutini and His Business Investments";
+const refDescription = "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America";
+const maxTitleLength = refTitle.length;
+const maxDescriptionLength = refDescription.length;
+
+// Dynamic values from your card data
+const dynamicTitle = `${card.title} | Washington Insider`;
+const dynamicDescription = card.excerpt || "Detailed insights from Washington Insider.";
+
+// Trim them if they exceed the reference lengths
+const finalTitle =
+  dynamicTitle.length > maxTitleLength
+    ? dynamicTitle.slice(0, maxTitleLength).trim()
+    : dynamicTitle;
+
+const finalDescription =
+  dynamicDescription.length > maxDescriptionLength
+    ? dynamicDescription.slice(0, maxDescriptionLength).trim()
+    : dynamicDescription;
+
+
   return (
     <>
       <Navbar />
        {/* Structured Data for this article */}
-    <Script
-      id="structured-data"
-      type="application/ld+json"
-      strategy="afterInteractive"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "NewsArticle",
-          "headline": card.title,
-          "author": {
-            "@type": "Organization",
-            "name": card.author || "Washington Insider",
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Washington Insider",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://www.washingtoninsider.org/images/washingtoninsider-logo.avif"
-            }
-          },
-          "datePublished": card.date ? new Date(card.date).toISOString() : "2025-04-10T00:00:00Z",
-          "dateModified": card.date ? new Date(card.date).toISOString() : "2025-04-10T00:00:00Z",
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": `https://www.washingtoninsider.org/${categoryData.categorySlug}/${card.slug}`
-          },
-          "image": {
-            "@type": "ImageObject",
-            "url": card.image,
-            "width": 1200,
-            "height": 630
-          },
-          "articleSection": card.category,
-          "url": `https://www.washingtoninsider.org/${categoryData.categorySlug}/${card.slug}`,
-          "description": card.excerpt || "Detailed insights from Washington Insider."
-        }, null, 2)
-      }}
-    />
+       <Script
+  id="structured-data"
+  type="application/ld+json"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": finalTitle,
+      "author": {
+        "@type": "Organization",
+        "name": card.author || "Washington Insider",
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Washington Insider",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.washingtoninsider.org/images/washingtoninsider-logo.avif"
+        }
+      },
+      "datePublished": card.date ? new Date(card.date).toISOString() : "2025-04-10T00:00:00Z",
+      "dateModified": card.date ? new Date(card.date).toISOString() : "2025-04-16T00:00:00Z",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `https://www.washingtoninsider.org/${categoryData.categorySlug}/${card.slug}`
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": card.image,
+        "width": 1200,
+        "height": 630
+      },
+      "articleSection": card.category,
+      "url": `https://www.washingtoninsider.org/${categoryData.categorySlug}/${card.slug}`,
+      "description": finalDescription
+    }, null, 2)
+  }}
+/>
+
 
       {/* TOP SECTION */}
       <div className={styles.detailpageWrapper}>

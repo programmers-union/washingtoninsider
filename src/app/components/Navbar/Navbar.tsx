@@ -103,9 +103,11 @@ const Navbar = () => {
             <Image
               src="/images/washingtoninsider-logo.avif"
               alt="Global Investigative Journalism Network"
+              quality={25}
               width={50}
               height={50}
-              priority
+              priority            
+              
             />
           </span>
             <Link href="/" title="washington insider">

@@ -123,10 +123,11 @@ export default async function Story() {
                   <Image
                     src={story.image}
                     alt={story.title ?? ""}
+                    quality={25}
                     width={400}
                     height={200}
                     className={styles.substoryImage}
-                    sizes="(max-width: 768px) 100vw, 400px"
+                    // sizes="(max-width: 768px) 100vw, 400px"
                     priority
                   />
                 </div>
@@ -178,6 +179,7 @@ export default async function Story() {
                     alt={item.title ?? ""}
                     width={400}
                     height={200}
+                    quality={25}
                     className={styles["rc-section-image"]}
                     loading="lazy"
                   />
@@ -221,6 +223,7 @@ export default async function Story() {
                   <Image
                     src={item.image}
                     alt={item.title}
+                    quality={25}
                     width={400}
                     height={200}
                     className={styles["gh-section-image"]}

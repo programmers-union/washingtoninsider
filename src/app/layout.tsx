@@ -37,6 +37,8 @@ export const metadata: Metadata = {
     "Julio Herrera Velutini is a renowned global investor",
     "private banking strategist",
     "washingtoninsider",
+    "washington insider news",
+    "latest news about julio herrera velutini",
     "Who is Julio Herrera Velutini", 
     "Julio Herrera Velutini net worth", 
     "Julio Herrera Velutini background",
@@ -51,8 +53,8 @@ export const metadata: Metadata = {
   ],
   robots: "index, follow",
   openGraph: {
-    title: "Julio Herrera Velutini and His Business Investments",
-    description: "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America. Learn about his case studies, innovations, global ventures, and prestigious awards.",
+    title: "Washington Insider",
+    description: "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America.",
     url: "https://www.washingtoninsider.org/",
     siteName: "washingtoninsider",
     images: [
@@ -63,19 +65,19 @@ export const metadata: Metadata = {
         alt: "washingtoninsider",
       }
     ],
-    type: "profile",
+    type: "article",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Julio Herrera Velutini and His Business Investments",
-    description: "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America. Learn about his case studies, innovations, global ventures, and prestigious awards.",
+    title: "Washington Insider",
+    description: "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America.",
     images: ["https://www.washingtoninsider.org/images/washingtoninsider-logo.webp"],
   },
   alternates: {
     canonical: "https://www.washingtoninsider.org/",
   },
   other: {
-    "author": "washingtoninsider",
+    author: "washingtoninsider",
   },
   icons: {
     icon: '/favicon.ico', 
@@ -124,8 +126,14 @@ export default function RootLayout({
     href="/images/julio-herrera-financial-growth.webp"
     type="image/webp"
   />
+  <link
+    rel="preload"
+    as="image"
+    href="/images/julio-herrera-financial-growth-blur.webp"
+    type="image/webp"
+  />
 
-<link
+{/* <link
     rel="preload"
     as="image"
     href="/images/Grosse-Pointe-Garden-Society.webp"
@@ -149,7 +157,7 @@ export default function RootLayout({
   as="image"
   href="/images/Suryakumar-Yadav-and-Raj-Kapoor.webp"
   type="image/webp"
-/>
+/> */}
 
 
 
@@ -175,7 +183,7 @@ export default function RootLayout({
         }
       },
       "datePublished": "2025-04-09T00:00:00Z",
-      "dateModified": "2025-04-09T00:00:00Z",
+      "dateModified": "2025-04-16T00:00:00Z",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.washingtoninsider.org/realestate/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/"
@@ -188,13 +196,14 @@ export default function RootLayout({
       },
       "articleSection": "Finance",
       "url": "https://www.washingtoninsider.org/realestate/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
-      "description": "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America. Learn about his case studies, innovations, global ventures, and prestigious awards."
+      "description": "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America."
     }, null, 2),
   }}
 />
 
 <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+
 
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`} itemScope itemType="https://schema.org/WebPage">
