@@ -30,6 +30,7 @@ export async function generateMetadata({
       description: "The requested page is not available.",
     };
   }
+
   const sanitizedCards = categoryData.cards.map((card) => ({
     ...card,
     category: card.cardCategory,
@@ -110,6 +111,7 @@ export async function generateMetadata({
   }
 
   // For all other slugs
+  const baseUrl = `https://www.washingtoninsider.org/${categoryData.categorySlug}/${card.slug}/`;
   const dynamicTitle = `${card.title} | Washington Insider`;
   const dynamicDescription =
     card.excerpt || "Detailed insights from Washington Insider.";
@@ -150,7 +152,15 @@ export async function generateMetadata({
       images: [card.image],
     },
     alternates: {
-      canonical: `https://www.washingtoninsider.org/${categoryData.categorySlug}/${card.slug}`,
+      canonical: baseUrl,
+      languages: {
+        "en-us": baseUrl,
+        "en-gb": baseUrl,
+        "en-ae": baseUrl,
+        "en-fr": baseUrl,
+        en: baseUrl,
+        "x-default": baseUrl,
+      },
     },
     other: {
       author: card.author || "Washington Insider",
@@ -274,8 +284,9 @@ export default async function DetailPage({
       : dynamicDescription;
 
   return (
-    <>
+    <main itemScope itemType="https://schema.org/NewsArticle">
       <Navbar />
+
       {/* Structured Data for this article */}
       <Script
         id="structured-data"
@@ -287,6 +298,8 @@ export default async function DetailPage({
               "@context": "https://schema.org",
               "@type": "NewsArticle",
               headline: finalTitle,
+              isAccessibleForFree: true,
+              inLanguage: "en",
               author: {
                 "@type": "Organization",
                 name: card.author || "Washington Insider",
@@ -299,12 +312,19 @@ export default async function DetailPage({
                   url: "https://www.washingtoninsider.org/images/washingtoninsider-logo.avif",
                 },
               },
+
+              spatialCoverage: [
+                { "@type": "Place", name: "United States" },
+                { "@type": "Place", name: "United Kingdom" },
+                { "@type": "Place", name: "United Arab Emirates" },
+                { "@type": "Place", name: "France" },
+              ],
               datePublished: card.date
                 ? new Date(card.date).toISOString()
                 : "2025-04-10T00:00:00Z",
               dateModified: card.date
                 ? new Date(card.date).toISOString()
-                : "2025-04-16T00:00:00Z",
+                : "2025-04-17T00:00:00Z",
               mainEntityOfPage: {
                 "@type": "WebPage",
                 "@id": `https://www.washingtoninsider.org/${categoryData.categorySlug}/${card.slug}`,
@@ -318,6 +338,84 @@ export default async function DetailPage({
               articleSection: card.category,
               url: `https://www.washingtoninsider.org/${categoryData.categorySlug}/${card.slug}`,
               description: finalDescription,
+            },
+            null,
+            2
+          ),
+        }}
+      />
+
+      {/* person schema  */}
+      {card.slug ===
+        "Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market" && (
+        <Script
+          id="person-schema-julio"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                name: "Julio Herrera Velutini",
+                description:
+                  "Julio Herrera Velutini is a globally recognized financier known for sustainable investments across the US, UK, UAE, Latin America, and the Caribbean.",
+                jobTitle: "Investor & Financial Strategist",
+                worksFor: {
+                  "@type": "Organization",
+                  name: "Britannia Financial Group",
+                },
+                knowsAbout: [
+                  "Private Banking Strategies",
+                  "International Financial Markets",
+                  "Fintech and Digital Banking",
+                  "Wealth and Asset Management",
+                  "Cross-Border Investment Banking",
+                  "Risk Management and Compliance",
+                  "High-Net-Worth Portfolio Advisory",
+                ],
+                sameAs: [
+                  "https://en.wikipedia.org/wiki/Julio_Herrera_Velutini",
+                ],
+                url: "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
+              },
+              null,
+              2
+            ),
+          }}
+        />
+      )}
+
+      {/* breadcrumb-detail */}
+      <Script
+        id="breadcrumb-detail"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://www.washingtoninsider.org/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: categoryData.mainTitle,
+                  item: `https://www.washingtoninsider.org/${categoryData.categorySlug}/`,
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: card.title,
+                  item: `https://www.washingtoninsider.org/${categoryData.categorySlug}/${card.slug}/`,
+                },
+              ],
             },
             null,
             2
@@ -372,7 +470,7 @@ export default async function DetailPage({
         <div className={styles.detailpageLeft}>
           {/* SHARE SECTION */}
           <div className={styles.detailpageShareBlock}>
-            <h4 className={styles.detailpageShareTitle}>SHARE</h4>
+            <span className={styles.detailpageShareTitle}>SHARE</span>
             <div className={styles.detailpageShareGrid}>
               <div className={styles.detailpageShareItem}>
                 <span className={styles.detailpageShareIcon}>
@@ -449,9 +547,9 @@ export default async function DetailPage({
 
           {nextCategoryData && (
             <div className={styles.detailpageResourcesBlock}>
-              <h4 className={styles.detailpageResourcesTitle}>
+              <span className={styles.detailpageResourcesTitle}>
                 {nextCategoryData.mainTitle}
-              </h4>
+              </span>
               <div className={styles.resourceCards}>
                 {sortedNextCards.map((resCard, index) => (
                   <Link
@@ -488,9 +586,9 @@ export default async function DetailPage({
         {card.slug ===
         "Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market" ? (
           <div className={styles.specialCenter}>
-            <h3 className={styles.specialHeading}>
+            <h2 className={styles.specialHeading}>
               🌍 A Truly Global Investment Portfolio
-            </h3>
+            </h2>
             <h3 className={styles.specialHeading}>
               🇦🇪 United Arab Emirates (UAE) – Gateway to Global Finance
             </h3>
@@ -679,9 +777,9 @@ export default async function DetailPage({
         {/* RIGHT COLUMN: Related Stories (Next-Next Category Cards) */}
         {nextNextCategoryData && (
           <div className={styles.detailpageRight}>
-            <h3 className={styles.detailpageRightHeading}>
+            <span className={styles.detailpageRightHeading}>
               {nextNextCategoryData.mainTitle}
-            </h3>
+            </span>
             <div className={styles.storyCards}>
               {sortedNextNextCards.map((storyCard, idx) => (
                 <Link
@@ -766,7 +864,7 @@ export default async function DetailPage({
 
       {/* READ NEXT SECTION: Latest 4 cards from current category (excluding current) */}
       <div className={styles.detailpageReadNext}>
-        <h2 className={styles.detailpageReadNextHeading}>Read Next</h2>
+        <span className={styles.detailpageReadNextHeading}>Read Next</span>
         <div className={styles.detailpageReadNextGrid}>
           {readNextCards.map((nextCard, idx) => (
             <Link
@@ -798,6 +896,6 @@ export default async function DetailPage({
         </div>
       </div>
       <Footer />
-    </>
+    </main>
   );
 }

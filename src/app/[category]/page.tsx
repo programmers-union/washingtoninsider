@@ -72,6 +72,14 @@ export async function generateMetadata({
       },
       alternates: {
         canonical: "https://www.washingtoninsider.org/business/",
+        languages: {
+          "en-us": "https://www.washingtoninsider.org/business/",
+          "en-gb": "https://www.washingtoninsider.org/business/",
+          "en-ae": "https://www.washingtoninsider.org/business/",
+          "en-fr": "https://www.washingtoninsider.org/business/",
+          en: "https://www.washingtoninsider.org/business/",
+          "x-default": "https://www.washingtoninsider.org/business/",
+        },
       },
       other: {
         author: "Washington Insider",
@@ -148,12 +156,16 @@ export default async function CategoryPage({
   const remainingCards = sortedCards.slice(8);
 
   return (
-    <main className={styles.categorypageWrapper}>
+    <main
+      className={styles.categorypageWrapper}
+      itemScope
+      itemType="https://schema.org/CollectionPage"
+    >
       <Navbar />
       {/* structured data  */}
       {category === "business" && (
         <Script
-          id="structured-data"
+          id="structured-data-category"
           type="application/ld+json"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -161,9 +173,11 @@ export default async function CategoryPage({
               {
                 "@context": "https://schema.org",
                 "@type": "CollectionPage",
-                headline: "Julio Herrera Velutini and His Business Investments",
+                name: "Business News - Julio Herrera Velutini",
+                isAccessibleForFree: true,
+                inLanguage: "en",
                 description:
-                  "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America",
+                  "Explore business and financial news stories, with featured coverage on Julio Herrera Velutini’s global investment strategies.",
                 url: "https://www.washingtoninsider.org/business/",
                 publisher: {
                   "@type": "Organization",
@@ -174,8 +188,42 @@ export default async function CategoryPage({
                     width: 1200,
                     height: 630,
                   },
-                  datePublished:"2025-04-10",
-                  dateModified:"2025-04-16",
+                },
+                about: {
+                  "@type": "Person",
+                  name: "Julio Herrera Velutini",
+                  description:
+                    "Julio Herrera Velutini is a globally recognized financier and private banking strategist known for his influential investments across the United States, United Kingdom, United Arab Emirates, France, and Latin America. He is renowned for leading sustainable financial innovations and transforming high-net-worth banking.",
+                },
+                spatialCoverage: [
+                  { "@type": "Place", name: "United States" },
+                  { "@type": "Place", name: "United Kingdom" },
+                  { "@type": "Place", name: "United Arab Emirates" },
+                  { "@type": "Place", name: "France" },
+                ],
+
+                datePublished: "2025-04-10",
+                dateModified: "2025-04-17",
+                hasPart: {
+                  "@type": "ItemList",
+                  itemListOrder: "http://schema.org/ItemListOrderDescending",
+                  itemListElement: [
+                    {
+                      "@type": "ListItem",
+                      position: 1,
+                      url: "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
+                    },
+                    {
+                      "@type": "ListItem",
+                      position: 2,
+                      url: "https://www.washingtoninsider.org/business/donald-trump-spent-millions-on-these-9-luxury-items-no-7-will-blow-your-mind/",
+                    },
+                    {
+                      "@type": "ListItem",
+                      position: 3,
+                      url: "https://www.washingtoninsider.org/business/catherine-and-pierce-compete-for-a-listing-in-episode-7-exclusive-clip/",
+                    },
+                  ],
                 },
               },
               null,
@@ -184,6 +232,36 @@ export default async function CategoryPage({
           }}
         />
       )}
+      {/* breadcrumb */}
+      <Script
+        id="breadcrumb-business"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://www.washingtoninsider.org/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Business",
+                  item: "https://www.washingtoninsider.org/business/",
+                },
+              ],
+            },
+            null,
+            2
+          ),
+        }}
+      />
 
       <section className={styles.categorypageHeader}>
         <div className={styles.categorypageHeaderInner}>

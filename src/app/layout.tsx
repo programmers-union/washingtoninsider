@@ -15,18 +15,18 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.washingtoninsider.org/"),
-  title: "Julio Herrera Velutini and His Business Investments ",
+  title: "Julio Herrera Velutini: Global Business Investments ",
   description:
     "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America.",
   keywords: [
     "julio herrera velutini",
     "julio herrera velutini breaking news",
+    "washingtoninsider",
+    "washington insider news",
     "julio herrera",
     "Julio Herrera Velutini and His Business Investments in the Global Market",
     "Julio Herrera Velutini is a renowned global investor",
     "private banking strategist",
-    "washingtoninsider",
-    "washington insider news",
     "latest news about julio herrera velutini",
     "Who is Julio Herrera Velutini",
     "Julio Herrera Velutini net worth",
@@ -42,30 +42,32 @@ export const metadata: Metadata = {
   ],
   robots: "index, follow",
   openGraph: {
-    title: "Washington Insider",
+    title:
+      "Washington Insider | Breaking News, Business Insights & Global Affairs",
     description:
-      "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America.",
+      "In-depth coverage and analysis on politics, business, finance, and more from Washington Insider.",
     url: "https://www.washingtoninsider.org/",
-    siteName: "washingtoninsider",
+    siteName: "Washington Insider",
     images: [
       {
         url: "https://www.washingtoninsider.org/images/washingtoninsider-logo.webp",
         width: 1200,
         height: 630,
-        alt: "washingtoninsider",
+        alt: "Washington Insider Logo",
       },
     ],
-    type: "article",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Washington Insider",
     description:
-      "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America.",
+      "In-depth coverage and analysis on politics, business, finance, and more from Washington Insider.",
     images: [
       "https://www.washingtoninsider.org/images/washingtoninsider-logo.webp",
     ],
   },
+
   alternates: {
     canonical: "https://www.washingtoninsider.org/",
   },
@@ -85,8 +87,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-         {/* Google Tag Manager Head Script */}
-         <Script id="gtm-head" strategy="afterInteractive">
+        {/* Google Tag Manager Head Script */}
+        <Script id="gtm-head" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -95,6 +97,39 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-WC3SMJ6Q');
           `}
         </Script>
+        
+        {/* Hreflang Tags for English-speaking regions */}
+        <link
+          rel="alternate"
+          hrefLang="en-us"
+          href="https://www.washingtoninsider.org/"
+        />
+        <link
+          rel="alternate"
+          hrefLang="en-gb"
+          href="https://www.washingtoninsider.org/"
+        />
+        <link
+          rel="alternate"
+          hrefLang="en-ae"
+          href="https://www.washingtoninsider.org/"
+        />
+        <link
+          rel="alternate"
+          hrefLang="en-fr"
+          href="https://www.washingtoninsider.org/"
+        />
+        <link
+          rel="alternate"
+          hrefLang="en"
+          href="https://www.washingtoninsider.org/"
+        />
+        <link
+          rel="alternate"
+          hrefLang="x-default"
+          href="https://www.washingtoninsider.org/"
+        />
+
         <link
           rel="preload"
           as="image"
@@ -116,37 +151,48 @@ export default function RootLayout({
             __html: JSON.stringify(
               {
                 "@context": "https://schema.org",
-                "@type": "NewsArticle",
-                headline: "Julio Herrera Velutini and His Business Investments",
-                author: {
-                  "@type": "Organization",
-                  name: "Washington Insider",
-                },
+                "@type": "WebPage",
+                url: "https://www.washingtoninsider.org/",
+                name: "Washington Insider",
+                inLanguage: "en",
+                description:
+                  "Breaking news and in‑depth coverage of Julio Herrera Velutini’s global investments and finance strategy.",
+                isAccessibleForFree: true,
                 publisher: {
                   "@type": "Organization",
                   name: "Washington Insider",
                   logo: {
                     "@type": "ImageObject",
                     url: "https://www.washingtoninsider.org/images/washingtoninsider-logo.webp",
+                    width: 1200,
+                    height: 630,
                   },
                 },
+                about: {
+                  "@type": "Person",
+                  name: "Julio Herrera Velutini",
+                  description:
+                    "Julio Herrera Velutini is a globally recognized financier and private banking strategist known for his influential investments across the United States, United Kingdom, United Arab Emirates, France, and Latin America. He is renowned for leading sustainable financial innovations and transforming high-net-worth banking.",
+                },
+                spatialCoverage: [
+                  { "@type": "Place", name: "United States" },
+                  { "@type": "Place", name: "United Kingdom" },
+                  { "@type": "Place", name: "United Arab Emirates" },
+                  { "@type": "Place", name: "France" },
+                ],
                 datePublished: "2025-04-09T00:00:00Z",
-                dateModified: "2025-04-16T00:00:00Z",
-                mainEntityOfPage: {
-                  "@type": "WebPage",
-                  "@id":
-                    "https://www.washingtoninsider.org/realestate/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
+                dateModified: "2025-04-17T00:00:00Z",
+                hasPart: {
+                  "@type": "ItemList",
+                  itemListOrder: "http://schema.org/ItemListOrderDescending",
+                  itemListElement: [
+                    {
+                      "@type": "ListItem",
+                      position: 1,
+                      url: "https://www.washingtoninsider.org/realestate/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
+                    },
+                  ],
                 },
-                image: {
-                  "@type": "ImageObject",
-                  url: "https://www.washingtoninsider.org/images/washingtoninsider-logo.webp",
-                  width: 1200,
-                  height: 630,
-                },
-                articleSection: "Finance",
-                url: "https://www.washingtoninsider.org/realestate/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
-                description:
-                  "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America.",
               },
               null,
               2
@@ -156,9 +202,6 @@ export default function RootLayout({
 
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        
-
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable}`}
@@ -171,7 +214,7 @@ export default function RootLayout({
             src="https://www.googletagmanager.com/ns.html?id=GTM-WC3SMJ6Q"
             height="0"
             width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
+            style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
         {children}

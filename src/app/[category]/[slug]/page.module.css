@@ -172,6 +172,7 @@
   align-items: flex-start;
   border-bottom: 0.05rem solid #ccc;
   padding: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .detailpageResourceImage {
@@ -232,6 +233,7 @@
   color: #202020;
   font-size: 1rem;
   font-weight: 600;
+  padding: 1rem;
   margin-bottom: 1.5rem;
 }
 
@@ -242,6 +244,7 @@
   align-items: flex-start;
   border-bottom: 0.05rem solid #ccc;
   padding: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .detailpageStoryImage {
@@ -374,6 +377,7 @@
 }
 
 .detailpageCard {
+  margin-top: 0.5rem;
   background-color: transparent;
   display: flex;
   flex-direction: column;
