@@ -8,7 +8,8 @@ import Story from "./components/Story/Story";
 
 export default function Home() {
   return (
-    <main>
+    <main itemScope
+    itemType="https://schema.org/WebPage">
       <Navbar />
       <Story />
       <Atw />

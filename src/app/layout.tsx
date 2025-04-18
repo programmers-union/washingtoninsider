@@ -19,11 +19,10 @@ export const metadata: Metadata = {
   description:
     "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America.",
   keywords: [
-    "julio herrera velutini",
+    "Julio","Herrera","Velutini","Julio Herrera Velutini","Julio Herrera","Herrera Velutini","Velutini Venezvela","Julio Britania","Julio Herrera Britania","Julio Herrera Puerto Rico","Julio Herrera V","Julio M Herrera Velutini",
     "julio herrera velutini breaking news",
     "washingtoninsider",
     "washington insider news",
-    "julio herrera",
     "Julio Herrera Velutini and His Business Investments in the Global Market",
     "Julio Herrera Velutini is a renowned global investor",
     "private banking strategist",
@@ -201,13 +200,12 @@ export default function RootLayout({
         />
 
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* <meta name="viewport" content="width=device-width, initial-scale=1" /> */}
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable}`}
-        itemScope
-        itemType="https://schema.org/WebPage"
-      >
+        className={`${geistSans.variable} ${geistMono.variable}`}>
+          
+          
         {/* Google Tag Manager Body Noscript */}
         <noscript>
           <iframe

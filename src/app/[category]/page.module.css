@@ -8,6 +8,10 @@
   position: relative;
   height: auto;
 }
+.categorypagebacktohome{
+  font-size: 0.8rem;
+  text-decoration: underline;
+}
 
 .categorypageHeaderInner {
   width: auto;
@@ -194,6 +198,10 @@
 }
 
 @media (max-width: 680px) {
+  .categorypagebacktohome{
+    margin: 1rem;
+    
+  }
   .categorypageHeader {
     padding-bottom: 1rem;
   }

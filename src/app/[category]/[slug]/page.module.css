@@ -71,7 +71,7 @@
   text-overflow: ellipsis;
 }
 .detailpageBreadcrumbs a {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   color: #222;
 }
 

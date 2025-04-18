@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Footer.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -8,6 +9,7 @@ const Footer = () => {
       <div className={styles.FooterTop}>
         <div className={styles.FooterLogoSection}>
           <div className={styles.FooterLogoWrapper}>
+          <Link href="/" title="washington insider">
             <Image
               src="/images/washingtoninsider-logo.avif"
               alt="Global Investigative Journalism Network"
@@ -16,7 +18,11 @@ const Footer = () => {
               loading="lazy"
               className={styles.FooterLogo}
             />
+            </Link>
+            <Link href="/" title="washington insider">
             <h2 className={styles.FooterTitle}>washingtoninsider</h2>
+            </Link>
+            
           </div>
           <p className={styles.FooterFollow}>FOLLOW washingtoninsider</p>
           <div className={styles.FooterIcons}>

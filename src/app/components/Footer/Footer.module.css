@@ -79,7 +79,7 @@
   padding-bottom: 0.2rem;
   font-size: 0.8rem;
   margin: 0 0;
-  cursor: pointer;
+  /* cursor: pointer; */
   transition: color 0.3s ease;
   border-bottom: 1px solid #666;
 }

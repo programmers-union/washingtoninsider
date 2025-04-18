@@ -270,6 +270,9 @@ export default async function CategoryPage({
       </section>
 
       <div className={styles.categorypagePostCountDiv}>
+        <span className={styles.categorypagebacktohome}>
+                  <Link href="/" title="Back to Washington Insider home"> Back to Home</Link>
+        </span>
         <p className={styles.categorypagePostCount}>
           {categoryData.postCount} posts
         </p>

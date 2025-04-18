@@ -25,9 +25,9 @@
   text-decoration: none;
 }
 
-.navbar-language:hover {
+/* .navbar-language:hover {
   text-decoration: underline;
-}
+} */
 
 .navbar-mainNav {
   display: flex;

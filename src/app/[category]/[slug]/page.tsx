@@ -450,12 +450,13 @@ export default async function DetailPage({
       {/* TITLE HEADER SECTION */}
       <div className={styles.detailpageTitleHeader}>
         <div className={styles.detailpageTitleHeaderLeft}>
-          <p className={styles.detailpageBreadcrumbs}>
-            {card.category} •{" "}
-            <Link href={`/${categoryData.categorySlug}`} title={card.title}>
-              <span>{categoryData.categorySlug}</span>
-            </Link>
-          </p>
+          <span className={styles.detailpageBreadcrumbs}>
+          <Link href="/" title="Back to Washington Insider home">Home {">>"}</Link>
+            
+          </span>
+          <span className={styles.detailpageBreadcrumbs}> <Link href={`/${categoryData.categorySlug}`} title={card.title}>
+              {categoryData.categorySlug}
+            </Link></span>
         </div>
         <div className={styles.detailpageTitleHeaderCenter}>
           <h1 className={styles.detailpageMainTitle}>{card.title}</h1>
@@ -827,10 +828,10 @@ export default async function DetailPage({
             </div>
             <p>
               This work is licensed under a{" "}
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <span>
                 Creative Commons Attribution-NoDerivatives 4.0 International
                 License
-              </a>
+              </span>
             </p>
           </div>
           <div className={styles.detailpageLicenseRight}>
