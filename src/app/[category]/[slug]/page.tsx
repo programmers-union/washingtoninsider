@@ -78,6 +78,7 @@ export async function generateMetadata({
         "high-net-worth banking strategies",
         "investment banking leadership",
       ],
+      robots: "index, follow",
       openGraph: {
         title: "Julio Herrera Velutini and His Business Investments",
         description:
@@ -284,7 +285,7 @@ export default async function DetailPage({
       : dynamicDescription;
 
   return (
-    <main itemScope itemType="https://schema.org/NewsArticle">
+    <main>
       <Navbar />
 
       {/* Structured Data for this article */}
@@ -297,47 +298,84 @@ export default async function DetailPage({
             {
               "@context": "https://schema.org",
               "@type": "NewsArticle",
+              "@id": `https://www.washingtoninsider.org/${categoryData.categorySlug}/${card.slug}/#newsarticle`,
+              url: `https://www.washingtoninsider.org/${categoryData.categorySlug}/${card.slug}`,
               headline: finalTitle,
+              articleSection: card.category,
+              description: finalDescription,
               isAccessibleForFree: true,
               inLanguage: "en",
               author: {
-                "@type": "Organization",
+                "@type": "Person",
                 name: card.author || "Washington Insider",
               },
               publisher: {
                 "@type": "Organization",
+                "@id": "https://www.washingtoninsider.org/#org",
                 name: "Washington Insider",
                 logo: {
                   "@type": "ImageObject",
-                  url: "https://www.washingtoninsider.org/images/washingtoninsider-logo.avif",
+                  url: "https://www.washingtoninsider.org/images/washingtoninsider-logo.webp",
+                  width: 1200,
+                  height: 630,
                 },
               },
-
+              ...(card.slug ===
+                "Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market" && {
+                about: {
+                  "@type": "Person",
+                  "@id": "https://www.washingtoninsider.org/#person-julio",
+                  name: "Julio Herrera Velutini",
+                  description:
+                    "Julio Herrera Velutini is a globally recognized financier and private banking strategist known for his influential investments across the United States, United Kingdom, United Arab Emirates, France, and Latin America. He is renowned for leading sustainable financial innovations and transforming high-net-worth banking.",
+                },
+                keywords: [
+                  "Julio Herrera Velutini",
+                  "Julio Herrera investments",
+                  "Julio Herrera Velutini global investments",
+                  "Julio Herrera Velutini net worth",
+                  "Julio Herrera Velutini Britannia Financial Group",
+                  "Julio Herrera banker",
+                  "Julio Herrera financial strategies",
+                  "Julio Herrera Velutini UK investments",
+                  "Julio Herrera Velutini UAE investments",
+                  "Julio Herrera Velutini Caribbean banking",
+                  "Julio Herrera Velutini private banking",
+                  "Julio Herrera Velutini Latin America",
+                  "Julio Herrera Velutini biography",
+                  "Julio Herrera latest news",
+                  "Julio Herrera Velutini financial news",
+                  "Julio Herrera Velutini banking history",
+                  "Julio Herrera Velutini controversies",
+                  "Julio Herrera Velutini wealth management",
+                  "Herrera Velutini investment strategies",
+                  "Washington Insider Julio Herrera Velutini",
+                ],
+                potentialAction: {
+                  "@type": "ReadAction",
+                  target:
+                    "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
+                },
+              }),
               spatialCoverage: [
                 { "@type": "Place", name: "United States" },
                 { "@type": "Place", name: "United Kingdom" },
                 { "@type": "Place", name: "United Arab Emirates" },
                 { "@type": "Place", name: "France" },
               ],
-              datePublished: card.date
-                ? new Date(card.date).toISOString()
-                : "2025-04-10T00:00:00Z",
-              dateModified: card.date
-                ? new Date(card.date).toISOString()
-                : "2025-04-17T00:00:00Z",
+              datePublished: "2025-04-09T00:00:00Z",
+              dateModified: new Date().toISOString(),
               mainEntityOfPage: {
                 "@type": "WebPage",
                 "@id": `https://www.washingtoninsider.org/${categoryData.categorySlug}/${card.slug}`,
               },
+
               image: {
                 "@type": "ImageObject",
                 url: card.image,
                 width: 1200,
                 height: 630,
               },
-              articleSection: card.category,
-              url: `https://www.washingtoninsider.org/${categoryData.categorySlug}/${card.slug}`,
-              description: finalDescription,
             },
             null,
             2
@@ -357,6 +395,7 @@ export default async function DetailPage({
               {
                 "@context": "https://schema.org",
                 "@type": "Person",
+                "@id": "https://www.washingtoninsider.org/#person-julio",
                 name: "Julio Herrera Velutini",
                 description:
                   "Julio Herrera Velutini is a globally recognized financier known for sustainable investments across the US, UK, UAE, Latin America, and the Caribbean.",
@@ -396,6 +435,7 @@ export default async function DetailPage({
             {
               "@context": "https://schema.org",
               "@type": "BreadcrumbList",
+              "@id": `https://www.washingtoninsider.org/${categoryData.categorySlug}/${card.slug}/#breadcrumb`,
               itemListElement: [
                 {
                   "@type": "ListItem",
@@ -451,18 +491,35 @@ export default async function DetailPage({
       <div className={styles.detailpageTitleHeader}>
         <div className={styles.detailpageTitleHeaderLeft}>
           <span className={styles.detailpageBreadcrumbs}>
-          <Link href="/" title="Back to Washington Insider home">Home {">>"}</Link>
-            
+            <Link href="/" title="Back to Washington Insider home">
+              Home {">>"}
+            </Link>
           </span>
-          <span className={styles.detailpageBreadcrumbs}> <Link href={`/${categoryData.categorySlug}`} title={card.title}>
+          <span className={styles.detailpageBreadcrumbs}>
+            {" "}
+            <Link href={`/${categoryData.categorySlug}`} title={card.title}>
               {categoryData.categorySlug}
-            </Link></span>
+            </Link>
+          </span>
         </div>
         <div className={styles.detailpageTitleHeaderCenter}>
           <h1 className={styles.detailpageMainTitle}>{card.title}</h1>
-          <p className={styles.detailpageMainByline}>
-            by {card.author} • {card.date}
-          </p>
+          {/* <p className={styles.detailpageMainByline}>
+            by {card.author} ,  {card.date}  
+            
+          </p> */}
+          <div className={styles.detailpageMainBylineRow}>
+            <span className={styles.detailpageMainByline}>
+              by {card.author}
+            </span>
+            <span className={styles.detailpageMainDate}>
+              Originally published {card.date}
+              {card.slug ===
+                "Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market" && (
+                <> | Last updated April 19, 2025</>
+              )}
+            </span>
+          </div>
         </div>
       </div>
 
@@ -753,6 +810,38 @@ export default async function DetailPage({
               inclusive, and forward-looking systems that redefine how the world
               experiences wealth and investment.
             </p>
+
+            <div className={styles.reporterAttribution}>
+              <div className={styles.reporterInner}>
+                <Image
+                  src="/images/Clara-Hensley-Green.webp"
+                  alt="Clara Hensley-Green"
+                  width={96}
+                  height={96}
+                  className={styles.reporterAvatar}
+                />
+                <div className={styles.reporterText}>
+                  <p className={styles.reportedBy}>Reported by</p>
+                  <h3 className={styles.reporterName}>Clara Hensley‑Green</h3>
+                  {/* <p className={styles.reporterTitle}>
+                    Political Correspondent, The Guardian
+                  </p> */}
+                  {/* <p className={styles.reporterBio}>
+                    Clara Hensley-Green is an award-winning political
+                    correspondent for The Guardian, based in London, where she
+                    specialises in UK parliamentary affairs, social justice
+                    policy, and electoral law. Prior to joining The Guardian in
+                    2016, she was a senior editor at The New Statesman and
+                    contributed to the BBC’s Panorama. Her 2021 investigative
+                    series Shadow Mandates: Unseen Influence in Westminster
+                    Lobbying earned her the Orwell Prize for Political Writing.
+                    Hensley-Green is a fellow of the Royal Society of Literature
+                    and serves on the advisory board of the British Journalism
+                    Review.
+                  </p> */}
+                </div>
+              </div>
+            </div>
           </div>
         ) : (
           <div className={styles.detailpageCenter}>

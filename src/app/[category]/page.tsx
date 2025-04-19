@@ -45,6 +45,7 @@ export async function generateMetadata({
         "high-net-worth banking strategies",
         "investment banking leadership",
       ],
+      robots: "index, follow",
       openGraph: {
         title: "Julio Herrera Velutini and His Business Investments",
         description:
@@ -77,7 +78,7 @@ export async function generateMetadata({
           "en-gb": "https://www.washingtoninsider.org/business/",
           "en-ae": "https://www.washingtoninsider.org/business/",
           "en-fr": "https://www.washingtoninsider.org/business/",
-          en: "https://www.washingtoninsider.org/business/",
+          "en": "https://www.washingtoninsider.org/business/",
           "x-default": "https://www.washingtoninsider.org/business/",
         },
       },
@@ -173,14 +174,38 @@ export default async function CategoryPage({
               {
                 "@context": "https://schema.org",
                 "@type": "CollectionPage",
+                "@id": "https://www.washingtoninsider.org/business/#webpage",
+                url: "https://www.washingtoninsider.org/business/",
                 name: "Business News - Julio Herrera Velutini",
                 isAccessibleForFree: true,
                 inLanguage: "en",
                 description:
                   "Explore business and financial news stories, with featured coverage on Julio Herrera Velutini’s global investment strategies.",
-                url: "https://www.washingtoninsider.org/business/",
-                publisher: {
+                  keywords: [
+                    "Julio Herrera Velutini",
+                    "Julio Herrera Velutini business news",
+                    "Julio Herrera Velutini investments",
+                    "Julio Herrera Velutini finance",
+                    "Julio Herrera Velutini latest news",
+                    "Julio Herrera Velutini global markets",
+                    "Julio Herrera banking strategies",
+                    "Julio Herrera private banking",
+                    "Herrera Velutini investment portfolio",
+                    "Julio Herrera Britannia Financial",
+                    "Julio Herrera financial news",
+                    "Julio Herrera Velutini net worth",
+                    "Julio Herrera Velutini business insights",
+                    "Julio Herrera Velutini UK business",
+                    "Julio Herrera Velutini UAE business",
+                    "Julio Herrera Latin America investments",
+                    "Julio Herrera Caribbean banking",
+                    "Julio Herrera Velutini business biography",
+                    "Julio Herrera wealth management",
+                    "Washington Insider business news"
+                  ],
+                  publisher: {
                   "@type": "Organization",
+                  "@id": "https://www.washingtoninsider.org/#org",
                   name: "Washington Insider",
                   logo: {
                     "@type": "ImageObject",
@@ -189,6 +214,7 @@ export default async function CategoryPage({
                     height: 630,
                   },
                 },
+                
                 about: {
                   "@type": "Person",
                   name: "Julio Herrera Velutini",
@@ -202,26 +228,17 @@ export default async function CategoryPage({
                   { "@type": "Place", name: "France" },
                 ],
 
-                datePublished: "2025-04-10",
-                dateModified: "2025-04-17",
+                datePublished: "2025-04-09T00:00:00Z",
+                dateModified: new Date().toISOString(),
                 hasPart: {
                   "@type": "ItemList",
+                  "@id": "https://www.washingtoninsider.org/business/#business-list",
                   itemListOrder: "http://schema.org/ItemListOrderDescending",
                   itemListElement: [
                     {
                       "@type": "ListItem",
                       position: 1,
                       url: "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
-                    },
-                    {
-                      "@type": "ListItem",
-                      position: 2,
-                      url: "https://www.washingtoninsider.org/business/donald-trump-spent-millions-on-these-9-luxury-items-no-7-will-blow-your-mind/",
-                    },
-                    {
-                      "@type": "ListItem",
-                      position: 3,
-                      url: "https://www.washingtoninsider.org/business/catherine-and-pierce-compete-for-a-listing-in-episode-7-exclusive-clip/",
                     },
                   ],
                 },
@@ -233,7 +250,8 @@ export default async function CategoryPage({
         />
       )}
       {/* breadcrumb */}
-      <Script
+      {category === "business" && (
+        <Script
         id="breadcrumb-business"
         type="application/ld+json"
         strategy="afterInteractive"
@@ -242,6 +260,7 @@ export default async function CategoryPage({
             {
               "@context": "https://schema.org",
               "@type": "BreadcrumbList",
+              "@id": "https://www.washingtoninsider.org/business/#breadcrumb",
               itemListElement: [
                 {
                   "@type": "ListItem",
@@ -262,6 +281,8 @@ export default async function CategoryPage({
           ),
         }}
       />
+       )}
+      
 
       <section className={styles.categorypageHeader}>
         <div className={styles.categorypageHeaderInner}>
@@ -271,7 +292,10 @@ export default async function CategoryPage({
 
       <div className={styles.categorypagePostCountDiv}>
         <span className={styles.categorypagebacktohome}>
-                  <Link href="/" title="Back to Washington Insider home"> Back to Home</Link>
+          <Link href="/" title="Back to Washington Insider home">
+            {" "}
+            Back to Home
+          </Link>
         </span>
         <p className={styles.categorypagePostCount}>
           {categoryData.postCount} posts

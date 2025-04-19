@@ -77,7 +77,6 @@
 
 .detailpageTitleHeaderCenter {
   width: 50%;
-
   margin-right: auto;
   height: auto;
 }
@@ -89,10 +88,10 @@
   margin-bottom: 0.8rem;
 }
 
-.detailpageMainByline {
+/* .detailpageMainByline {
   font-size: 0.9rem;
   color: #363536;
-}
+} */
 
 .detailpageContentWrapper {
   width: 100%;
@@ -456,6 +455,89 @@
   color: #555;
 }
 
+/* reporter section  */
+
+.reporterAttribution {
+  width: 40%;
+  height: auto;
+  margin-top: 3rem;
+  padding: 0.5rem;
+  background-color: #f9f9fb;
+  border: 1px solid #e2e2e2;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.reporterInner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.reporterAvatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.reporterText {
+  flex: 1;
+}
+
+.reportedBy {
+  font-size: 0.5rem;
+  font-weight: 500;
+  color: #666;
+  margin: 0 0 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.reporterName {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0;
+  color: #222;
+}
+
+.reporterTitle {
+  font-size: 0.8rem;
+  color: #888;
+  margin: 0.2rem 0 1rem;
+}
+
+.reporterBio {
+  font-size: 0.7rem;
+  line-height: 1.6;
+  color: #333;
+}
+.detailpageMainBylineRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 0.3rem;
+  gap: 0.5rem;
+}
+
+.detailpageMainByline {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.detailpageMainDate {
+  font-size: 0.8rem;
+  color: #666;
+  /* font-style: italic; */
+  /* text-align: right; */
+}
+
+
+
 @media (min-width: 681px) and (max-width: 1200px) {
   .detailpageWrapper {
     height: 30vh;
@@ -623,7 +705,7 @@
   .detailpageTitleHeader {
     flex-direction: column;
     align-items: flex-start;
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
   .detailpageTitleHeaderLeft,
@@ -813,5 +895,30 @@
     font-size: 0.9rem;
     padding-left: 1.2rem;
     margin-bottom: 0.8rem;
+  }
+
+  .reporterAttribution {
+    width: 100%;}
+  .reporterInner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .reporterAvatar {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .reporterText {
+    padding: 0 0.5rem;
+  }
+
+  .reporterName {
+    font-size: 1rem;
+  }
+
+  .reporterBio {
+    font-size: 0.7rem;
   }
 }
