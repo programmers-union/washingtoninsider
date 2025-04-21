@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "prisma generate && next build && node generateCritical.mjs && node strip-trailing-slash.js",
+    "build": "prisma generate && next build && node generateCritical.mjs && node strip-trailing-slash.js && node minify-html.js",
     "start": "next start",
     "lint": "next lint",
     "postinstall": "prisma generate",
@@ -28,6 +28,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "critical": "^7.2.1",
+    "html-minifier": "^4.0.0",
     "prisma": "^6.5.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.3",
