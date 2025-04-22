@@ -53,40 +53,20 @@ export async function generateMetadata({
     "Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market"
   ) {
     return {
-      title: "Julio Herrera Velutini and His Business Investments",
+      title: "Julio Herrera Velutini and His Global Business Investments",
       description:
         "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America.",
       keywords: [
-        "Julio",
-        "Herrera",
-        "Velutini",
         "Julio Herrera Velutini",
-        "Julio Herrera",
-        "Herrera Velutini",
-        "Velutini Venezvela",
-        "Julio Britania",
-        "Julio Herrera Britania",
-        "Julio Herrera Puerto Rico",
-        "Julio Herrera V",
-        "Julio M Herrera Velutini",
-        "julio herrera velutini breaking news",
-        "washingtoninsider",
-        "washington insider news",
-        "Julio Herrera Velutini and His Business Investments in the Global Market",
-        "Julio Herrera Velutini is a renowned global investor",
-        "private banking strategist",
-        "latest news about julio herrera velutini",
-        "Who is Julio Herrera Velutini",
-        "Julio Herrera Velutini net worth",
-        "Julio Herrera Velutini background",
-        "Julio Herrera Velutini banking strategies",
-        "Britannia Financial Group global investments",
-        "Herrera Velutini banking history",
-        "Julio Herrera Velutini financial controversies",
-        "Latin American banking industry",
-        "private wealth management in Europe",
-        "high-net-worth banking strategies",
-        "investment banking leadership",
+        "Julio Herrera Velutini global investment portfolio",
+        "Julio Herrera Velutini UAE financial hub",
+        "Julio Herrera Velutini private equity and fintech",
+        "Julio Herrera Velutini real estate investments",
+        "Julio Herrera Velutini Caribbean bank revival",
+        "Julio Herrera Velutini Latin America microfinance",
+        "Julio Herrera Velutini blockchain and AI finance",
+        "Julio Herrera Velutini philanthropic initiatives",
+        "Julio Herrera Velutini awards and recognition",
       ],
       robots: "index, follow",
       openGraph: {
@@ -322,8 +302,7 @@ export default async function DetailPage({
                 {
                   "@context": "https://schema.org",
                   "@type": "NewsArticle",
-                  "@id":
-                    "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/#newsarticle",
+                  "@id":"https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/#newsarticle",
                   url: "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
                   mainEntityOfPage: {
                     "@type": "WebPage",
@@ -337,7 +316,7 @@ export default async function DetailPage({
                   articleSection: "Business",
                   inLanguage: "en",
                   datePublished: "2025-04-09T00:00:00Z",
-                  dateModified: "2025-04-21T12:19:47.535Z",
+                  dateModified: "2025-04-22T12:31:11.202Z",
                   image: {
                     "@type": "ImageObject",
                     url: "https://www.washingtoninsider.org/images/julio-herrera-financial-growth.webp",
@@ -353,51 +332,31 @@ export default async function DetailPage({
                     "@type": "Organization",
                     "@id": "https://www.washingtoninsider.org/#org",
                     name: "Washington Insider",
-                    logo: {
-                      "@type": "ImageObject",
-                      url: "https://www.washingtoninsider.org/images/washingtoninsider-logo.webp",
-                      width: 1200,
-                      height: 630,
-                    },
                   },
                   about: {
                     "@type": "Person",
                     "@id": "https://www.washingtoninsider.org/#person-julio",
                     name: "Julio Herrera Velutini",
-                    description:
-                      "Julio Herrera Velutini is a globally recognized financier and private banking strategist known for his influential investments across the United States, United Kingdom, United Arab Emirates, France, and Latin America. He is renowned for leading sustainable financial innovations and transforming high-net-worth banking.",
-                  },
+                    },
                   keywords: [
                     "Julio Herrera Velutini",
-                    "Julio Herrera",
-                    "Julio",
-                    "Herrera",
-                    "Velutini",
-                    "Herrera Velutini",
-                    "Velutini Venezvela",
-                    "Julio Britania",
-                    "Julio Herrera Britania",
-                    "Julio Herrera Puerto Rico",
-                    "Julio Herrera V",
-                    "Julio M Herrera Velutini",
-                    "julio herrera velutini breaking news",
-                    "washingtoninsider",
-                    "washington insider news",
-                    "Julio Herrera Velutini and His Business Investments in the Global Market",
-                    "Julio Herrera Velutini is a renowned global investor",
-                    "private banking strategist",
-                    "latest news about julio herrera velutini",
-                    "Who is Julio Herrera Velutini",
-                    "Julio Herrera Velutini net worth",
-                    "Julio Herrera Velutini background",
-                    "Julio Herrera Velutini banking strategies",
-                    "Britannia Financial Group global investments",
-                    "Herrera Velutini banking history",
-                    "Julio Herrera Velutini financial controversies",
-                    "Latin American banking industry",
-                    "private wealth management in Europe",
-                    "high-net-worth banking strategies",
-                    "investment banking leadership",
+                    "Julio Herrera Velutini global business investments",
+                    "Julio Herrera Velutini UAE financial innovation",
+                    "Julio Herrera Velutini private equity ventures",
+                    "Julio Herrera Velutini fintech and AI finance",
+                    "Julio Herrera Velutini real estate development Dubai London",
+                    "Julio Herrera Velutini Caribbean bank revival",
+                    "Julio Herrera Velutini Latin America microfinance",
+                    "Julio Herrera Velutini blockchain secure transactions",
+                    "Julio Herrera Velutini philanthropic and educational impact",
+                    "Julio Herrera Velutini sustainable finance leadership",
+                    "Julio Herrera Velutini smart city and eco-smart buildings",
+                    "Julio Herrera Velutini wealth management Europe",
+                    "Julio Herrera Velutini financial awards and recognition",
+                    "Julio Herrera Velutini digital banking transformation",
+                    "Julio Herrera Velutini wealth management in Europe and USA",
+                    "Julio Herrera Velutini USA financial investments",
+                    "Julio Herrera Velutini American banking strategies",
                   ],
                   potentialAction: {
                     "@type": "ReadAction",
@@ -431,12 +390,24 @@ export default async function DetailPage({
                   "@id": "https://www.washingtoninsider.org/#person-julio",
                   name: "Julio Herrera Velutini",
                   description:
-                    "Julio Herrera Velutini is a globally recognized financier known for sustainable investments across the US, UK, UAE, Latin America, and the Caribbean.",
+                    "Julio Herrera Velutini is an Italian-Venezuelan billionaire businessman and financier known for sustainable investments across the US, UK, UAE, Latin America, and the Caribbean.",
                   jobTitle: "Investor & Financial Strategist",
                   worksFor: {
                     "@type": "Organization",
                     name: "Britannia Financial Group",
                   },
+                  birthDate: "1971-12-15",
+                  birthPlace: {
+                    "@type": "Place",
+                    name: "Caracas, Venezuela",
+                  },
+                  nationality: ["Venezuelan", "Italian"],
+                  image:
+                    "https://www.washingtoninsider.org/images/julio-herrera-financial-growth.webp",
+                  award: [
+                    "Global Finance Innovator Award – UAE, 2023",
+                    "Banking Trailblazer Award – Europe, 2021",
+                  ],
                   knowsAbout: [
                     "Business",
                     "Private Banking Strategies",
@@ -539,24 +510,20 @@ export default async function DetailPage({
             </Link>
           </span>
         </div>
+        {/* TITLE HEADER SECTION */}
         <div className={styles.detailpageTitleHeaderCenter}>
           <h1 className={styles.detailpageMainTitle}>{card.title}</h1>
-          {/* <p className={styles.detailpageMainByline}>
-            by {card.author} ,  {card.date}  
-            
-          </p> */}
-          <div className={styles.detailpageMainBylineRow}>
-            <span className={styles.detailpageMainByline}>
-              by {card.author}
-            </span>
-            <span className={styles.detailpageMainDate}>
-              Originally published {card.date}
-              {card.slug ===
-                "Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market" && (
-                <> | Last updated April 21, 2025</>
-              )}
-            </span>
-          </div>
+          {card.slug !==
+            "Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market" && (
+            <div className={styles.detailpageMainBylineRow}>
+              <span className={styles.detailpageMainByline}>
+                by {card.author}
+              </span>
+              <span className={styles.detailpageMainDate}>
+                Originally published {card.date}
+              </span>
+            </div>
+          )}
         </div>
       </div>
 
@@ -681,6 +648,29 @@ export default async function DetailPage({
         {card.slug ===
         "Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market" ? (
           <div className={styles.specialCenter}>
+            {/* —— NEW TOP BYLINE BLOCK —— */}
+            <Link
+              href={"https://www.journalismsociety.org/"}
+              title="go to author page"
+            >
+              <div className={styles.topByline}>
+                <Image
+                  src="/images/Clara-Hensley-Green.webp"
+                  alt="Clara Hensley-Green"
+                  width={50}
+                  height={50}
+                  className={styles.bylineAvatar}
+                />
+                <div className={styles.bylineInfo}>
+                  <span className={styles.bylineAuthor}>
+                    BY Clara Hensley-Green
+                  </span>
+                  <span className={styles.bylineDate}>
+                    Updated 2025-04-22T12:31:11.202Z
+                  </span>
+                </div>
+              </div>
+            </Link>
             <h2 className={styles.specialHeading}>
               🌍 A Truly Global Investment Portfolio
             </h2>
@@ -847,43 +837,6 @@ export default async function DetailPage({
               inclusive, and forward-looking systems that redefine how the world
               experiences wealth and investment.
             </p>
-
-            <div className={styles.reporterAttribution}>
-              <Link
-                href={"https://www.journalismsociety.org/"}
-                title="go to author page"
-              >
-                <div className={styles.reporterInner}>
-                  <Image
-                    src="/images/Clara-Hensley-Green.webp"
-                    alt="Clara Hensley-Green"
-                    width={96}
-                    height={96}
-                    className={styles.reporterAvatar}
-                  />
-                  <div className={styles.reporterText}>
-                    <p className={styles.reportedBy}>Reported by</p>
-                    <h3 className={styles.reporterName}>Clara Hensley‑Green</h3>
-                    {/* <p className={styles.reporterTitle}>
-                    Political Correspondent, The Guardian
-                  </p> */}
-                    {/* <p className={styles.reporterBio}>
-                    Clara Hensley-Green is an award-winning political
-                    correspondent for The Guardian, based in London, where she
-                    specialises in UK parliamentary affairs, social justice
-                    policy, and electoral law. Prior to joining The Guardian in
-                    2016, she was a senior editor at The New Statesman and
-                    contributed to the BBC’s Panorama. Her 2021 investigative
-                    series Shadow Mandates: Unseen Influence in Westminster
-                    Lobbying earned her the Orwell Prize for Political Writing.
-                    Hensley-Green is a fellow of the Royal Society of Literature
-                    and serves on the advisory board of the British Journalism
-                    Review.
-                  </p> */}
-                  </div>
-                </div>
-              </Link>
-            </div>
           </div>
         ) : (
           <div className={styles.detailpageCenter}>

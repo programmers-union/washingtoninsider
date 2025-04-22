@@ -25,35 +25,11 @@ export async function generateMetadata({
         "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America",
       keywords: [
         "Julio Herrera Velutini",
-        "Julio Herrera",
-        "Julio",
-        "Herrera",
-        "Velutini",
-        "Herrera Velutini",
-        "Velutini Venezvela",
-        "Julio Britania",
-        "Julio Herrera Britania",
-        "Julio Herrera Puerto Rico",
-        "Julio Herrera V",
-        "Julio M Herrera Velutini",
-        "julio herrera velutini breaking news",
-        "washingtoninsider",
-        "washington insider news",
-        "Julio Herrera Velutini and His Business Investments in the Global Market",
-        "Julio Herrera Velutini is a renowned global investor",
-        "private banking strategist",
-        "latest news about julio herrera velutini",
-        "Who is Julio Herrera Velutini",
-        "Julio Herrera Velutini net worth",
-        "Julio Herrera Velutini background",
-        "Julio Herrera Velutini banking strategies",
-        "Britannia Financial Group global investments",
-        "Herrera Velutini banking history",
-        "Julio Herrera Velutini financial controversies",
-        "Latin American banking industry",
-        "private wealth management in Europe",
-        "high-net-worth banking strategies",
-        "investment banking leadership",
+        "Julio Herrera Velutini Business Investments",
+        "Julio Herrera Velutini Global Business Investments",
+        "Global Business News",
+        "Global Business Investments",
+        "Washington Insider Business news",
       ],
       robots: "index, follow",
       openGraph: {
@@ -174,13 +150,13 @@ export default async function CategoryPage({
         <Script
           id="structured-data-category"
           type="application/ld+json"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(
               {
                 "@context": "https://schema.org",
                 "@type": "CollectionPage",
-                "@id": "https://www.washingtoninsider.org/business/#webpage",
+                "@id": "https://www.washingtoninsider.org/business/#collection",
                 url: "https://www.washingtoninsider.org/business/",
                 name: "Business News - Julio Herrera Velutini",
                 inLanguage: "en",
@@ -188,145 +164,25 @@ export default async function CategoryPage({
                   "Explore business and financial news stories, with featured coverage on Julio Herrera Velutini’s global investment strategies.",
                 keywords: [
                   "Julio Herrera Velutini",
-                  "Julio Herrera",
-                  "Julio",
-                  "Herrera",
-                  "Velutini",
-                  "Herrera Velutini",
-                  "Velutini Venezvela",
-                  "Julio Britania",
-                  "Julio Herrera Britania",
-                  "Julio Herrera Puerto Rico",
-                  "Julio Herrera V",
-                  "Julio M Herrera Velutini",
-                  "julio herrera velutini breaking news",
-                  "washingtoninsider",
-                  "washington insider news",
-                  "Julio Herrera Velutini and His Business Investments in the Global Market",
-                  "Julio Herrera Velutini is a renowned global investor",
-                  "private banking strategist",
-                  "latest news about julio herrera velutini",
-                  "Who is Julio Herrera Velutini",
-                  "Julio Herrera Velutini net worth",
-                  "Julio Herrera Velutini background",
-                  "Julio Herrera Velutini banking strategies",
-                  "Britannia Financial Group global investments",
-                  "Herrera Velutini banking history",
-                  "Julio Herrera Velutini financial controversies",
-                  "Latin American banking industry",
-                  "private wealth management in Europe",
-                  "high-net-worth banking strategies",
-                  "investment banking leadership",
+                  "Julio Herrera Velutini Business Investments",
+                  "Julio Herrera Velutini global",
+                  "Global Business Insights",
+                  "Washington Insider",
                 ],
                 publisher: {
                   "@type": "Organization",
                   "@id": "https://www.washingtoninsider.org/#org",
                   name: "Washington Insider",
-                  logo: {
-                    "@type": "ImageObject",
-                    url: "https://www.washingtoninsider.org/images/washingtoninsider-logo.webp",
-                    width: 1200,
-                    height: 630,
-                  },
                 },
                 mainEntity: {
-                  "@context": "https://schema.org",
                   "@type": "NewsArticle",
-                  "@id":
-                    "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/#newsarticle",
-                  url: "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
-                  mainEntityOfPage: {
-                    "@type": "WebPage",
-                    "@id":
-                      "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
-                  },
-                  headline:
-                    "Julio Herrera Velutini and His Business Investments",
-                  description:
-                    "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America.",
-                  articleSection: "Business",
-                  inLanguage: "en",
-                  datePublished: "2025-04-09T00:00:00Z",
-                  dateModified: "2025-04-21T12:19:47.535Z",
-                  image: {
-                    "@type": "ImageObject",
-                    url: "https://www.washingtoninsider.org/images/julio-herrera-financial-growth.webp",
-                    width: 1200,
-                    height: 630,
-                  },
-                  author: {
-                    "@type": "Person",
-                    name: "Clara Hensley-Green",
-                    url: "https://www.washingtoninsider.org/",
-                  },
-                  publisher: {
-                    "@type": "Organization",
-                    "@id": "https://www.washingtoninsider.org/#org",
-                    name: "Washington Insider",
-                    logo: {
-                      "@type": "ImageObject",
-                      url: "https://www.washingtoninsider.org/images/washingtoninsider-logo.webp",
-                      width: 1200,
-                      height: 630,
-                    },
-                  },
-                  about: {
-                    "@type": "Person",
-                    "@id": "https://www.washingtoninsider.org/#person-julio",
-                    name: "Julio Herrera Velutini",
-                    description:
-                      "Julio Herrera Velutini is a globally recognized financier and private banking strategist known for his influential investments across the United States, United Kingdom, United Arab Emirates, France, and Latin America. He is renowned for leading sustainable financial innovations and transforming high-net-worth banking.",
-                  },
-                  keywords: [
-                    "Julio Herrera Velutini",
-                    "Julio Herrera",
-                    "Julio",
-                    "Herrera",
-                    "Velutini",
-                    "Herrera Velutini",
-                    "Velutini Venezvela",
-                    "Julio Britania",
-                    "Julio Herrera Britania",
-                    "Julio Herrera Puerto Rico",
-                    "Julio Herrera V",
-                    "Julio M Herrera Velutini",
-                    "julio herrera velutini breaking news",
-                    "washingtoninsider",
-                    "washington insider news",
-                    "Julio Herrera Velutini and His Business Investments in the Global Market",
-                    "Julio Herrera Velutini is a renowned global investor",
-                    "private banking strategist",
-                    "latest news about julio herrera velutini",
-                    "Who is Julio Herrera Velutini",
-                    "Julio Herrera Velutini net worth",
-                    "Julio Herrera Velutini background",
-                    "Julio Herrera Velutini banking strategies",
-                    "Britannia Financial Group global investments",
-                    "Herrera Velutini banking history",
-                    "Julio Herrera Velutini financial controversies",
-                    "Latin American banking industry",
-                    "private wealth management in Europe",
-                    "high-net-worth banking strategies",
-                    "investment banking leadership",
-                  ],
-                  potentialAction: {
-                    "@type": "ReadAction",
-                    target: [
-                      "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
-                    ],
-                  },
-                  spatialCoverage: [
-                    { "@type": "Place", name: "United States" },
-                    { "@type": "Place", name: "United Kingdom" },
-                    { "@type": "Place", name: "United Arab Emirates" },
-                    { "@type": "Place", name: "France" },
-                  ],
+                  headline:"Julio Herrera Velutini and His Business Investments",
+                  "@id":"https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/#newsarticle",
                 },
                 about: {
                   "@type": "Person",
-                  name: "Julio Herrera Velutini",
-                  description:
-                    "Julio Herrera Velutini is a globally recognized financier and private banking strategist known for his influential investments across the United States, United Kingdom, United Arab Emirates, France, and Latin America. He is renowned for leading sustainable financial innovations and transforming high-net-worth banking.",
+                    "@id": "https://www.washingtoninsider.org/#person-julio",
+                    name: "Julio Herrera Velutini",
                 },
                 spatialCoverage: [
                   { "@type": "Place", name: "United States" },
@@ -336,102 +192,7 @@ export default async function CategoryPage({
                 ],
 
                 datePublished: "2025-04-09T00:00:00Z",
-                dateModified: "2025-04-21T12:19:47.535Z",
-                hasPart: [
-                  {
-                    "@context": "https://schema.org",
-                    "@type": "NewsArticle",
-                    "@id":
-                      "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/#newsarticle",
-                    url: "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
-                    mainEntityOfPage: {
-                      "@type": "WebPage",
-                      "@id":
-                        "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
-                    },
-                    headline:
-                      "Julio Herrera Velutini and His Business Investments",
-                    description:
-                      "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America.",
-                    articleSection: "Business",
-                    inLanguage: "en",
-                    datePublished: "2025-04-09T00:00:00Z",
-                    dateModified: "2025-04-21T12:19:47.535Z",
-                    image: {
-                      "@type": "ImageObject",
-                      url: "https://www.washingtoninsider.org/images/julio-herrera-financial-growth.webp",
-                      width: 1200,
-                      height: 630,
-                    },
-                    author: {
-                      "@type": "Person",
-                      name: "Clara Hensley-Green",
-                      url: "https://www.washingtoninsider.org/",
-                    },
-                    publisher: {
-                      "@type": "Organization",
-                      "@id": "https://www.washingtoninsider.org/#org",
-                      name: "Washington Insider",
-                      logo: {
-                        "@type": "ImageObject",
-                        url: "https://www.washingtoninsider.org/images/washingtoninsider-logo.webp",
-                        width: 1200,
-                        height: 630,
-                      },
-                    },
-                    about: {
-                      "@type": "Person",
-                      "@id": "https://www.washingtoninsider.org/#person-julio",
-                      name: "Julio Herrera Velutini",
-                      description:
-                        "Julio Herrera Velutini is a globally recognized financier and private banking strategist known for his influential investments across the United States, United Kingdom, United Arab Emirates, France, and Latin America. He is renowned for leading sustainable financial innovations and transforming high-net-worth banking.",
-                    },
-                    keywords: [
-                      "Julio Herrera Velutini",
-                      "Julio Herrera",
-                      "Julio",
-                      "Herrera",
-                      "Velutini",
-                      "Herrera Velutini",
-                      "Velutini Venezvela",
-                      "Julio Britania",
-                      "Julio Herrera Britania",
-                      "Julio Herrera Puerto Rico",
-                      "Julio Herrera V",
-                      "Julio M Herrera Velutini",
-                      "julio herrera velutini breaking news",
-                      "washingtoninsider",
-                      "washington insider news",
-                      "Julio Herrera Velutini and His Business Investments in the Global Market",
-                      "Julio Herrera Velutini is a renowned global investor",
-                      "private banking strategist",
-                      "latest news about julio herrera velutini",
-                      "Who is Julio Herrera Velutini",
-                      "Julio Herrera Velutini net worth",
-                      "Julio Herrera Velutini background",
-                      "Julio Herrera Velutini banking strategies",
-                      "Britannia Financial Group global investments",
-                      "Herrera Velutini banking history",
-                      "Julio Herrera Velutini financial controversies",
-                      "Latin American banking industry",
-                      "private wealth management in Europe",
-                      "high-net-worth banking strategies",
-                      "investment banking leadership",
-                    ],
-                    potentialAction: {
-                      "@type": "ReadAction",
-                      target: [
-                        "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
-                      ],
-                    },
-                    spatialCoverage: [
-                      { "@type": "Place", name: "United States" },
-                      { "@type": "Place", name: "United Kingdom" },
-                      { "@type": "Place", name: "United Arab Emirates" },
-                      { "@type": "Place", name: "France" },
-                    ],
-                  },
-                ],
+                dateModified: "2025-04-22T12:31:11.202Z",
               },
               null,
               2
@@ -444,7 +205,7 @@ export default async function CategoryPage({
         <Script
           id="breadcrumb-business"
           type="application/ld+json"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(
               {
