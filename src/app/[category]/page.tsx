@@ -20,39 +20,47 @@ export async function generateMetadata({
   // If the category is "business", return the fixed SEO details:
   if ((await params).category === "business") {
     return {
-      title: "Julio Herrera Velutini and His Business Investments",
+      title: "Business News Collection - Washington Insider",
       description:
-        "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America",
+        "Explore business and financial news stories, with featured coverage on Julio Herrera Velutini’s global investment strategies.",
       keywords: [
-        "Julio Herrera Velutini",
-        "Julio Herrera Velutini Business Investments",
-        "Julio Herrera Velutini Global Business Investments",
-        "Global Business News",
-        "Global Business Investments",
-        "Washington Insider Business news",
+        "2025 business landscape",
+        "global investments 2025",
+        "luxury real estate trends",
+        "high-profile financial moves",
+        "market-shaping events",
+        "Julio Herrera Velutini news",
+        "Donald Trump business news",
+        "emerging markets analysis",
+        "international investment trends",
+        "luxury property market",
+        "top financial deals",
+        "global market insights",
+        "business leadership updates",
+        "real estate investment 2025",
+        "economic events 2025",
       ],
-      robots: "index, follow",
       openGraph: {
-        title: "Julio Herrera Velutini and His Business Investments",
+        title: "Business News Collection - Washington Insider",
         description:
-          "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America",
+          "Explore business and financial news stories, with featured coverage on Julio Herrera Velutini’s global investment strategies.",
         url: "https://www.washingtoninsider.org/business/",
         siteName: "Washington Insider",
         type: "website",
         images: [
           {
             url: "https://www.washingtoninsider.org/images/washingtoninsider-logo.webp",
-            width: 1200,
-            height: 630,
+            width: 1024,
+            height: 1024,
             alt: "Washington Insider",
           },
         ],
       },
       twitter: {
         card: "summary_large_image",
-        title: "Julio Herrera Velutini and His Business Investments",
+        title: "Business News Collection - Washington Insider",
         description:
-          "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America",
+          "Explore business and financial news stories, with featured coverage on Julio Herrera Velutini’s global investment strategies.",
         images: [
           "https://www.washingtoninsider.org/images/washingtoninsider-logo.webp",
         ],
@@ -60,10 +68,6 @@ export async function generateMetadata({
       alternates: {
         canonical: "https://www.washingtoninsider.org/business/",
         languages: {
-          "en-us": "https://www.washingtoninsider.org/business/",
-          "en-gb": "https://www.washingtoninsider.org/business/",
-          "en-ae": "https://www.washingtoninsider.org/business/",
-          "en-fr": "https://www.washingtoninsider.org/business/",
           en: "https://www.washingtoninsider.org/business/",
           "x-default": "https://www.washingtoninsider.org/business/",
         },
@@ -163,36 +167,108 @@ export default async function CategoryPage({
                 description:
                   "Explore business and financial news stories, with featured coverage on Julio Herrera Velutini’s global investment strategies.",
                 keywords: [
-                  "Julio Herrera Velutini",
-                  "Julio Herrera Velutini Business Investments",
-                  "Julio Herrera Velutini global",
-                  "Global Business Insights",
-                  "Washington Insider",
+                  "2025 business landscape",
+                  "global investments 2025",
+                  "luxury real estate trends",
+                  "high-profile financial moves",
+                  "market-shaping events",
+                  "Julio Herrera Velutini news",
+                  "Donald Trump business news",
+                  "emerging markets analysis",
+                  "international investment trends",
+                  "luxury property market",
+                  "top financial deals",
+                  "global market insights",
+                  "business leadership updates",
+                  "real estate investment 2025",
+                  "economic events 2025",
                 ],
-                publisher: {
-                  "@type": "Organization",
-                  "@id": "https://www.washingtoninsider.org/#org",
-                  name: "Washington Insider",
-                },
-                mainEntity: {
-                  "@type": "NewsArticle",
-                  headline:"Julio Herrera Velutini and His Business Investments",
-                  "@id":"https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/#newsarticle",
-                },
-                about: {
-                  "@type": "Person",
-                    "@id": "https://www.washingtoninsider.org/#person-julio",
-                    name: "Julio Herrera Velutini",
-                },
+                publisher: {"@id": "https://www.washingtoninsider.org/#organization"},
+                datePublished: "2025-04-09T00:00:00Z",
+                dateModified: "2025-04-24T10:26:56.561Z",
                 spatialCoverage: [
                   { "@type": "Place", name: "United States" },
                   { "@type": "Place", name: "United Kingdom" },
                   { "@type": "Place", name: "United Arab Emirates" },
                   { "@type": "Place", name: "France" },
                 ],
-
-                datePublished: "2025-04-09T00:00:00Z",
-                dateModified: "2025-04-22T12:31:11.202Z",
+              },
+              null,
+              2
+            ),
+          }}
+        />
+      )}
+      {category === "business" && (
+        <Script
+          id="structured-data-itemlist-category"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "ItemList",
+                "@id": "https://www.washingtoninsider.org/business/#itemlist",
+                url: "https://www.washingtoninsider.org/business/",
+                numberOfItems: 9,
+                itemListOrder: "http://schema.org/ItemListOrderAscending",
+                itemListElement: [
+                  {
+                    "@type": "ListItem",
+                    position: 1,
+                    url: "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
+                    name: "Julio Herrera Velutini’s Top 7 Global Business Investments",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 2,
+                    url: "https://www.washingtoninsider.org/business/catherine-and-pierce-compete-for-a-listing-in-episode-7-exclusive-clip/",
+                    name: "Catherine and Pierce Compete for a Listing in Episode 7 [Exclusive Clip]",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 3,
+                    url: "https://www.washingtoninsider.org/business/donald-trump-spent-millions-on-these-9-luxury-items-no-7-will-blow-your-mind/",
+                    name: "Donald Trump Spent Millions on These 9 Luxury Items – No. 7 Will Blow Your Mind",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 4,
+                    url: "https://www.washingtoninsider.org/business/why-did-tom-o-brien-decide-not-to-run-for-mayor-against-wu-kraft/",
+                    name: "Why did Tom O’Brien Decide Not to Run for Mayor Against Wu, Kraft?",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 5,
+                    url: "https://www.washingtoninsider.org/business/suryakumar-yadav-buys-two-luxurious-apartments-in-deonar-check-out-the-price-and-other-details/",
+                    name: "Suryakumar Yadav Buys Two Luxurious Apartments in Deonar – Check Out the Price and Other Details",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 6,
+                    url: "https://www.washingtoninsider.org/business/douglas-higgins-administrator-at-chicago-area-schools-dies/",
+                    name: "Douglas Higgins, Administrator at Chicago-Area Schools, Dies",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 7,
+                    url: "https://www.washingtoninsider.org/business/protesters-in-serbia-rally-against-real-estate-project-with-trump-son-in-law-kushner/",
+                    name: "Protesters in Serbia Rally Against Real Estate Project with Trump Son-in-Law Kushner",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 8,
+                    url: "https://www.washingtoninsider.org/business/a-battle-of-amenities-boston-luxury-towers-compete-on-who-can-offer-the-most-extravagant-perks/",
+                    name: "A Battle of Amenities: Boston Luxury Towers Compete on Who Can Offer the Most Extravagant Perks",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 9,
+                    url: "https://www.washingtoninsider.org/business/prices-for-posh-palm-beach-penthouses-are-soaring/",
+                    name: "Prices for Posh Palm Beach Penthouses Are Soaring",
+                  },
+                ],
               },
               null,
               2

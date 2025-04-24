@@ -16,34 +16,22 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.washingtoninsider.org/"),
-  title: "Julio Herrera Velutini's Global Business Investments",
+  title: "Breaking Business & Global Affairs News | Washington Insider",
   description:
-    "Explore Julio Herrera Velutini’s expansive investment portfolio across the UAE, UK, Caribbean, Europe, and Latin America.",
-  keywords: [
-    "Julio Herrera Velutini",
-    "Julio Herrera Velutini Global Business Investments",
-    "Washington Insider Business News",
-    "Global Business News",
-    "Global Market Trends and Insights",
-    "Private Equity and Venture Capital Updates",
-    "Cryptocurrency and Blockchain News",
-    "Artificial Intelligence and Tech Startups",
-    "Sustainable and ESG Investment Strategies",
-    "Stocks and Smart Investing Tips",
-  ],
-  robots: "index, follow",
+    "Stay updated with breaking news, global business insights, and financial strategies. Explore Julio Herrera Velutini’s investments, market trends, and analysis.",
+  keywords:
+    "Breaking business news, Global financial insights, Julio Herrera Velutini, Global business investments, Market trends 2025, Private equity insights, Venture capital news, Cryptocurrency updates, Blockchain analysis, AI & tech startup news, Sustainable investing, ESG strategies, Stock market tips, Smart investing, Washington Insider",
   openGraph: {
-    title:
-      "Washington Insider | Breaking News, Business Insights & Global Affairs",
+    title: "Breaking Business & Global Affairs News | Washington Insider",
     description:
-      "In-depth coverage and analysis on politics, business, finance, and more from Washington Insider.",
+      "Stay updated with breaking news, global business insights, and financial strategies. Explore Julio Herrera Velutini’s investments, market trends, and analysis.",
     url: "https://www.washingtoninsider.org/",
     siteName: "Washington Insider",
     images: [
       {
         url: "https://www.washingtoninsider.org/images/washingtoninsider-logo.webp",
-        width: 1200,
-        height: 630,
+        width: 1024,
+        height: 1024,
         alt: "Washington Insider Logo",
       },
     ],
@@ -51,16 +39,18 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Washington Insider",
+    title: "Breaking Business & Global Affairs News | Washington Insider",
     description:
-      "In-depth coverage and analysis on politics, business, finance, and more from Washington Insider.",
-    images: [
+      "Stay updated with breaking news, global business insights, and financial strategies. Explore Julio Herrera Velutini’s investments, market trends, and analysis.",
+    images:
       "https://www.washingtoninsider.org/images/washingtoninsider-logo.webp",
-    ],
   },
-
   alternates: {
     canonical: "https://www.washingtoninsider.org/",
+    languages: {
+      en: "https://www.washingtoninsider.org/",
+      "x-default": "https://www.washingtoninsider.org/",
+    },
   },
   other: {
     author: "washingtoninsider",
@@ -88,38 +78,7 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-WC3SMJ6Q');
           `}
         </Script>
-
-        {/* Hreflang Tags for English-speaking regions */}
-        <link
-          rel="alternate"
-          hrefLang="en-us"
-          href="https://www.washingtoninsider.org/"
-        />
-        <link
-          rel="alternate"
-          hrefLang="en-gb"
-          href="https://www.washingtoninsider.org/"
-        />
-        <link
-          rel="alternate"
-          hrefLang="en-ae"
-          href="https://www.washingtoninsider.org/"
-        />
-        <link
-          rel="alternate"
-          hrefLang="en-fr"
-          href="https://www.washingtoninsider.org/"
-        />
-        <link
-          rel="alternate"
-          hrefLang="en"
-          href="https://www.washingtoninsider.org/"
-        />
-        <link
-          rel="alternate"
-          hrefLang="x-default"
-          href="https://www.washingtoninsider.org/"
-        />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
 
         <link
           rel="preload"
@@ -135,7 +94,7 @@ export default function RootLayout({
         />
 
         <Script
-          id="structured-data"
+          id="structured-data-webpage"
           type="application/ld+json"
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
@@ -148,51 +107,71 @@ export default function RootLayout({
                 name: "Washington Insider",
                 inLanguage: "en",
                 description:
-                  "Breaking news and in‑depth coverage of Julio Herrera Velutini’s global investments and finance strategy.",
-                keywords: [
-                  "Julio Herrera Velutini",
-                  "Julio Herrera Velutini Global Investments",
-                  "Julio Herrera Velutini Business News",
-                  "Washington Insider",
-                  "Global Business and Finance",
-                  "Private Equity and Julio Herrera Velutini",
-                  "Julio Herrera Velutini Financial Strategies"
-                ],
-                publisher: {
-                  "@type": "Organization",
-                  "@id": "https://www.washingtoninsider.org/#org",
-                  name: "Washington Insider",
-                  logo: {
-                    "@type": "ImageObject",
-                    url: "https://www.washingtoninsider.org/images/washingtoninsider-logo.webp",
-                    width: 1200,
-                    height: 630,
-                  },
+                  "Stay updated with breaking news, global business insights, and financial strategies. Explore Julio Herrera Velutini’s investments, market trends, and analysis.",
+                speakable: {
+                  "@type": "SpeakableSpecification",
+                  cssSelector: ["h1"],
                 },
-                mainEntity: {
-                  "@type": "NewsArticle",
-                  headline:"Julio Herrera Velutini and His Business Investments",
-                  "@id":"https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/#newsarticle",
+              },
+              null,
+              2
+            ),
+          }}
+        />
+        <Script
+          id="structured-data-newsmediaorganization"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "NewsMediaOrganization",
+                "@id": "https://www.washingtoninsider.org/#organization",
+                name: "Washington Insider",
+                url: "https://www.washingtoninsider.org/",
+                foundingDate: "2010-04-05",
+                logo: {
+                  "@type": "ImageObject",
+                  url: "https://www.washingtoninsider.org/images/washingtoninsider-logo.webp",
+                  width: 1024,
+                  height: 1024,
                 },
-                about: {
-                  "@type": "Person",
-                    "@id": "https://www.washingtoninsider.org/#person-julio",
-                    name: "Julio Herrera Velutini",
+                contactPoint: {
+                  "@type": "ContactPoint",
+                  contactType: "Customer Service",
+                  email: "support@washingtoninsider.org",
+                  areaServed: "US",
+                  availableLanguage: ["English"],
                 },
-                spatialCoverage: [
-                  { "@type": "Place", name: "United States" },
-                  { "@type": "Place", name: "United Kingdom" },
-                  { "@type": "Place", name: "United Arab Emirates" },
-                  { "@type": "Place", name: "France" },
-                ],
-                datePublished: "2025-04-09T00:00:00Z",
-                dateModified: "2025-04-22T12:31:11.201Z",
-                hasPart: [
-                  {
-                    "@type": "CollectionPage",
-                    "@id":"https://www.washingtoninsider.org/business/#collection",
-                    name: "Business News Collection",
-                  },
+                address: {
+                  "@type": "PostalAddress",
+                  streetAddress: "Capitol Hill Ave",
+                  addressLocality: "Washington",
+                  addressRegion: "DC",
+                  postalCode: "20004",
+                  addressCountry: "US",
+                },
+                sameAs: ["https://www.washingtoninsider.org/"],
+              },
+              null,
+              2
+            ),
+          }}
+        />
+        <Script
+          id="structured-data-site-navigation"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "SiteNavigationElement",
+                name: ["Home", "Business"],
+                url: [
+                  "https://www.washingtoninsider.org/",
+                  "https://www.washingtoninsider.org/business",
                 ],
               },
               null,
@@ -204,7 +183,10 @@ export default function RootLayout({
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         {/* <meta name="viewport" content="width=device-width, initial-scale=1" /> */}
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        suppressHydrationWarning
+        className={`${geistSans.variable} ${geistMono.variable}`}
+      >
         {/* Google Tag Manager Body Noscript */}
         <noscript>
           <iframe
