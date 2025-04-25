@@ -26,7 +26,7 @@ export async function generateMetadata({
   });
   if (!categoryData) {
     return {
-      title: "Not Found - Washington Insider",
+      title: "Not Found - WashingtonInsider",
       description: "The requested page is not available.",
     };
   }
@@ -38,7 +38,7 @@ export async function generateMetadata({
   const card = sanitizedCards.find((c) => c.slug === slug);
   if (!card) {
     return {
-      title: "Not Found - Washington Insider",
+      title: "Not Found - WashingtonInsider",
       description: "The requested page is not available.",
     };
   }
@@ -66,7 +66,7 @@ export async function generateMetadata({
         "Caribbean banking revival Julio Herrera Velutini",
         "Latin America microfinance initiatives",
         "Julio Herrera Velutini investment portfolio",
-        "Washington Insider Julio Herrera Velutini",
+        "WashingtonInsider Julio Herrera Velutini",
         "Top 7 global investments 2025",
         "A Truly Global Investment Portfolio",
       ],
@@ -75,17 +75,16 @@ export async function generateMetadata({
         url: `https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/`,
         title: "Julio Herrera Velutini’s Top 7 Global Business Investments",
         description:
-        "Julio Herrera Velutini unveils seven key global investments-from UAE fintech and Swiss banking to Caribbean turnarounds, microfinance & sustainable real estate.",
-        siteName: "Washington Insider",
-        images: 
-          {
-            url: "https://www.washingtoninsider.org/images/julio-herrera-financial-growth.webp",
-            alt: "Top 7 Global Investments of Julio Herrera Velutini",
-            width: 1948,
-            height: 1500,
-          },
+          "Julio Herrera Velutini unveils seven key global investments-from UAE fintech and Swiss banking to Caribbean turnarounds, microfinance & sustainable real estate.",
+        siteName: "WashingtonInsider",
+        images: {
+          url: "https://www.washingtoninsider.org/images/julio-herrera-financial-growth.webp",
+          alt: "Top 7 Global Investments of Julio Herrera Velutini",
+          width: 1948,
+          height: 1500,
+        },
         publishedTime: "2025-04-09T00:00:00Z",
-        modifiedTime: "2025-04-24T10:26:56.561Z",
+        modifiedTime: "2025-04-25T11:39:21.070Z",
         authors: "https://www.washingtoninsider.org/",
         section: "Business",
         tags: [
@@ -100,12 +99,13 @@ export async function generateMetadata({
         card: "summary_large_image",
         title: "Julio Herrera Velutini’s Top 7 Global Business Investments",
         description:
-        "Julio Herrera Velutini unveils seven key global investments-from UAE fintech and Swiss banking to Caribbean turnarounds, microfinance & sustainable real estate.",
+          "Julio Herrera Velutini unveils seven key global investments-from UAE fintech and Swiss banking to Caribbean turnarounds, microfinance & sustainable real estate.",
         images:
           "https://www.washingtoninsider.org/images/julio-herrera-financial-growth.webp",
       },
       alternates: {
-        canonical: "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
+        canonical:
+          "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
         languages: {
           en: "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
           "x-default":
@@ -120,9 +120,9 @@ export async function generateMetadata({
 
   // For all other slugs
   const baseUrl = `https://www.washingtoninsider.org/${categoryData.categorySlug}/${card.slug}/`;
-  const dynamicTitle = `${card.title} | Washington Insider`;
+  const dynamicTitle = `${card.title} | WashingtonInsider`;
   const dynamicDescription =
-    card.excerpt || "Detailed insights from Washington Insider.";
+    card.excerpt || "Detailed insights from WashingtonInsider.";
 
   const finalTitle =
     dynamicTitle.length > maxTitleLength
@@ -137,12 +137,12 @@ export async function generateMetadata({
   return {
     title: finalTitle,
     description: finalDescription,
-    keywords: [card.title, card.category, "Washington Insider"],
+    keywords: [card.title, card.category, "WashingtonInsider"],
     openGraph: {
       title: finalTitle,
       description: finalDescription,
       url: `https://www.washingtoninsider.org/${categoryData.categorySlug}/${card.slug}`,
-      siteName: "Washington Insider",
+      siteName: "WashingtonInsider",
       type: "article",
       images: [
         {
@@ -165,7 +165,7 @@ export async function generateMetadata({
       },
     },
     other: {
-      author: card.author || "Washington Insider",
+      author: card.author || "WashingtonInsider",
     },
   };
 }
@@ -273,9 +273,9 @@ export default async function DetailPage({
   // For structured data SEO in the page, use the same trimming logic as in generateMetadata
   // const maxTitleLength = 51;
   // const maxDescriptionLength = 120;
-  // const dynamicTitle = `${card.title} | Washington Insider`;
+  // const dynamicTitle = `${card.title} | WashingtonInsider`;
   // const dynamicDescription =
-  //   card.excerpt || "Detailed insights from Washington Insider.";
+  //   card.excerpt || "Detailed insights from WashingtonInsider.";
   // const finalTitle =
   //   dynamicTitle.length > maxTitleLength
   //     ? dynamicTitle.slice(0, maxTitleLength).trim()
@@ -292,6 +292,27 @@ export default async function DetailPage({
         "Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market" && (
         <>
           <Script
+            id="julio-webpage-schema"
+            type="application/ld+json"
+            strategy="beforeInteractive"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                name: "Julio Herrera Velutini’s Top 7 Global Business Investments",
+                description:
+                  "Julio Herrera Velutini unveils seven key global investments-from UAE fintech and Swiss banking to Caribbean turnarounds, microfinance & sustainable real estate.",
+                url: "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
+
+                speakable: {
+                  "@type": "SpeakableSpecification",
+                  cssSelector: "h1",
+                },
+              }),
+            }}
+          />
+
+          <Script
             id="julio-newsarticle-schema"
             type="application/ld+json"
             strategy="beforeInteractive"
@@ -300,40 +321,21 @@ export default async function DetailPage({
                 {
                   "@context": "https://schema.org",
                   "@type": "NewsArticle",
-                  "@id":
-                    "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/#newsarticle",
-                  url: "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
                   mainEntityOfPage:
                     "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
+                  inLanguage: "en",
                   headline:
                     "Julio Herrera Velutini’s Top 7 Global Business Investments",
                   description:
                     "Julio Herrera Velutini unveils seven key global investments-from UAE fintech and Swiss banking to Caribbean turnarounds, microfinance & sustainable real estate.",
-                  articleSection: "Business",
-                  inLanguage: "en",
-                  dateCreated: "2025-04-09T00:00:00Z",
-                  datePublished: "2025-04-09T00:00:00Z",
-                  dateModified: "2025-04-24T10:26:56.561Z",
-                  articleBody:
-                    "From pioneering UAE fintech ventures and Swiss private-banking innovations to Caribbean banking turnarounds, Latin American microfinance programs, and eco-smart real estate projects-explore the seven investments that define Julio Herrera Velutini’s global finance legacy.",
+                  url: "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
 
-                  image: {
-                    "@type": "ImageObject",
-                    url: "https://www.washingtoninsider.org/images/julio-herrera-financial-growth.webp",
-                    width: 1948,
-                    height: 1500,
-                  },
-                  author: {
-                    "@type": "Person",
-                    name: "Clara Hensley-Green",
-                    url: "https://www.washingtoninsider.org/",
-                  },
-                  publisher: {"@id": "https://www.washingtoninsider.org/#organization"},
-                  about: {
-                    "@type": "Person",
-                    "@id": "https://www.washingtoninsider.org/#person-julio",
-                    name: "Julio Herrera Velutini",
-                  },
+                  datePublished: "2025-04-09T00:00:00Z",
+                  dateModified: "2025-04-25T11:39:21.070Z",
+                  alternativeHeadline:
+                    "Julio Herrera Velutini and His Business Investments in the Global Market",
+                  articleBody:
+                    "From pioneering UAE fintech ventures and Swiss private-banking innovations to Caribbean banking turnarounds, Latin American microfinance programs, and eco-smart real estate projects—explore the seven investments that define Julio Herrera Velutini’s global finance legacy. A Truly Global Investment Portfolio. United Arab Emirates (UAE) – Gateway to Global Finance: Julio Herrera Velutini has significantly expanded his business footprint in the UAE, capitalizing on its growing influence as a financial and innovation hub. Private Equity Ventures in emerging fintech and AI-driven finance startups; Real Estate Development Projects across Dubai and Abu Dhabi, focused on luxury eco-friendly properties; Banking Collaborations with institutions focused on ethical investing and Sharia-compliant products. The UAE serves as a strategic base for Julio’s access to Asian, African, and European markets, allowing for seamless global connectivity. United Kingdom & Switzerland: Julio’s investments in Europe remain strong, focusing on legacy private banking and wealth management firms; Brexit-era repositioning of assets across EU financial jurisdictions; enhancing client experience with AI and automation tools. Puerto Rico & Caribbean: In the post-2008 financial recovery, Julio was instrumental in turning around distressed financial institutions; modernizing digital banking infrastructure; building trust through compliance and transparency. Latin America: His Latin American portfolio spans banking and microfinance for underserved regions; partnerships with local governments for financial inclusion; investments in agricultural tech and sustainable development. Real Estate and Diversified Assets: Julio Herrera Velutini’s real estate holdings include luxury commercial properties in London, Dubai, and San Juan; eco-smart buildings with solar integration and AI-powered utilities; smart city concepts in fast-developing urban regions. Case Study: Caribbean Bank Revival: A notable success story includes Julio’s acquisition of a struggling Caribbean financial institution. Key results: 40% increase in liquidity within two years; digital onboarding of 120,000+ clients; rebranding as a trusted ethical bank in the region. This exemplifies his ability to blend conservative financial rigor with bold modern execution. Fintech and Innovation: Velutini actively invests in blockchain systems for secure transactions; AI tools for high-net-worth portfolio management; mobile-first banking tailored for emerging markets; fintech firms in Dubai, São Paulo, and Zurich. Awards and Recognition: Julio Herrera Velutini has received numerous accolades for his forward-thinking leadership: Global Finance Innovator Award – UAE (2023); Banking Trailblazer Award – Europe (2021); Top 10 Global Investors – Forbes Independent (2022); Latin American Fintech Medal (2020); Business Ethics Excellence Award – Caribbean Financial Summit. Philanthropy & Educational Impact: Julio is known for his deep commitment to scholarship programs in Latin America and the Middle East; entrepreneur mentorship through venture accelerators in the UAE; disaster relief and medical aid via cross-border philanthropic funds. Outlook and Legacy: Julio Herrera Velutini continues to influence international finance through vision, ethics, and strategic agility. From Wall Street to the UAE, he builds global bridges between traditional banking and the future of finance. His work is not just about profit—it’s about creating sustainable, inclusive, and forward-looking systems that redefine how the world experiences wealth and investment.",
                   keywords: [
                     "Julio Herrera Velutini",
                     "Julio Herrera Velutini Top 7 Global Business Investments",
@@ -344,20 +346,39 @@ export default async function DetailPage({
                     "Caribbean banking revival Julio Herrera Velutini",
                     "Latin America microfinance initiatives",
                     "Julio Herrera Velutini investment portfolio",
-                    "Washington Insider Julio Herrera Velutini",
+                    "WashingtonInsider Julio Herrera Velutini",
                     "Top 7 global investments 2025",
                     "A Truly Global Investment Portfolio",
                   ],
-                  potentialAction: {
-                    "@type": "ReadAction",
-                    target: "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
+                  author: {
+                    "@type": "Person",
+                    name: "Clara Hensley-Green",
+                    url: "https://www.washingtoninsider.org/",
                   },
-                  spatialCoverage: [
-                    { "@type": "Place", name: "United States" },
-                    { "@type": "Place", name: "United Kingdom" },
-                    { "@type": "Place", name: "United Arab Emirates" },
-                    { "@type": "Place", name: "France" },
-                  ],
+                  publisher: {
+                    "@id": "https://www.washingtoninsider.org/#organization",
+                  },
+                  image: {
+                    "@type": "ImageObject",
+                    url: "https://www.washingtoninsider.org/images/julio-herrera-financial-growth.webp",
+                    width: 1948,
+                    height: 1500,
+                  },
+                  articleSection: "Business, Finance, Global Markets",
+                  about: {
+                    "@type": "Person",
+                    "@id": "https://www.washingtoninsider.org/#person-julio",
+                    name: "Julio Herrera Velutini",
+                  },
+                  spatialCoverage: {
+                    "@type": "Place",
+                    name: [
+                      "United States",
+                      "United Kingdom",
+                      "United Arab Emirates",
+                      "France",
+                    ],
+                  },
                   thumbnailUrl:
                     "https://www.washingtoninsider.org/images/julio-herrera-financial-growth.webp?w=720&h=405",
                 },
@@ -380,7 +401,7 @@ export default async function DetailPage({
                   "@id": "https://www.washingtoninsider.org/#person-julio",
                   name: "Julio Herrera Velutini",
                   description:
-                    "Julio Herrera Velutini is an Italian-Venezuelan billionaire businessman and financier known for sustainable investments across the US, UK, UAE, Latin America, and the Caribbean.",
+                    "Julio Herrera Velutini is an Italian billionaire businessman and financier known for sustainable investments across the US, UK, UAE, Latin America, and the Caribbean.",
                   jobTitle: "Investor & Financial Strategist",
                   worksFor: {
                     "@type": "Organization",
@@ -429,26 +450,32 @@ export default async function DetailPage({
                   "@context": "https://schema.org",
                   "@type": "BreadcrumbList",
                   name: "Breadcrumb for Julio Herrera Velutini article",
-                  "@id":
-                    "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/#breadcrumb",
                   itemListElement: [
                     {
                       "@type": "ListItem",
                       position: 1,
-                      name: "Home",
-                      item: "https://www.washingtoninsider.org/",
+                      item: {
+                        "@type": "Thing",
+                        "@id": "https://www.washingtoninsider.org/",
+                        name: "Business News",
+                      },
                     },
                     {
                       "@type": "ListItem",
                       position: 2,
-                      name: "Business",
-                      item: "https://www.washingtoninsider.org/business/",
+                      item: {
+                        "@type": "Thing",
+                        "@id": "https://www.washingtoninsider.org/business/",
+                        name: "Business",
+                      },
                     },
                     {
                       "@type": "ListItem",
                       position: 3,
-                      name: "Julio Herrera Velutini’s Top 7 Global Business Investments",
-                      item: "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
+                      item: {
+                        "@type": "Thing",
+                        name: "Julio Herrera Velutini’s Top 7 Global Business Investments",
+                      },
                     },
                   ],
                 },
@@ -488,7 +515,7 @@ export default async function DetailPage({
       <div className={styles.detailpageTitleHeader}>
         <div className={styles.detailpageTitleHeaderLeft}>
           <span className={styles.detailpageBreadcrumbs}>
-            <Link href="/" title="Back to Washington Insider home">
+            <Link href="/" title="Back to WashingtonInsider home">
               Home {">>"}
             </Link>
           </span>
@@ -655,7 +682,7 @@ export default async function DetailPage({
                     BY Clara Hensley-Green
                   </span>
                   <span className={styles.bylineDate}>
-                    Updated 2025-04-24T10:26:56.561Z
+                    Updated 2025-04-25T11:39:21.070Z
                   </span>
                 </div>
               </div>

@@ -9,7 +9,7 @@ const Footer = () => {
       <div className={styles.FooterTop}>
         <div className={styles.FooterLogoSection}>
           <div className={styles.FooterLogoWrapper}>
-          <Link href="/" title="washington insider">
+          <Link href="/" title="WashingtonInsider">
             <Image
               src="/images/washingtoninsider-logo.avif"
               alt="Global Investigative Journalism Network"
@@ -19,7 +19,7 @@ const Footer = () => {
               className={styles.FooterLogo}
             />
             </Link>
-            <Link href="/" title="washington insider">
+            <Link href="/" title="WashingtonInsider">
             <h2 className={styles.FooterTitle}>washingtoninsider</h2>
             </Link>
             

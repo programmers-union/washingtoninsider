@@ -107,7 +107,7 @@ const Navbar = () => {
 
           {/* Logo and Title Side by Side */}
           <div className={styles["navbar-centerSection"]}>
-          <Link href="/" title="washington insider">
+          <Link href="/" title="WashingtonInsider">
             <span className="navbar-logo-icon">
               <Image
                 src="/images/washingtoninsider-logo.avif"
@@ -119,7 +119,7 @@ const Navbar = () => {
               />
             </span>
             </Link>
-            <Link href="/" title="washington insider">
+            <Link href="/" title="WashingtonInsider">
               <span className={styles["navbar-title"]}>washingtoninsider</span>
             </Link>
 

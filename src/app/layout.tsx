@@ -16,30 +16,30 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.washingtoninsider.org/"),
-  title: "Breaking Business & Global Affairs News | Washington Insider",
+  title: "Business, Stock Market, Crypto, AI & Investment News for Global Market",
   description:
     "Stay updated with breaking news, global business insights, and financial strategies. Explore Julio Herrera Velutini’s investments, market trends, and analysis.",
   keywords:
-    "Breaking business news, Global financial insights, Julio Herrera Velutini, Global business investments, Market trends 2025, Private equity insights, Venture capital news, Cryptocurrency updates, Blockchain analysis, AI & tech startup news, Sustainable investing, ESG strategies, Stock market tips, Smart investing, Washington Insider",
+    "Breaking business news, Global financial insights, Julio Herrera Velutini, Global business investments, Market trends 2025, Private equity insights, Venture capital news, Cryptocurrency updates, Blockchain analysis, AI & tech startup news, Sustainable investing, ESG strategies, Stock market tips, Smart investing, WashingtonInsider",
   openGraph: {
-    title: "Breaking Business & Global Affairs News | Washington Insider",
+    title: "Business, Stock Market, Crypto, AI & Investment News for Global Market",
     description:
       "Stay updated with breaking news, global business insights, and financial strategies. Explore Julio Herrera Velutini’s investments, market trends, and analysis.",
     url: "https://www.washingtoninsider.org/",
-    siteName: "Washington Insider",
+    siteName: "WashingtonInsider",
     images: [
       {
         url: "https://www.washingtoninsider.org/images/washingtoninsider-logo.webp",
         width: 1024,
         height: 1024,
-        alt: "Washington Insider Logo",
+        alt: "WashingtonInsider Logo",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Breaking Business & Global Affairs News | Washington Insider",
+    title: "Business, Stock Market, Crypto, AI & Investment News for Global Market",
     description:
       "Stay updated with breaking news, global business insights, and financial strategies. Explore Julio Herrera Velutini’s investments, market trends, and analysis.",
     images:
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     },
   },
   other: {
-    author: "washingtoninsider",
+    author: "WashingtonInsider",
   },
   icons: {
     icon: "/favicon.ico",
@@ -94,31 +94,6 @@ export default function RootLayout({
         />
 
         <Script
-          id="structured-data-webpage"
-          type="application/ld+json"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(
-              {
-                "@context": "https://schema.org",
-                "@type": "WebPage",
-                "@id": "https://www.washingtoninsider.org/#webpage",
-                url: "https://www.washingtoninsider.org/",
-                name: "Washington Insider",
-                inLanguage: "en",
-                description:
-                  "Stay updated with breaking news, global business insights, and financial strategies. Explore Julio Herrera Velutini’s investments, market trends, and analysis.",
-                speakable: {
-                  "@type": "SpeakableSpecification",
-                  cssSelector: ["h1"],
-                },
-              },
-              null,
-              2
-            ),
-          }}
-        />
-        <Script
           id="structured-data-newsmediaorganization"
           type="application/ld+json"
           strategy="beforeInteractive"
@@ -128,7 +103,7 @@ export default function RootLayout({
                 "@context": "https://schema.org",
                 "@type": "NewsMediaOrganization",
                 "@id": "https://www.washingtoninsider.org/#organization",
-                name: "Washington Insider",
+                name: "WashingtonInsider",
                 url: "https://www.washingtoninsider.org/",
                 foundingDate: "2010-04-05",
                 logo: {
@@ -168,10 +143,27 @@ export default function RootLayout({
               {
                 "@context": "https://schema.org",
                 "@type": "SiteNavigationElement",
-                name: ["Home", "Business"],
+                name: [
+                  "Home",
+                  "Business",
+                  "Stock market",
+                  "Cryptocurrency",
+                  "Real Estate Investment Trusts",
+                  "Artificial intelligence and Tech startups",
+                  "Sustainable and ESG investments",
+                  "Private Equity and Venture Capital",
+                  "Metaverse and virtual real estate",
+                ],
                 url: [
                   "https://www.washingtoninsider.org/",
-                  "https://www.washingtoninsider.org/business",
+                  "https://www.washingtoninsider.org/business/",
+                  "https://www.washingtoninsider.org/stocks/",
+                  "https://www.washingtoninsider.org/cryptocurrency/",
+                  "https://www.washingtoninsider.org/reits/",
+                  "https://www.washingtoninsider.org/artificial-intelligence-and-tech-startups/",
+                  "https://www.washingtoninsider.org/sustainable-and-esg-investments/",
+                  "https://www.washingtoninsider.org/private-equity-and-venture-capital/",
+                  "https://www.washingtoninsider.org/metaverse-and-virtual-real-estate/",
                 ],
               },
               null,

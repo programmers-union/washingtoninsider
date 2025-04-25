@@ -20,9 +20,10 @@ export async function generateMetadata({
   // If the category is "business", return the fixed SEO details:
   if ((await params).category === "business") {
     return {
-      title: "Business News Collection - Washington Insider",
+      title:
+        "Business & Finance News: Investments, Markets & Luxury Real Estate",
       description:
-        "Explore business and financial news stories, with featured coverage on Julio Herrera Velutini’s global investment strategies.",
+        "Stay informed on global business trends, investments, real estate, and financial news featuring market leaders like Julio Herrera Velutini, Donald Trump & more.",
       keywords: [
         "2025 business landscape",
         "global investments 2025",
@@ -41,26 +42,28 @@ export async function generateMetadata({
         "economic events 2025",
       ],
       openGraph: {
-        title: "Business News Collection - Washington Insider",
+        title:
+          "Business & Finance News: Investments, Markets & Luxury Real Estate",
         description:
-          "Explore business and financial news stories, with featured coverage on Julio Herrera Velutini’s global investment strategies.",
+          "Stay informed on global business trends, investments, real estate, and financial news featuring market leaders like Julio Herrera Velutini, Donald Trump & more.",
         url: "https://www.washingtoninsider.org/business/",
-        siteName: "Washington Insider",
+        siteName: "WashingtonInsider",
         type: "website",
         images: [
           {
             url: "https://www.washingtoninsider.org/images/washingtoninsider-logo.webp",
             width: 1024,
             height: 1024,
-            alt: "Washington Insider",
+            alt: "WashingtonInsider",
           },
         ],
       },
       twitter: {
         card: "summary_large_image",
-        title: "Business News Collection - Washington Insider",
+        title:
+          "Business & Finance News: Investments, Markets & Luxury Real Estate",
         description:
-          "Explore business and financial news stories, with featured coverage on Julio Herrera Velutini’s global investment strategies.",
+          "Stay informed on global business trends, investments, real estate, and financial news featuring market leaders like Julio Herrera Velutini, Donald Trump & more.",
         images: [
           "https://www.washingtoninsider.org/images/washingtoninsider-logo.webp",
         ],
@@ -73,7 +76,7 @@ export async function generateMetadata({
         },
       },
       other: {
-        author: "Washington Insider",
+        author: "WashingtonInsider",
       },
     };
   }
@@ -84,10 +87,10 @@ export async function generateMetadata({
     title: `${
       (await params).category.charAt(0).toUpperCase() +
       (await params).category.slice(1)
-    } - Washington Insider`,
+    } - WashingtonInsider`,
     description: `${
       (await params).category
-    } category page on Washington Insider.`,
+    } category page on WashingtonInsider.`,
   };
 }
 
@@ -152,20 +155,17 @@ export default async function CategoryPage({
       {/* structured data  */}
       {category === "business" && (
         <Script
-          id="structured-data-category"
+          id="business-webpage-schema"
           type="application/ld+json"
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(
               {
                 "@context": "https://schema.org",
-                "@type": "CollectionPage",
-                "@id": "https://www.washingtoninsider.org/business/#collection",
-                url: "https://www.washingtoninsider.org/business/",
-                name: "Business News - Julio Herrera Velutini",
-                inLanguage: "en",
+                "@type": "WebPage",
+                name: "Business & Finance News: Investments, Markets & Luxury Real Estate",
                 description:
-                  "Explore business and financial news stories, with featured coverage on Julio Herrera Velutini’s global investment strategies.",
+                  "Stay informed on global business trends, investments, real estate, and financial news featuring market leaders like Julio Herrera Velutini, Donald Trump & more.",
                 keywords: [
                   "2025 business landscape",
                   "global investments 2025",
@@ -183,15 +183,11 @@ export default async function CategoryPage({
                   "real estate investment 2025",
                   "economic events 2025",
                 ],
-                publisher: {"@id": "https://www.washingtoninsider.org/#organization"},
-                datePublished: "2025-04-09T00:00:00Z",
-                dateModified: "2025-04-24T10:26:56.561Z",
-                spatialCoverage: [
-                  { "@type": "Place", name: "United States" },
-                  { "@type": "Place", name: "United Kingdom" },
-                  { "@type": "Place", name: "United Arab Emirates" },
-                  { "@type": "Place", name: "France" },
-                ],
+                url: "https://www.washingtoninsider.org/business/",
+                speakable: {
+                  "@type": "SpeakableSpecification",
+                  cssSelector: "h1",
+                },
               },
               null,
               2
@@ -209,64 +205,81 @@ export default async function CategoryPage({
               {
                 "@context": "https://schema.org",
                 "@type": "ItemList",
-                "@id": "https://www.washingtoninsider.org/business/#itemlist",
                 url: "https://www.washingtoninsider.org/business/",
                 numberOfItems: 9,
                 itemListOrder: "http://schema.org/ItemListOrderAscending",
+                mainEntityOfPage: {
+                  "@type": "WebPage",
+                  "@id": "https://www.washingtoninsider.org/business/",
+                },
+
                 itemListElement: [
                   {
                     "@type": "ListItem",
                     position: 1,
                     url: "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
                     name: "Julio Herrera Velutini’s Top 7 Global Business Investments",
+                    description: "Julio Herrera Velutini unveils seven key global investments-from UAE fintech and Swiss banking to Caribbean turnarounds, microfinance & sustainable real estate.",
                   },
                   {
                     "@type": "ListItem",
                     position: 2,
                     url: "https://www.washingtoninsider.org/business/catherine-and-pierce-compete-for-a-listing-in-episode-7-exclusive-clip/",
                     name: "Catherine and Pierce Compete for a Listing in Episode 7 [Exclusive Clip]",
+                    description: "Catherine and Pierce clash in Episode 7 over a prime luxury real estate listing, reigniting careers and rivalries in this exclusive property drama.",
+
                   },
                   {
                     "@type": "ListItem",
                     position: 3,
                     url: "https://www.washingtoninsider.org/business/donald-trump-spent-millions-on-these-9-luxury-items-no-7-will-blow-your-mind/",
                     name: "Donald Trump Spent Millions on These 9 Luxury Items – No. 7 Will Blow Your Mind",
+                    description: "Donald Trump’s lavish spending revealed—explore 9 luxury items, from rare cars to gold-plated jets, showcasing his extravagant lifestyle.",
                   },
                   {
                     "@type": "ListItem",
                     position: 4,
                     url: "https://www.washingtoninsider.org/business/why-did-tom-o-brien-decide-not-to-run-for-mayor-against-wu-kraft/",
                     name: "Why did Tom O’Brien Decide Not to Run for Mayor Against Wu, Kraft?",
+                    description: "Tom O’Brien exits Boston’s mayoral race, raising questions about political strategy, real estate influence, and future business ties with City Hall.",
                   },
                   {
                     "@type": "ListItem",
                     position: 5,
                     url: "https://www.washingtoninsider.org/business/suryakumar-yadav-buys-two-luxurious-apartments-in-deonar-check-out-the-price-and-other-details/",
                     name: "Suryakumar Yadav Buys Two Luxurious Apartments in Deonar – Check Out the Price and Other Details",
+                    description: "Suryakumar Yadav invests ₹21.11 crore in two luxury Mumbai apartments, expanding his premium real estate portfolio in Deonar.",
                   },
                   {
                     "@type": "ListItem",
                     position: 6,
                     url: "https://www.washingtoninsider.org/business/douglas-higgins-administrator-at-chicago-area-schools-dies/",
                     name: "Douglas Higgins, Administrator at Chicago-Area Schools, Dies",
+                    description: "Douglas Higgins, who after many years in real estate returned to his initial career choice in education, has died at 81.",
                   },
                   {
                     "@type": "ListItem",
                     position: 7,
                     url: "https://www.washingtoninsider.org/business/protesters-in-serbia-rally-against-real-estate-project-with-trump-son-in-law-kushner/",
                     name: "Protesters in Serbia Rally Against Real Estate Project with Trump Son-in-Law Kushner",
+                    description: "Serbia protests erupt over Jared Kushner’s planned luxury complex on a NATO-bombed military site, sparking heritage and corruption debates.",
+
                   },
                   {
                     "@type": "ListItem",
                     position: 8,
                     url: "https://www.washingtoninsider.org/business/a-battle-of-amenities-boston-luxury-towers-compete-on-who-can-offer-the-most-extravagant-perks/",
                     name: "A Battle of Amenities: Boston Luxury Towers Compete on Who Can Offer the Most Extravagant Perks",
+                    description: "In the words of Ricardo Rodriguez, a Coldwell Banker luxury real estate agent, they’re “vertical country clubs.”",
+
                   },
                   {
                     "@type": "ListItem",
                     position: 9,
                     url: "https://www.washingtoninsider.org/business/prices-for-posh-palm-beach-penthouses-are-soaring/",
                     name: "Prices for Posh Palm Beach Penthouses Are Soaring",
+                    description: "Palm Beach penthouse prices soar as billionaires fuel a luxury real estate boom, with record-breaking sales and sky-high listings.",
+
                   },
                 ],
               },
@@ -288,19 +301,23 @@ export default async function CategoryPage({
                 "@context": "https://schema.org",
                 "@type": "BreadcrumbList",
                 name: "BreadcrumbList for business Category Page ",
-                "@id": "https://www.washingtoninsider.org/business/#breadcrumb",
                 itemListElement: [
                   {
                     "@type": "ListItem",
                     position: 1,
-                    name: "Home",
-                    item: "https://www.washingtoninsider.org/",
+                    item: {
+                      "@type": "Thing",
+                      "@id": "https://www.washingtoninsider.org/",
+                      name: "Business News",
+                    },
                   },
                   {
                     "@type": "ListItem",
                     position: 2,
-                    name: "Business",
-                    item: "https://www.washingtoninsider.org/business/",
+                    item: {
+                      "@type": "Thing",
+                      name: "Business",
+                    },
                   },
                 ],
               },
@@ -319,7 +336,7 @@ export default async function CategoryPage({
 
       <div className={styles.categorypagePostCountDiv}>
         <span className={styles.categorypagebacktohome}>
-          <Link href="/" title="Back to Washington Insider home">
+          <Link href="/" title="Back to WashingtonInsider home">
             {" "}
             Back to Home
           </Link>
