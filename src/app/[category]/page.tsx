@@ -17,6 +17,7 @@ export async function generateMetadata({
 }: {
   params: Promise<{ category: string }>;
 }): Promise<Metadata> {
+  
   // If the category is "business", return the fixed SEO details:
   if ((await params).category === "business") {
     return {
@@ -82,16 +83,68 @@ export async function generateMetadata({
   }
 
   // For other categories, return generic dynamic metadata.
+    const { category } = await params;
+  const categoryData = await prisma.category.findFirst({
+    where: { categorySlug: category },
+    include: { cards: true },
+  });
+
+  if (!categoryData) {
+    return {
+      title: "Not Found – WashingtonInsider",
+      description: "The category you’re looking for doesn’t exist.",
+    };
+  }
+
+  const mainTitle = categoryData.mainTitle;          // e.g. “Technology”
+  const slugUrl   = `https://www.washingtoninsider.org/${category}/`;
+  const title     = `${mainTitle} News & Insights | WashingtonInsider`;
+  const description = `Stay informed on ${mainTitle.toLowerCase()} trends, analysis, and top stories from WashingtonInsider.`;
+  const keywords  = [
+    `${mainTitle} news`,
+    `latest ${mainTitle.toLowerCase()} updates`,
+    `${mainTitle} analysis`,
+    `${mainTitle} trends 2025`,
+    `WashingtonInsider ${mainTitle}`,
+    `${mainTitle} market insights`,
+  ];
+
+  // pick OG image from first card if available, else fallback to logo
+  const firstImagePath = categoryData.cards[0]?.image ?? "/images/washingtoninsider-logo.webp";
+  const ogImageUrl     = `https://www.washingtoninsider.org${firstImagePath}`;
 
   return {
-    title: `${
-      (await params).category.charAt(0).toUpperCase() +
-      (await params).category.slice(1)
-    } - WashingtonInsider`,
-    description: `${
-      (await params).category
-    } category page on WashingtonInsider.`,
+    title,
+    description,
+    keywords,
+    openGraph: {
+      title,
+      description,
+      url: slugUrl,
+      siteName: "WashingtonInsider",
+      type: "website",
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: `${mainTitle} – WashingtonInsider`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [ogImageUrl],
+    },
+    alternates: {
+      canonical: slugUrl,
+      languages: { en: slugUrl, "x-default": slugUrl },
+    },
+    other: { author: "WashingtonInsider" },
   };
+
 }
 
 export const dynamicParams = false;
