@@ -13,7 +13,7 @@ export default function Home() {
       <Script
         id="structured-data-webpage"
         type="application/ld+json"
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             {
@@ -21,7 +21,7 @@ export default function Home() {
               "@type": "WebPage",
               name: "Business, Stock Market, Crypto, AI & Investment News for Global Market",
               description:
-                "Stay updated with breaking news, global business insights, and financial strategies. Explore Julio Herrera Velutini’s investments, market trends, and analysis.",
+                "Stay updated with breaking news, global business insights, and financial strategies. Explore business investments, market trends, and analysis.",
               url: "https://www.washingtoninsider.org/",
               speakable: {
                 "@type": "SpeakableSpecification",
@@ -37,7 +37,7 @@ export default function Home() {
       <Script
         id="structured-data-itemlist"
         type="application/ld+json"
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             {

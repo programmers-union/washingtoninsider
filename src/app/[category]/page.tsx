@@ -24,14 +24,13 @@ export async function generateMetadata({
       title:
         "Business & Finance News: Investments, Markets & Luxury Real Estate",
       description:
-        "Stay informed on global business trends, investments, real estate, and financial news featuring market leaders like Julio Herrera Velutini, Donald Trump & more.",
+        "Stay informed on global business trends, investments, real estate, and financial news featuring market leaders like Donald Trump & more.",
       keywords: [
         "2025 business landscape",
         "global investments 2025",
         "luxury real estate trends",
         "high-profile financial moves",
         "market-shaping events",
-        "Julio Herrera Velutini news",
         "Donald Trump business news",
         "emerging markets analysis",
         "international investment trends",
@@ -46,7 +45,7 @@ export async function generateMetadata({
         title:
           "Business & Finance News: Investments, Markets & Luxury Real Estate",
         description:
-          "Stay informed on global business trends, investments, real estate, and financial news featuring market leaders like Julio Herrera Velutini, Donald Trump & more.",
+          "Stay informed on global business trends, investments, real estate, and financial news featuring market leaders like Donald Trump & more.",
         url: "https://www.washingtoninsider.org/business/",
         siteName: "WashingtonInsider",
         type: "website",
@@ -64,7 +63,7 @@ export async function generateMetadata({
         title:
           "Business & Finance News: Investments, Markets & Luxury Real Estate",
         description:
-          "Stay informed on global business trends, investments, real estate, and financial news featuring market leaders like Julio Herrera Velutini, Donald Trump & more.",
+          "Stay informed on global business trends, investments, real estate, and financial news featuring market leaders like Donald Trump & more.",
         images: [
           "https://www.washingtoninsider.org/images/washingtoninsider-logo.webp",
         ],
@@ -210,7 +209,7 @@ export default async function CategoryPage({
         <Script
           id="business-webpage-schema"
           type="application/ld+json"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(
               {
@@ -218,14 +217,13 @@ export default async function CategoryPage({
                 "@type": "WebPage",
                 name: "Business & Finance News: Investments, Markets & Luxury Real Estate",
                 description:
-                  "Stay informed on global business trends, investments, real estate, and financial news featuring market leaders like Julio Herrera Velutini, Donald Trump & more.",
+                  "Stay informed on global business trends, investments, real estate, and financial news featuring market leaders like Donald Trump & more.",
                 keywords: [
                   "2025 business landscape",
                   "global investments 2025",
                   "luxury real estate trends",
                   "high-profile financial moves",
                   "market-shaping events",
-                  "Julio Herrera Velutini news",
                   "Donald Trump business news",
                   "emerging markets analysis",
                   "international investment trends",
@@ -252,7 +250,7 @@ export default async function CategoryPage({
         <Script
           id="structured-data-itemlist-category"
           type="application/ld+json"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(
               {
@@ -347,7 +345,7 @@ export default async function CategoryPage({
         <Script
           id="breadcrumb-business"
           type="application/ld+json"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(
               {

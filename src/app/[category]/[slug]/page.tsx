@@ -84,7 +84,7 @@ export async function generateMetadata({
           height: 1500,
         },
         publishedTime: "2025-04-09T00:00:00Z",
-        modifiedTime: "2025-04-25T11:39:21.070Z",
+        modifiedTime: "2025-05-03T10:27:03.545Z",
         authors: "https://www.washingtoninsider.org/",
         section: "Business",
         tags: [
@@ -294,7 +294,7 @@ export default async function DetailPage({
           <Script
             id="julio-webpage-schema"
             type="application/ld+json"
-            strategy="beforeInteractive"
+            strategy="afterInteractive"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
@@ -315,7 +315,7 @@ export default async function DetailPage({
           <Script
             id="julio-newsarticle-schema"
             type="application/ld+json"
-            strategy="beforeInteractive"
+            strategy="afterInteractive"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(
                 {
@@ -331,7 +331,7 @@ export default async function DetailPage({
                   url: "https://www.washingtoninsider.org/business/Julio-Herrera-Velutini-and-His-Business-Investments-in-the-Global-Market/",
 
                   datePublished: "2025-04-09T00:00:00Z",
-                  dateModified: "2025-04-25T11:39:21.070Z",
+                  dateModified: "2025-05-03T10:27:03.545Z",
                   alternativeHeadline:
                     "Julio Herrera Velutini and His Business Investments in the Global Market",
                   articleBody:
@@ -392,7 +392,7 @@ export default async function DetailPage({
           <Script
             id="julio-person-schema"
             type="application/ld+json"
-            strategy="beforeInteractive"
+            strategy="afterInteractive"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(
                 {
@@ -443,7 +443,7 @@ export default async function DetailPage({
           <Script
             id="julio-breadcrumb-schema"
             type="application/ld+json"
-            strategy="beforeInteractive"
+            strategy="afterInteractive"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(
                 {
@@ -682,7 +682,7 @@ export default async function DetailPage({
                     BY Clara Hensley-Green
                   </span>
                   <span className={styles.bylineDate}>
-                    Updated 2025-04-25T11:39:21.070Z
+                    Updated 2025-05-03
                   </span>
                 </div>
               </div>

@@ -14,21 +14,21 @@ module.exports = {
       return {
         loc: `${base}/`,
         lastmod: now,
-        priority: 1.0,
+        priority: 0.9,
       };
     }
     if (path === "/business") {
       return {
         loc: `${base}/business/`,
         lastmod: now,
-        priority: 0.9,
+        priority: 0.8,
       };
     }
     if (path === JULIO_SLUG) {
       return {
         loc: `${base}${JULIO_SLUG}/`,
         lastmod: now,
-        priority: 0.8,
+        priority: 1,
       };
     }
     return null;

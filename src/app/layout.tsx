@@ -18,13 +18,13 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.washingtoninsider.org/"),
   title: "Business, Stock Market, Crypto, AI & Investment News for Global Market",
   description:
-    "Stay updated with breaking news, global business insights, and financial strategies. Explore Julio Herrera Velutini’s investments, market trends, and analysis.",
+    "Stay updated with breaking news, global business insights, and financial strategies. Explore business investments, market trends, and analysis.",
   keywords:
-    "Breaking business news, Global financial insights, Julio Herrera Velutini, Global business investments, Market trends 2025, Private equity insights, Venture capital news, Cryptocurrency updates, Blockchain analysis, AI & tech startup news, Sustainable investing, ESG strategies, Stock market tips, Smart investing, WashingtonInsider",
+    "Breaking business news, Global financial insights, Global business investments, Market trends 2025, Private equity insights, Venture capital news, Cryptocurrency updates, Blockchain analysis, AI & tech startup news, Sustainable investing, ESG strategies, Stock market tips, Smart investing, WashingtonInsider",
   openGraph: {
     title: "Business, Stock Market, Crypto, AI & Investment News for Global Market",
     description:
-      "Stay updated with breaking news, global business insights, and financial strategies. Explore Julio Herrera Velutini’s investments, market trends, and analysis.",
+      "Stay updated with breaking news, global business insights, and financial strategies. Explore business investments, market trends, and analysis.",
     url: "https://www.washingtoninsider.org/",
     siteName: "WashingtonInsider",
     images: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Business, Stock Market, Crypto, AI & Investment News for Global Market",
     description:
-      "Stay updated with breaking news, global business insights, and financial strategies. Explore Julio Herrera Velutini’s investments, market trends, and analysis.",
+      "Stay updated with breaking news, global business insights, and financial strategies. Explore business investments, market trends, and analysis.",
     images:
       "https://www.washingtoninsider.org/images/washingtoninsider-logo.webp",
   },
@@ -78,8 +78,6 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-WC3SMJ6Q');
           `}
         </Script>
-        <meta name="robots" content="index, follow, max-image-preview:large" />
-
         <link
           rel="preload"
           as="image"
@@ -96,7 +94,7 @@ export default function RootLayout({
         <Script
           id="structured-data-newsmediaorganization"
           type="application/ld+json"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(
               {
@@ -137,7 +135,7 @@ export default function RootLayout({
         <Script
           id="structured-data-site-navigation"
           type="application/ld+json"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(
               {
@@ -171,8 +169,10 @@ export default function RootLayout({
             ),
           }}
         />
-
-        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <meta name="googlebot" content="index, follow" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        {/* <link rel="sitemap" type="application/xml" href="/sitemap.xml" /> */}
         {/* <meta name="viewport" content="width=device-width, initial-scale=1" /> */}
       </head>
       <body
